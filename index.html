@@ -635,7 +635,86 @@
             }
         }
 
+        /* Service Menu Styles */
+        .service-menu {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #FFF8DC 100%);
+        }
+
+        .menu-category {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .menu-category-header {
+            background: linear-gradient(135deg, #228B22, #FFD700);
+            color: white;
+            padding: 1.5rem 2rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .menu-items {
+            padding: 2rem;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 1rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item-info {
+            flex: 1;
+        }
+
+        .menu-item-name {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .menu-item-description {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .menu-item-price {
+            font-weight: bold;
+            color: #228B22;
+            font-size: 1.1rem;
+            margin-left: 1rem;
+            flex-shrink: 0;
+        }
+
+        .menu-item-duration {
+            color: #999;
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+        }
+
         @media (max-width: 768px) {
+            .menu-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .menu-item-price {
+                margin-left: 0;
+                margin-top: 0.5rem;
+            }
+        }
             .modal-content {
                 width: 95%;
                 margin: 5% auto;
@@ -699,6 +778,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#menu">Menu & Pricing</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#instagram">Instagram</a></li>
                 <li><a href="#about">About</a></li>
@@ -759,6 +839,155 @@
                     <h3><a href="#full-set-application" style="color: inherit; text-decoration: none;">Full Set Application</a></h3>
                     <p>Transform your nails with our professional <strong>full set application</strong> service, ideal for those looking to add length and strength to their natural nails. Choose from a variety of nail enhancements, including acrylic or gel extensions, customized to suit your desired shape and style. Our skilled technicians provide precise application for beautiful, long-lasting results.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-menu" id="menu">
+        <div class="container">
+            <h2 class="section-title">Service Menu & Pricing</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.1rem; color: #666;">
+                Professional nail services with transparent pricing. All services include expert care and attention to detail.
+            </p>
+
+            <!-- Manicure Services -->
+            <div class="menu-category">
+                <div class="menu-category-header">
+                    💅 Manicure Services
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Basic Manicure</div>
+                            <div class="menu-item-description">Luxurious basic manicure with professional results and easy application process. Enjoy a long-lasting finish with basic polish.</div>
+                            <div class="menu-item-duration">45 minutes</div>
+                        </div>
+                        <div class="menu-item-price">$25</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Gel Manicure</div>
+                            <div class="menu-item-description">Luxurious gel manicure experience with long-lasting color, professional finish, and easy application that will leave you feeling pampered and glamorous.</div>
+                            <div class="menu-item-duration">1 hour</div>
+                        </div>
+                        <div class="menu-item-price">$30</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Structured Manicure</div>
+                            <div class="menu-item-description">Professional finish designed to provide added strength, durability, and structure to natural nails. Includes cuticle care and wide selection of vibrant colors.</div>
+                            <div class="menu-item-duration">1 hour 15 minutes</div>
+                        </div>
+                        <div class="menu-item-price">$35</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pedicure Services -->
+            <div class="menu-category">
+                <div class="menu-category-header">
+                    🦶 Pedicure Services
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Basic Pedicure</div>
+                            <div class="menu-item-description">Relaxing pedicure that pampers your feet and enhances foot health. Professional results with regular polish that leave you feeling rejuvenated.</div>
+                            <div class="menu-item-duration">45 minutes</div>
+                        </div>
+                        <div class="menu-item-price">$30</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Gel Pedicure</div>
+                            <div class="menu-item-description">Pampering gel pedicure session with long-lasting color and chip-resistant formula. Uses gel polish and UV/LED lamp for professional salon results.</div>
+                            <div class="menu-item-duration">1 hour 10 minutes</div>
+                        </div>
+                        <div class="menu-item-price">$35</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nail Enhancements -->
+            <div class="menu-category">
+                <div class="menu-category-header">
+                    ✨ Nail Enhancements
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Hard Gel Overlay</div>
+                            <div class="menu-item-description">Enhance your nails with durable protection, easy application, and high shine finish. Perfect for strengthening natural nails.</div>
+                            <div class="menu-item-duration">1 hour 30 minutes</div>
+                        </div>
+                        <div class="menu-item-price">$45</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Gel Tip Extension</div>
+                            <div class="menu-item-description">Achieve longer, natural-looking nails with pre-shaped soft gel tips. Lightweight, flexible extensions that mimic natural nails perfectly.</div>
+                            <div class="menu-item-duration">1 hour 30 minutes</div>
+                        </div>
+                        <div class="menu-item-price">$55</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Hard Gel Fill</div>
+                            <div class="menu-item-description">Maintenance service for hard gel enhanced nails. Includes basic manicure and filling regrowth area for a natural-looking finish.</div>
+                            <div class="menu-item-duration">1 hour 15 minutes</div>
+                        </div>
+                        <div class="menu-item-price">$35</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nail Art & Add-ons -->
+            <div class="menu-category">
+                <div class="menu-category-header">
+                    🎨 Nail Art & Repairs
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Nail Art</div>
+                            <div class="menu-item-description">Express your unique style with exclusive nail art! Creative designs that are long-lasting and incredibly easy to apply.</div>
+                            <div class="menu-item-duration">30 minutes</div>
+                        </div>
+                        <div class="menu-item-price">$5-20</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Nail Fix</div>
+                            <div class="menu-item-description">Professional repair service for broken or cracked nails that haven't damaged the nail plate or skin. Price depends on repair complexity.</div>
+                            <div class="menu-item-duration">15 minutes</div>
+                        </div>
+                        <div class="menu-item-price">$5-15</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Services -->
+            <div class="menu-category">
+                <div class="menu-category-header">
+                    🚗 Mobile Services
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Travel Fee</div>
+                            <div class="menu-item-description">Mobile services available! Prices vary based on distance from home technician's base location. Enjoy professional nail services in the comfort of your home.</div>
+                            <div class="menu-item-duration">30 minutes</div>
+                        </div>
+                        <div class="menu-item-price">$10-25</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: #666; margin-bottom: 1.5rem;">Ready to book your appointment?</p>
+                <button onclick="openBookingModal()" class="submit-button" style="width: auto; padding: 1rem 2rem;">
+                    📅 Book Your Service
+                </button>
             </div>
         </div>
     </section>
@@ -832,15 +1061,11 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>Welcome to Nailed By C. Nicole - Your Premier Nail Salon in Clinton, Maryland</h2>
-                    <p>We specialize in providing high-quality <strong>nail services</strong> with an unwavering commitment to excellence and artistry. Our business name, "Nailed By C. Nicole," reflects our dedication to achieving the perfect outcome for every client who walks through our doors. As a premier nail salon in Clinton, Maryland, we have built our reputation on exceptional service and attention to detail.</p>
+                    <p>We specialize in providing high-quality <strong>nail services</strong> with an unwavering commitment to excellence and artistry. As a premier nail salon in Clinton, Maryland, we have built our reputation on exceptional service and attention to detail.</p>
                     
-                    <p>At Nailed By C. Nicole, we pride ourselves on our meticulous attention to detail and our commitment to providing a comfortable, relaxing, and luxurious experience for our customers. Our comprehensive range of <strong>nail artistry</strong> services includes professional manicures, therapeutic pedicures, stunning nail art, gel polish applications, and custom nail enhancements designed to make every visit a memorable one.</p>
+                    <p>At Nailed By C. Nicole, we pride ourselves on our meticulous attention to detail and our commitment to providing a comfortable, relaxing, and luxurious experience for our customers. Our comprehensive range of <strong>nail artistry</strong> services includes professional manicures, therapeutic pedicures, stunning nail art, gel polish applications, and custom nail enhancements.</p>
                     
-                    <p>Our experienced nail technicians stay current with the latest trends in <strong>luxury nail</strong> care and nail art techniques, ensuring that you receive not only beautiful results but also the most innovative and modern nail services available. We use only premium quality products and maintain the highest standards of cleanliness and sanitation for your safety and peace of mind.</p>
-                    
-                    <p>Located in Clinton, Maryland, we serve clients from surrounding areas who appreciate quality nail care and personalized service. Whether you're preparing for a special occasion, maintaining your regular nail care routine, or simply treating yourself to some well-deserved pampering, our team is dedicated to helping you look and feel your absolute best.</p>
-                    
-                    <p>Thank you for choosing Nailed By C. Nicole as your trusted nail care destination. We look forward to providing you with excellent service in our safe, clean, and luxurious environment. <a href="#" onclick="openBookingModal(); return false;" style="color: #228B22; font-weight: bold;">Book your appointment today</a> and experience the difference that professional nail artistry can make.</p>
+                    <p>Located in Clinton, Maryland, we serve clients from surrounding areas who appreciate quality nail care and personalized service. Whether you're preparing for a special occasion or simply treating yourself to some well-deserved pampering, our team is dedicated to helping you look and feel your absolute best. <a href="#" onclick="openBookingModal(); return false;" style="color: #228B22; font-weight: bold;">Book your appointment today</a> and experience the difference that professional nail artistry can make.</p>
                 </div>
                 
                 <div class="about-images">
@@ -867,7 +1092,7 @@
                     
                     <!-- Quick Email Option -->
                     <div id="quickEmail" style="margin-top: 1rem;">
-                        <a href="mailto:info@nailedbycnicole.com?subject=Appointment%20Request&body=Hello,%0D%0A%0D%0AI%20would%20like%20to%20schedule%20an%20appointment.%0D%0A%0D%0AName:%0D%0APhone:%0D%0AService:%0D%0APreferred%20date/time:%0D%0A%0D%0AThank%20you!" class="email-button">
+                        <a href="mailto:christy@myruiz.com?subject=Appointment%20Request&body=Hello,%0D%0A%0D%0AI%20would%20like%20to%20schedule%20an%20appointment.%0D%0A%0D%0AName:%0D%0APhone:%0D%0AService:%0D%0APreferred%20date/time:%0D%0A%0D%0AThank%20you!" class="email-button">
                             📧 Email Us
                         </a>
                     </div>
@@ -1040,8 +1265,8 @@
                 <div style="text-align: center; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #eee;">
                     <p style="color: #666; margin-bottom: 1rem;">Prefer to call or email?</p>
                     <p style="color: #228B22; font-weight: bold; margin-bottom: 0.5rem;">📞 (240) 688-0912</p>
-                    <a href="mailto:info@nailedbycnicole.com?subject=Appointment%20Request&body=Hello,%0D%0A%0D%0AI%20would%20like%20to%20schedule%20an%20appointment.%0D%0A%0D%0AName:%0D%0APhone:%0D%0AService:%0D%0APreferred%20date/time:%0D%0A%0D%0AThank%20you!" style="color: #228B22; text-decoration: none;">
-                        📧 info@nailedbycnicole.com
+                    <a href="mailto:christy@myruiz.com?subject=Appointment%20Request&body=Hello,%0D%0A%0D%0AI%20would%20like%20to%20schedule%20an%20appointment.%0D%0A%0D%0AName:%0D%0APhone:%0D%0AService:%0D%0APreferred%20date/time:%0D%0A%0D%0AThank%20you!" style="color: #228B22; text-decoration: none;">
+                        📧 christy@myruiz.com
                     </a>
                 </div>
             </div>
