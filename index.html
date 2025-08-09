@@ -301,6 +301,66 @@
         .gallery-item:hover .gallery-overlay {
             opacity: 1;
         }
+
+        /* Instagram Feed Section */
+        .instagram-feed {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #FFF8DC 100%);
+        }
+
+        .instagram-container {
+            text-align: center;
+        }
+
+        .instagram-embed {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+
+        .instagram-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .instagram-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            color: white;
+            text-decoration: none;
+        }
+
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .instagram-placeholder {
+            background: #f0f0f0;
+            border-radius: 10px;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic;
+            border: 2px dashed #ddd;
+        }
+
+        /* About Section */
         .about {
             padding: 5rem 0;
             background: linear-gradient(135deg, #f8f9fa 0%, #FFF8DC 100%);
@@ -341,6 +401,42 @@
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
 
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 3rem 0 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #FFD700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .footer-section a:hover {
+            color: #228B22;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #555;
+            padding-top: 1rem;
+            color: #999;
+        }
+
         .email-button {
             display: inline-block;
             background: linear-gradient(135deg, #228B22, #32CD32);
@@ -360,40 +456,6 @@
             background: linear-gradient(135deg, #32CD32, #228B22);
             color: white;
             text-decoration: none;
-        }
-        footer {
-            background: #333;
-            color: white;
-            padding: 3rem 0 1rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            color: #d4af37;
-            margin-bottom: 1rem;
-        }
-
-        .footer-section p, .footer-section a {
-            color: #ccc;
-            text-decoration: none;
-            line-height: 1.6;
-        }
-
-        .footer-section a:hover {
-            color: #d4af37;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid #555;
-            padding-top: 1rem;
-            color: #999;
         }
 
         /* Animations */
@@ -468,32 +530,38 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="image4.jpg" alt="Luxury Manicure" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='💅';">
+                        <img src="image4.jpg" alt="Luxury Manicure" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
                     </div>
                     <h3>Luxury Manicure</h3>
                     <p>Treat your hands to a luxurious manicure that will leave your nails looking stunning and your skin feeling soft and rejuvenated. Includes shaping, cuticle care, hand massage, and your choice of polish.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="image5.jpg" alt="Professional Pedicure" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='🦶';">
+                        <img src="image5.jpg" alt="Professional Pedicure" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
                     </div>
                     <h3>Relaxing Pedicure</h3>
                     <p>Relax and unwind as you immerse your feet in a soothing, aromatic footbath. Our pedicure will pamper your feet with meticulous care, exfoliation, callus removal, and relaxing massage.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="image6.jpg" alt="Expert Fill-ins" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='✨';">
+                        <img src="image8.jpg" alt="Gel Polish" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                    </div>
+                    <h3>Gel Polish</h3>
+                    <p>Indulge in the long-lasting beauty of gel polish, known for its durability and brilliant shine. Our gel polish application includes nail shaping, cuticle care, and the perfect coating for chip-free, glossy nails that last for weeks.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="image6.jpg" alt="Expert Fill-ins" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
                     </div>
                     <h3>Expert Fill-ins</h3>
                     <p>Maintain the beauty of your acrylic or gel nails with our expert fill-in service. We carefully blend new growth with existing enhancements for a seamless, natural-looking result.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="image7.jpg" alt="Full Set Application" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='💎';">
+                        <img src="image7.jpg" alt="Full Set Application" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
                     </div>
                     <h3>Full Set Application</h3>
                     <p>Transform your nails with our full set service, ideal for adding length and strength. Choose from acrylic or gel extensions, customized to suit your desired shape and style.</p>
-                </div> nails with our full set service, ideal for adding length and strength. Choose from acrylic or gel extensions, customized to suit your desired shape and style.</p>
                 </div>
             </div>
         </div>
@@ -532,13 +600,11 @@
                 </a>
                 
                 <div class="instagram-embed">
-                    <!-- Instagram Feed Widget will go here -->
                     <div id="instagram-feed">
                         <p style="color: #666; margin-bottom: 1rem;">
                             <strong>@nailedbycnicole</strong> - Follow us for daily nail inspiration!
                         </p>
                         
-                        <!-- Placeholder for Instagram posts -->
                         <div class="instagram-grid">
                             <div class="instagram-placeholder">Latest Instagram Post 1</div>
                             <div class="instagram-placeholder">Latest Instagram Post 2</div>
@@ -571,7 +637,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
