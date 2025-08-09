@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nailed By C. Nicole - Luxury Nail Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #228B22;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #228B22;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #FFD700;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(34, 139, 34, 0.7), rgba(255, 215, 0, 0.6)), url('image1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #228B22;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background: #FFD700;
+            color: #8B4513;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #228B22, #FFD700);
+            margin: 1rem auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #228B22, #FFD700);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: #228B22;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #228B22;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #FFD700, #FFFF99);
+            border-radius: 50%;
+            margin: 0 auto 1rem auto;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 300px;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(34, 139, 34, 0.8), rgba(255, 215, 0, 0.8));
+            opacity: 0;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .about {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #FFF8DC 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .about-text p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image {
+            background: linear-gradient(rgba(34, 139, 34, 0.9), rgba(255, 215, 0, 0.8)), url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 3rem 0 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #d4af37;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .footer-section a:hover {
+            color: #d4af37;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #555;
+            padding-top: 1rem;
+            color: #999;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Nailed By C. Nicole</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Luxury Nail Artistry</h1>
+                <p>Where Beauty Meets Perfection</p>
+                <a href="#services" class="cta-button">Explore Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Premium Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://i.imgur.com/placeholder1.jpg" alt="Luxury Manicure" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='💅';">
+                    </div>
+                    <h3>Luxury Manicure</h3>
+                    <p>Treat your hands to a luxurious manicure that will leave your nails looking stunning and your skin feeling soft and rejuvenated. Includes shaping, cuticle care, hand massage, and your choice of polish.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://i.imgur.com/placeholder2.jpg" alt="Pedicure" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='🦶';">
+                    </div>
+                    <h3>Relaxing Pedicure</h3>
+                    <p>Relax and unwind as you immerse your feet in a soothing, aromatic footbath. Our pedicure will pamper your feet with meticulous care, exfoliation, callus removal, and relaxing massage.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://i.imgur.com/placeholder3.jpg" alt="Nail Extensions" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='✨';">
+                    </div>
+                    <h3>Expert Fill-ins</h3>
+                    <p>Maintain the beauty of your acrylic or gel nails with our expert fill-in service. We carefully blend new growth with existing enhancements for a seamless, natural-looking result.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://i.imgur.com/placeholder4.jpg" alt="Full Set" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='💎';">
+                    </div>
+                    <h3>Full Set Application</h3>
+                    <p>Transform your nails with our full set service, ideal for adding length and strength. Choose from acrylic or gel extensions, customized to suit your desired shape and style.</p>
+                </div> nails with our full set service, ideal for adding length and strength. Choose from acrylic or gel extensions, customized to suit your desired shape and style.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Work Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="image2.jpg" alt="Natural nail design with decorative accents">
+                    <div class="gallery-overlay">Natural Elegance</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image3.jpg" alt="Clear nails with elegant gold accent details">
+                    <div class="gallery-overlay">Sophisticated Style</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image1.jpg" alt="Hand moisturizing treatment with beautiful nails">
+                    <div class="gallery-overlay">Luxury Hand Care</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="instagram-feed" id="instagram">
+        <div class="container">
+            <h2 class="section-title">Follow Our Latest Work</h2>
+            <div class="instagram-container">
+                <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem;">
+                    See our newest nail art and behind-the-scenes content on Instagram
+                </p>
+                
+                <a href="https://www.instagram.com/nailedbycnicole/" target="_blank" class="instagram-button">
+                    📸 Follow @nailedbycnicole
+                </a>
+                
+                <div class="instagram-embed">
+                    <!-- Instagram Feed Widget will go here -->
+                    <div id="instagram-feed">
+                        <p style="color: #666; margin-bottom: 1rem;">
+                            <strong>@nailedbycnicole</strong> - Follow us for daily nail inspiration!
+                        </p>
+                        
+                        <!-- Placeholder for Instagram posts -->
+                        <div class="instagram-grid">
+                            <div class="instagram-placeholder">Latest Instagram Post 1</div>
+                            <div class="instagram-placeholder">Latest Instagram Post 2</div>
+                            <div class="instagram-placeholder">Latest Instagram Post 3</div>
+                            <div class="instagram-placeholder">Latest Instagram Post 4</div>
+                        </div>
+                        
+                        <p style="margin-top: 1.5rem; color: #999; font-size: 0.9rem;">
+                            To display live Instagram posts, you'll need to set up Instagram Basic Display API or use a third-party service like SnapWidget or LightWidget.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Welcome to Nailed By C. Nicole</h2>
+                    <p>We specialize in providing high-quality nail services with an unwavering commitment to excellence. Our business name reflects our focus on achieving the perfect outcome for every client.</p>
+                    <p>At Nailed By C. Nicole, we pride ourselves on our attention to detail and our commitment to providing a comfortable and relaxing experience. We offer a variety of services designed to make every visit memorable.</p>
+                    <p>Thank you for choosing us. We look forward to providing you with excellent service in a safe, clean, and luxurious environment.</p>
+                </div>
+                <div class="about-image">
+                    <div>Professional Nail Care<br>Since Day One</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>Phone: (240) 688-0912</p>
+                    <p>Email: info@nailedbycnicole.com</p>
+                    <p>Ready to book your appointment?</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Hours</h3>
+                    <p>Monday - Friday: 9AM - 7PM</p>
+                    <p>Saturday: 9AM - 6PM</p>
+                    <p>Sunday: 11AM - 5PM</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <a href="#">Instagram</a><br>
+                    <a href="#">Facebook</a><br>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nailed By C. Nicole. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>
