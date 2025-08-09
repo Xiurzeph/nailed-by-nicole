@@ -155,7 +155,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
@@ -317,7 +317,26 @@
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
 
-        /* Footer */
+        .email-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #228B22, #32CD32);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 0.5rem;
+        }
+
+        .email-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #32CD32, #228B22);
+            color: white;
+            text-decoration: none;
+        }
         footer {
             background: #333;
             color: white;
@@ -396,8 +415,9 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#instagram">Instagram</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -419,28 +439,28 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="https://i.imgur.com/placeholder1.jpg" alt="Luxury Manicure" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='💅';">
+                        <img src="image4.jpg" alt="Luxury Manicure" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='💅';">
                     </div>
                     <h3>Luxury Manicure</h3>
                     <p>Treat your hands to a luxurious manicure that will leave your nails looking stunning and your skin feeling soft and rejuvenated. Includes shaping, cuticle care, hand massage, and your choice of polish.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="https://i.imgur.com/placeholder2.jpg" alt="Pedicure" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='🦶';">
+                        <img src="image5.jpg" alt="Professional Pedicure" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='🦶';">
                     </div>
                     <h3>Relaxing Pedicure</h3>
                     <p>Relax and unwind as you immerse your feet in a soothing, aromatic footbath. Our pedicure will pamper your feet with meticulous care, exfoliation, callus removal, and relaxing massage.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="https://i.imgur.com/placeholder3.jpg" alt="Nail Extensions" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='✨';">
+                        <img src="image6.jpg" alt="Expert Fill-ins" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='✨';">
                     </div>
                     <h3>Expert Fill-ins</h3>
                     <p>Maintain the beauty of your acrylic or gel nails with our expert fill-in service. We carefully blend new growth with existing enhancements for a seamless, natural-looking result.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="https://i.imgur.com/placeholder4.jpg" alt="Full Set" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='💎';">
+                        <img src="image7.jpg" alt="Full Set Application" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='💎';">
                     </div>
                     <h3>Full Set Application</h3>
                     <p>Transform your nails with our full set service, ideal for adding length and strength. Choose from acrylic or gel extensions, customized to suit your desired shape and style.</p>
@@ -454,6 +474,14 @@
         <div class="container">
             <h2 class="section-title">Our Work Gallery</h2>
             <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="image4.jpg" alt="Professional nail polish application process">
+                    <div class="gallery-overlay">Professional Application</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image5.jpg" alt="Professional pedicure service in modern salon">
+                    <div class="gallery-overlay">Relaxing Pedicure</div>
+                </div>
                 <div class="gallery-item">
                     <img src="image2.jpg" alt="Natural nail design with decorative accents">
                     <div class="gallery-overlay">Natural Elegance</div>
@@ -528,8 +556,10 @@
                 <div class="footer-section">
                     <h3>Contact Info</h3>
                     <p>Phone: (240) 688-0912</p>
-                    <p>Email: info@nailedbycnicole.com</p>
-                    <p>Ready to book your appointment?</p>
+                    <a href="mailto:info@nailedbycnicole.com?subject=Nail%20Service%20Inquiry%20-%20Appointment%20Request&body=Hello,%0D%0A%0D%0AI%20am%20interested%20in%20scheduling%20an%20appointment%20at%20Nailed%20By%20C.%20Nicole.%0D%0A%0D%0AService%20I'm%20interested%20in:%0D%0A%0D%0APreferred%20date/time:%0D%0A%0D%0AAdditional%20details:%0D%0A%0D%0AThank%20you!" class="email-button">
+                        📧 Send Email Inquiry
+                    </a>
+                    <p style="margin-top: 1rem;">Ready to book your appointment?</p>
                 </div>
                 <div class="footer-section">
                     <h3>Hours</h3>
