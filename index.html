@@ -43,7 +43,31 @@
         }
 
         .logo {
-            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-circle {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #228B22, #FFD700);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo-circle img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
             font-weight: bold;
             color: #228B22;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -411,7 +435,12 @@
 <body>
     <header>
         <nav class="container">
-            <div class="logo">Nailed By C. Nicole</div>
+            <div class="logo">
+                <div class="logo-circle">
+                    <img src="logo.png" alt="Nailed By C. Nicole Logo" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #228B22, #FFD700)'; this.parentElement.innerHTML='<span style=color:white;font-weight:bold;font-size:1.2rem>NC</span>';">
+                </div>
+                <div class="logo-text">Nailed By C. Nicole</div>
+            </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
@@ -474,14 +503,6 @@
         <div class="container">
             <h2 class="section-title">Our Work Gallery</h2>
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="image4.jpg" alt="Professional nail polish application process">
-                    <div class="gallery-overlay">Professional Application</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="image5.jpg" alt="Professional pedicure service in modern salon">
-                    <div class="gallery-overlay">Relaxing Pedicure</div>
-                </div>
                 <div class="gallery-item">
                     <img src="image2.jpg" alt="Natural nail design with decorative accents">
                     <div class="gallery-overlay">Natural Elegance</div>
@@ -568,10 +589,11 @@
                     <p>Sunday: 11AM - 5PM</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Follow Us</h3>
-                    <a href="#">Instagram</a><br>
-                    <a href="#">Facebook</a><br>
-                    <a href="#">Twitter</a>
+                    <h3>Share</h3>
+                    <a href="https://www.instagram.com/nailedbycnicole/" target="_blank">Instagram</a><br>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourusername.github.io/nailedbycnicole" target="_blank">Share on Facebook</a><br>
+                    <a href="https://twitter.com/intent/tweet?text=Check%20out%20Nailed%20By%20C.%20Nicole%20for%20amazing%20nail%20services!&url=https://yourusername.github.io/nailedbycnicole" target="_blank">Share on Twitter</a><br>
+                    <a href="whatsapp://send?text=Check%20out%20Nailed%20By%20C.%20Nicole%20for%20amazing%20nail%20services!%20https://yourusername.github.io/nailedbycnicole" target="_blank">Share on WhatsApp</a>
                 </div>
             </div>
             <div class="footer-bottom">
