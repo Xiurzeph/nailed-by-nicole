@@ -1,6 +1,4 @@
-.nav-links a:hover::after {
-            width: 100%;
-        }<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -92,6 +90,7 @@
             display: flex;
             list-style: none;
             gap: 2rem;
+            align-items: center;
         }
 
         .nav-links a {
@@ -116,6 +115,10 @@
             background-color: #FFD700;
             transition: width 0.3s ease;
         }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
 
         .nav-links a.book-online {
             background: linear-gradient(135deg, #228B22, #32CD32);
@@ -138,6 +141,29 @@
             display: none;
         }
 
+        /* Mobile Menu Toggle (Hamburger) */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 1001; /* Ensure it's above other elements */
+        }
+        
+        .mobile-menu-toggle span {
+            width: 100%;
+            height: 3px;
+            background-color: #333;
+            border-radius: 10px;
+            transition: all 0.3s linear;
+            position: relative;
+            transform-origin: 1px;
+        }
+
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(34, 139, 34, 0.4), rgba(255, 215, 0, 0.3)), url('image1.JPG');
@@ -149,7 +175,7 @@
             align-items: center;
             text-align: center;
             color: white;
-            position: relative;
+            padding-top: 80px; /* Adjust for fixed header */
         }
 
         .hero-content h1 {
@@ -379,19 +405,7 @@
             gap: 1rem;
             margin-top: 2rem;
         }
-
-        .instagram-placeholder {
-            background: #f0f0f0;
-            border-radius: 10px;
-            height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-style: italic;
-            border: 2px dashed #ddd;
-        }
-
+        
         /* About Section */
         .about {
             padding: 5rem 0;
@@ -400,9 +414,15 @@
 
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr; /* Default to single column */
             gap: 3rem;
             align-items: center;
+        }
+        
+        @media (min-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+            }
         }
 
         .about-text h2 {
@@ -417,22 +437,7 @@
             line-height: 1.8;
             margin-bottom: 1.5rem;
         }
-
-        .about-image {
-            background: linear-gradient(rgba(34, 139, 34, 0.8), rgba(255, 215, 0, 0.7)), url('https://images.pexels.com/photos/7755212/pexels-photo-7755212.jpeg');
-            background-size: cover;
-            background-position: center;
-            height: 400px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            text-align: center;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-        }
-
+        
         /* Footer */
         footer {
             background: #333;
@@ -467,87 +472,6 @@
             border-top: 1px solid #555;
             padding-top: 1rem;
             color: #999;
-        }
-
-        .booking-form {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            margin-top: 1rem;
-            max-width: 600px;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #333;
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #228B22;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-
-        .submit-button {
-            background: linear-gradient(135deg, #228B22, #32CD32);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 25px;
-            font-weight: bold;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .submit-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .form-toggle {
-            margin-top: 1rem;
-            text-align: center;
-        }
-
-        .toggle-button {
-            background: none;
-            border: none;
-            color: #228B22;
-            text-decoration: underline;
-            cursor: pointer;
-            font-size: 0.9rem;
-        }
-
-        .booking-form.hidden {
-            display: none;
         }
 
         /* Modal Styles */
@@ -622,6 +546,69 @@
             box-shadow: none;
             margin: 0;
             padding: 0;
+        }
+        
+        .booking-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 1rem;
+            max-width: 600px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #228B22;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-button {
+            background: linear-gradient(135deg, #228B22, #32CD32);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
         @keyframes modalSlideIn {
@@ -704,32 +691,6 @@
             margin-top: 0.25rem;
         }
 
-        @media (max-width: 768px) {
-            .menu-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .menu-item-price {
-                margin-left: 0;
-                margin-top: 0.5rem;
-            }
-        }
-            .modal-content {
-                width: 95%;
-                margin: 5% auto;
-                max-height: 85vh;
-            }
-            
-            .modal-header {
-                padding: 1rem 1.5rem;
-            }
-            
-            .modal-body {
-                padding: 1.5rem;
-            }
-        }
-
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -744,8 +705,36 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .logo-text {
+                font-size: 1.5rem;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
             .nav-links {
-                display: none;
+                position: fixed;
+                top: 0;
+                right: -100%; /* Start off-screen */
+                height: 100vh;
+                width: 70%;
+                max-width: 300px;
+                background: white;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2.5rem;
+                transition: right 0.3s ease-in-out;
+            }
+            
+            .nav-links.open {
+                right: 0;
+            }
+
+            .nav-links a.book-online {
+                padding: 0.8rem 1.5rem; /* Ensure padding is consistent */
             }
 
             .hero-content h1 {
@@ -756,12 +745,32 @@
                 font-size: 1.2rem;
             }
 
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
             .section-title {
                 font-size: 2rem;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 5% auto;
+                max-height: 85vh;
+            }
+            
+            .modal-header {
+                padding: 1rem 1.5rem;
+            }
+            
+            .modal-body {
+                padding: 1.5rem;
+            }
+            
+            .menu-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .menu-item-price {
+                margin-left: 0;
+                margin-top: 0.5rem;
             }
         }
     </style>
@@ -775,7 +784,8 @@
                 </div>
                 <div class="logo-text">Nailed By C. Nicole</div>
             </div>
-            <ul class="nav-links">
+            
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#menu">Menu & Pricing</a></li>
@@ -784,9 +794,16 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#" onclick="openBookingModal(); return false;" class="book-online">📅 Book Online</a></li>
             </ul>
+
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
+    <!-- Main Content Sections -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
@@ -850,136 +867,41 @@
                 Professional nail services with transparent pricing. All services include expert care and attention to detail.
             </p>
 
-            <!-- Manicure Services -->
+            <!-- Menu Categories -->
             <div class="menu-category">
-                <div class="menu-category-header">
-                    💅 Manicure Services
-                </div>
+                <div class="menu-category-header">💅 Manicure Services</div>
                 <div class="menu-items">
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Basic Manicure</div>
-                            <div class="menu-item-description">Luxurious basic manicure with professional results and easy application process. Enjoy a long-lasting finish with basic polish.</div>
-                            <div class="menu-item-duration">45 minutes</div>
-                        </div>
-                        <div class="menu-item-price">$25</div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Gel Manicure</div>
-                            <div class="menu-item-description">Luxurious gel manicure experience with long-lasting color, professional finish, and easy application that will leave you feeling pampered and glamorous.</div>
-                            <div class="menu-item-duration">1 hour</div>
-                        </div>
-                        <div class="menu-item-price">$30</div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Structured Manicure</div>
-                            <div class="menu-item-description">Professional finish designed to provide added strength, durability, and structure to natural nails. Includes cuticle care and wide selection of vibrant colors.</div>
-                            <div class="menu-item-duration">1 hour 15 minutes</div>
-                        </div>
-                        <div class="menu-item-price">$35</div>
-                    </div>
+                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Basic Manicure</div><div class="menu-item-description">Luxurious basic manicure with professional results and easy application process. Enjoy a long-lasting finish with basic polish.</div><div class="menu-item-duration">45 minutes</div></div><div class="menu-item-price">$25</div></div>
+                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Gel Manicure</div><div class="menu-item-description">Luxurious gel manicure experience with long-lasting color, professional finish, and easy application that will leave you feeling pampered and glamorous.</div><div class="menu-item-duration">1 hour</div></div><div class="menu-item-price">$30</div></div>
+                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Structured Manicure</div><div class="menu-item-description">Professional finish designed to provide added strength, durability, and structure to natural nails. Includes cuticle care and wide selection of vibrant colors.</div><div class="menu-item-duration">1 hour 15 minutes</div></div><div class="menu-item-price">$35</div></div>
                 </div>
             </div>
-
-            <!-- Pedicure Services -->
             <div class="menu-category">
-                <div class="menu-category-header">
-                    🦶 Pedicure Services
-                </div>
+                <div class="menu-category-header">🦶 Pedicure Services</div>
                 <div class="menu-items">
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Basic Pedicure</div>
-                            <div class="menu-item-description">Relaxing pedicure that pampers your feet and enhances foot health. Professional results with regular polish that leave you feeling rejuvenated.</div>
-                            <div class="menu-item-duration">45 minutes</div>
-                        </div>
-                        <div class="menu-item-price">$30</div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Gel Pedicure</div>
-                            <div class="menu-item-description">Pampering gel pedicure session with long-lasting color and chip-resistant formula. Uses gel polish and UV/LED lamp for professional salon results.</div>
-                            <div class="menu-item-duration">1 hour 10 minutes</div>
-                        </div>
-                        <div class="menu-item-price">$35</div>
-                    </div>
+                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Basic Pedicure</div><div class="menu-item-description">Relaxing pedicure that pampers your feet and enhances foot health. Professional results with regular polish that leave you feeling rejuvenated.</div><div class="menu-item-duration">45 minutes</div></div><div class="menu-item-price">$30</div></div>
+                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Gel Pedicure</div><div class="menu-item-description">Pampering gel pedicure session with long-lasting color and chip-resistant formula. Uses gel polish and UV/LED lamp for professional salon results.</div><div class="menu-item-duration">1 hour 10 minutes</div></div><div class="menu-item-price">$35</div></div>
                 </div>
             </div>
-
-            <!-- Nail Enhancements -->
             <div class="menu-category">
-                <div class="menu-category-header">
-                    ✨ Nail Enhancements
-                </div>
+                <div class="menu-category-header">✨ Nail Enhancements</div>
                 <div class="menu-items">
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Hard Gel Overlay</div>
-                            <div class="menu-item-description">Enhance your nails with durable protection, easy application, and high shine finish. Perfect for strengthening natural nails.</div>
-                            <div class="menu-item-duration">1 hour 30 minutes</div>
-                        </div>
-                        <div class="menu-item-price">$45</div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Gel Tip Extension</div>
-                            <div class="menu-item-description">Achieve longer, natural-looking nails with pre-shaped soft gel tips. Lightweight, flexible extensions that mimic natural nails perfectly.</div>
-                            <div class="menu-item-duration">1 hour 30 minutes</div>
-                        </div>
-                        <div class="menu-item-price">$55</div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Hard Gel Fill</div>
-                            <div class="menu-item-description">Maintenance service for hard gel enhanced nails. Includes basic manicure and filling regrowth area for a natural-looking finish.</div>
-                            <div class="menu-item-duration">1 hour 15 minutes</div>
-                        </div>
-                        <div class="menu-item-price">$35</div>
-                    </div>
+                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Hard Gel Overlay</div><div class="menu-item-description">Enhance your nails with durable protection, easy application, and high shine finish. Perfect for strengthening natural nails.</div><div class="menu-item-duration">1 hour 30 minutes</div></div><div class="menu-item-price">$45</div></div>
+                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Gel Tip Extension</div><div class="menu-item-description">Achieve longer, natural-looking nails with pre-shaped soft gel tips. Lightweight, flexible extensions that mimic natural nails perfectly.</div><div class="menu-item-duration">1 hour 30 minutes</div></div><div class="menu-item-price">$55</div></div>
+                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Hard Gel Fill</div><div class="menu-item-description">Maintenance service for hard gel enhanced nails. Includes basic manicure and filling regrowth area for a natural-looking finish.</div><div class="menu-item-duration">1 hour 15 minutes</div></div><div class="menu-item-price">$35</div></div>
                 </div>
             </div>
-
-            <!-- Nail Art & Add-ons -->
             <div class="menu-category">
-                <div class="menu-category-header">
-                    🎨 Nail Art & Repairs
-                </div>
+                <div class="menu-category-header">🎨 Nail Art & Repairs</div>
                 <div class="menu-items">
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Nail Art</div>
-                            <div class="menu-item-description">Express your unique style with exclusive nail art! Creative designs that are long-lasting and incredibly easy to apply.</div>
-                            <div class="menu-item-duration">30 minutes</div>
-                        </div>
-                        <div class="menu-item-price">$5-20</div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Nail Fix</div>
-                            <div class="menu-item-description">Professional repair service for broken or cracked nails that haven't damaged the nail plate or skin. Price depends on repair complexity.</div>
-                            <div class="menu-item-duration">15 minutes</div>
-                        </div>
-                        <div class="menu-item-price">$5-15</div>
-                    </div>
+                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Nail Art</div><div class="menu-item-description">Express your unique style with exclusive nail art! Creative designs that are long-lasting and incredibly easy to apply.</div><div class="menu-item-duration">30 minutes</div></div><div class="menu-item-price">$5-20</div></div>
+                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Nail Fix</div><div class="menu-item-description">Professional repair service for broken or cracked nails that haven't damaged the nail plate or skin. Price depends on repair complexity.</div><div class="menu-item-duration">15 minutes</div></div><div class="menu-item-price">$5-15</div></div>
                 </div>
             </div>
-
-            <!-- Mobile Services -->
             <div class="menu-category">
-                <div class="menu-category-header">
-                    🚗 Mobile Services
-                </div>
+                <div class="menu-category-header">🚗 Mobile Services</div>
                 <div class="menu-items">
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Travel Fee</div>
-                            <div class="menu-item-description">Mobile services available! Prices vary based on distance from home technician's base location. Enjoy professional nail services in the comfort of your home.</div>
-                            <div class="menu-item-duration">30 minutes</div>
-                        </div>
-                        <div class="menu-item-price">$10-25</div>
-                    </div>
+                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Travel Fee</div><div class="menu-item-description">Mobile services available! Prices vary based on distance from home technician's base location. Enjoy professional nail services in the comfort of your home.</div><div class="menu-item-duration">30 minutes</div></div><div class="menu-item-price">$10-25</div></div>
                 </div>
             </div>
 
@@ -999,18 +921,9 @@
                 Discover the artistry and precision that defines our work. Each image represents our commitment to excellence in <strong>nail artistry</strong> and the <strong>luxury nail</strong> experience we provide to every client in Clinton, Maryland.
             </p>
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="image2.JPG" alt="Natural nail design with decorative accents">
-                    <div class="gallery-overlay">Natural Elegance</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="image3.JPG" alt="Clear nails with elegant gold accent details">
-                    <div class="gallery-overlay">Sophisticated Style</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="image1.JPG" alt="Hand moisturizing treatment with beautiful nails">
-                    <div class="gallery-overlay">Luxury Hand Care</div>
-                </div>
+                <div class="gallery-item"><img src="image2.JPG" alt="Natural nail design with decorative accents"><div class="gallery-overlay">Natural Elegance</div></div>
+                <div class="gallery-item"><img src="image3.JPG" alt="Clear nails with elegant gold accent details"><div class="gallery-overlay">Sophisticated Style</div></div>
+                <div class="gallery-item"><img src="image1.JPG" alt="Hand moisturizing treatment with beautiful nails"><div class="gallery-overlay">Luxury Hand Care</div></div>
             </div>
         </div>
     </section>
@@ -1022,33 +935,15 @@
                 Stay up to date with our newest <strong>nail artistry</strong> creations and recent client transformations. Follow our journey of creating beautiful nails for our valued clients in Clinton, Maryland.
             </p>
             <div class="instagram-container">
-                <p style="font-size: 1.2rem; color: #666; margin-bottom: 1rem;">
-                    Check out our newest <strong>nail art</strong> and recent client work showcasing our expertise in <strong>luxury nail artistry</strong>
-                </p>
-                
-                <a href="https://www.instagram.com/nailedbycnicole/" target="_blank" class="instagram-button">
-                    📸 Follow @nailedbycnicole on Instagram
-                </a>
-                
+                <p style="font-size: 1.2rem; color: #666; margin-bottom: 1rem;">Check out our newest <strong>nail art</strong> and recent client work showcasing our expertise in <strong>luxury nail artistry</strong></p>
+                <a href="https://www.instagram.com/nailedbycnicole/" target="_blank" class="instagram-button">📸 Follow @nailedbycnicole on Instagram</a>
                 <div class="instagram-embed">
                     <div id="latest-work-gallery">
                         <div class="instagram-grid">
-                            <div class="gallery-item" style="height: 250px;">
-                                <img src="recent1.jpg" alt="Recent nail work 1" onerror="this.parentElement.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;background:#f0f0f0;color:#666;border-radius:10px;&quot;>Recent Work 1</div>';">
-                                <div class="gallery-overlay">Latest Work</div>
-                            </div>
-                            <div class="gallery-item" style="height: 250px;">
-                                <img src="recent2.jpg" alt="Recent nail work 2" onerror="this.parentElement.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;background:#f0f0f0;color:#666;border-radius:10px;&quot;>Recent Work 2</div>';">
-                                <div class="gallery-overlay">Fresh Design</div>
-                            </div>
-                            <div class="gallery-item" style="height: 250px;">
-                                <img src="recent3.jpg" alt="Recent nail work 3" onerror="this.parentElement.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;background:#f0f0f0;color:#666;border-radius:10px;&quot;>Recent Work 3</div>';">
-                                <div class="gallery-overlay">New Style</div>
-                            </div>
-                            <div class="gallery-item" style="height: 250px;">
-                                <img src="recent4.jpg" alt="Recent nail work 4" onerror="this.parentElement.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;background:#f0f0f0;color:#666;border-radius:10px;&quot;>Recent Work 4</div>';">
-                                <div class="gallery-overlay">Client Favorite</div>
-                            </div>
+                            <div class="gallery-item" style="height: 250px;"><img src="recent1.jpg" alt="Recent nail work 1" onerror="this.parentElement.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;background:#f0f0f0;color:#666;border-radius:10px;&quot;>Recent Work 1</div>';"><div class="gallery-overlay">Latest Work</div></div>
+                            <div class="gallery-item" style="height: 250px;"><img src="recent2.jpg" alt="Recent nail work 2" onerror="this.parentElement.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;background:#f0f0f0;color:#666;border-radius:10px;&quot;>Recent Work 2</div>';"><div class="gallery-overlay">Fresh Design</div></div>
+                            <div class="gallery-item" style="height: 250px;"><img src="recent3.jpg" alt="Recent nail work 3" onerror="this.parentElement.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;background:#f0f0f0;color:#666;border-radius:10px;&quot;>Recent Work 3</div>';"><div class="gallery-overlay">New Style</div></div>
+                            <div class="gallery-item" style="height: 250px;"><img src="recent4.jpg" alt="Recent nail work 4" onerror="this.parentElement.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;background:#f0f0f0;color:#666;border-radius:10px;&quot;>Recent Work 4</div>';"><div class="gallery-overlay">Client Favorite</div></div>
                         </div>
                     </div>
                 </div>
@@ -1062,22 +957,8 @@
                 <div class="about-text">
                     <h2>Welcome to Nailed By C. Nicole - Your Premier Nail Salon in Clinton, Maryland</h2>
                     <p>We specialize in providing high-quality <strong>nail services</strong> with an unwavering commitment to excellence and artistry. As a premier nail salon in Clinton, Maryland, we have built our reputation on exceptional service and attention to detail.</p>
-                    
                     <p>At Nailed By C. Nicole, we pride ourselves on our meticulous attention to detail and our commitment to providing a comfortable, relaxing, and luxurious experience for our customers. Our comprehensive range of <strong>nail artistry</strong> services includes professional manicures, therapeutic pedicures, stunning nail art, gel polish applications, and custom nail enhancements.</p>
-                    
                     <p>Located in Clinton, Maryland, we serve clients from surrounding areas who appreciate quality nail care and personalized service. Whether you're preparing for a special occasion or simply treating yourself to some well-deserved pampering, our team is dedicated to helping you look and feel your absolute best. <a href="#" onclick="openBookingModal(); return false;" style="color: #228B22; font-weight: bold;">Book your appointment today</a> and experience the difference that professional nail artistry can make.</p>
-                </div>
-                
-                <div class="about-images">
-                    <div class="about-image">
-                        <div>Professional<br>Nail Care</div>
-                    </div>
-                    <div class="about-image about-image-2">
-                        <div>Expert<br>Techniques</div>
-                    </div>
-                    <div class="about-image about-image-3">
-                        <div>Beautiful<br>Results</div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1086,194 +967,59 @@
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <p>Phone: <a href="tel:2406880912" style="color: inherit; text-decoration: none;">(240) 688-0912</a></p>
-                    
-                    <!-- Quick Email Option -->
-                    <div id="quickEmail" style="margin-top: 1rem;">
-                        <a href="mailto:christy@myruiz.com?subject=Appointment%20Request&body=Hello,%0D%0A%0D%0AI%20would%20like%20to%20schedule%20an%20appointment.%0D%0A%0D%0AName:%0D%0APhone:%0D%0AService:%0D%0APreferred%20date/time:%0D%0A%0D%0AThank%20you!" class="email-button">
-                            📧 Email Us
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Business Hours</h3>
-                    <p>Monday: Closed</p>
-                    <p>Tuesday: 2PM - 6PM</p>
-                    <p>Wednesday: Closed</p>
-                    <p>Thursday: 9AM - 7PM</p>
-                    <p>Friday: 9AM - 7PM</p>
-                    <p>Saturday: Closed</p>
-                    <p>Sunday: Closed</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <a href="#luxury-manicure" style="color: #ccc; text-decoration: none; line-height: 1.6;">Luxury Manicures</a><br>
-                    <a href="#relaxing-pedicure" style="color: #ccc; text-decoration: none; line-height: 1.6;">Relaxing Pedicures</a><br>
-                    <a href="#gel-polish" style="color: #ccc; text-decoration: none; line-height: 1.6;">Gel Polish</a><br>
-                    <a href="#expert-fill-ins" style="color: #ccc; text-decoration: none; line-height: 1.6;">Expert Fill-ins</a><br>
-                    <a href="#full-set-application" style="color: #ccc; text-decoration: none; line-height: 1.6;">Full Set Application</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Share</h3>
-                    <a href="https://www.instagram.com/nailedbycnicole/" target="_blank">Instagram</a><br>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourusername.github.io/nailedbycnicole" target="_blank">Share on Facebook</a><br>
-                    <a href="https://twitter.com/intent/tweet?text=Check%20out%20Nailed%20By%20C.%20Nicole%20for%20amazing%20nail%20services!&url=https://yourusername.github.io/nailedbycnicole" target="_blank">Share on Twitter</a><br>
-                    <a href="whatsapp://send?text=Check%20out%20Nailed%20By%20C.%20Nicole%20for%20amazing%20nail%20services!%20https://yourusername.github.io/nailedbycnicole" target="_blank">Share on WhatsApp</a>
-                </div>
+                <div class="footer-section"><h3>Contact Info</h3><p>Phone: <a href="tel:2406880912" style="color: inherit; text-decoration: none;">(240) 688-0912</a></p><div id="quickEmail" style="margin-top: 1rem;"><a href="mailto:christy@myruiz.com?subject=Appointment%20Request&body=Hello,%0D%0A%0D%0AI%20would%20like%20to%20schedule%20an%20appointment.%0D%0A%0D%0AName:%0D%0APhone:%0D%0AService:%0D%0APreferred%20date/time:%0D%0A%0D%0AThank%20you!" class="email-button">📧 Email Us</a></div></div>
+                <div class="footer-section"><h3>Business Hours</h3><p>Monday: Closed</p><p>Tuesday: 2PM - 6PM</p><p>Wednesday: Closed</p><p>Thursday: 9AM - 7PM</p><p>Friday: 9AM - 7PM</p><p>Saturday: Closed</p><p>Sunday: Closed</p></div>
+                <div class="footer-section"><h3>Services</h3><a href="#luxury-manicure" style="color: #ccc; text-decoration: none; line-height: 1.6;">Luxury Manicures</a><br><a href="#relaxing-pedicure" style="color: #ccc; text-decoration: none; line-height: 1.6;">Relaxing Pedicures</a><br><a href="#gel-polish" style="color: #ccc; text-decoration: none; line-height: 1.6;">Gel Polish</a><br><a href="#expert-fill-ins" style="color: #ccc; text-decoration: none; line-height: 1.6;">Expert Fill-ins</a><br><a href="#full-set-application" style="color: #ccc; text-decoration: none; line-height: 1.6;">Full Set Application</a></div>
+                <div class="footer-section"><h3>Share</h3><a href="https://www.instagram.com/nailedbycnicole/" target="_blank">Instagram</a><br><a href="https://www.facebook.com/sharer/sharer.php?u=https://yourusername.github.io/nailedbycnicole" target="_blank">Share on Facebook</a><br><a href="https://twitter.com/intent/tweet?text=Check%20out%20Nailed%20By%20C.%20Nicole%20for%20amazing%20nail%20services!&url=https://yourusername.github.io/nailedbycnicole" target="_blank">Share on Twitter</a><br><a href="whatsapp://send?text=Check%20out%20Nailed%20By%20C.%20Nicole%20for%20amazing%20nail%20services!%20https://yourusername.github.io/nailedbycnicole" target="_blank">Share on WhatsApp</a></div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Nailed By C. Nicole. All rights reserved.</p>
-            </div>
+            <div class="footer-bottom"><p>&copy; 2025 Nailed By C. Nicole. All rights reserved.</p></div>
         </div>
     </footer>
 
     <!-- Booking Modal -->
     <div id="bookingModal" class="modal">
         <div class="modal-content">
-            <div class="modal-header">
-                <h3>📅 Book Your Appointment</h3>
-                <button class="close" onclick="closeBookingModal()">&times;</button>
-            </div>
+            <div class="modal-header"><h3>📅 Book Your Appointment</h3><button class="close" onclick="closeBookingModal()">&times;</button></div>
             <div class="modal-body">
-                <!-- Booking Form -->
                 <form action="https://formspree.io/f/movlyard" method="POST" class="booking-form" id="modalBookingForm">
-                    <!-- Hidden field to send to your Google Fi SMS -->
                     <input type="hidden" name="_to" value="2406880912@msg.fi.google.com">
                     <input type="hidden" name="_subject" value="New Appointment Request - Nailed By C. Nicole">
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="modal_name">Full Name *</label>
-                            <input type="text" id="modal_name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="modal_phone">Phone Number *</label>
-                            <input type="tel" id="modal_phone" name="phone" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="modal_email">Email Address *</label>
-                        <input type="email" id="modal_email" name="email" required>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="modal_service">Service *</label>
-                            <select id="modal_service" name="service" required>
-                                <option value="">Select a service</option>
-                                <option value="Luxury Manicure">Luxury Manicure</option>
-                                <option value="Relaxing Pedicure">Relaxing Pedicure</option>
-                                <option value="Gel Polish">Gel Polish</option>
-                                <option value="Expert Fill-ins">Expert Fill-ins</option>
-                                <option value="Full Set Application">Full Set Application</option>
-                                <option value="Multiple Services">Multiple Services</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="modal_date">Preferred Date *</label>
-                            <input type="date" id="modal_date" name="preferred_date" required>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="modal_time">Preferred Time *</label>
-                            <select id="modal_time" name="preferred_time" required>
-                                <option value="">Select time</option>
-                                <optgroup label="Tuesday (2PM - 6PM)">
-                                    <option value="Tuesday 2:00 PM">2:00 PM</option>
-                                    <option value="Tuesday 2:30 PM">2:30 PM</option>
-                                    <option value="Tuesday 3:00 PM">3:00 PM</option>
-                                    <option value="Tuesday 3:30 PM">3:30 PM</option>
-                                    <option value="Tuesday 4:00 PM">4:00 PM</option>
-                                    <option value="Tuesday 4:30 PM">4:30 PM</option>
-                                    <option value="Tuesday 5:00 PM">5:00 PM</option>
-                                    <option value="Tuesday 5:30 PM">5:30 PM</option>
-                                </optgroup>
-                                <optgroup label="Thursday (9AM - 7PM)">
-                                    <option value="Thursday 9:00 AM">9:00 AM</option>
-                                    <option value="Thursday 9:30 AM">9:30 AM</option>
-                                    <option value="Thursday 10:00 AM">10:00 AM</option>
-                                    <option value="Thursday 10:30 AM">10:30 AM</option>
-                                    <option value="Thursday 11:00 AM">11:00 AM</option>
-                                    <option value="Thursday 11:30 AM">11:30 AM</option>
-                                    <option value="Thursday 12:00 PM">12:00 PM</option>
-                                    <option value="Thursday 12:30 PM">12:30 PM</option>
-                                    <option value="Thursday 1:00 PM">1:00 PM</option>
-                                    <option value="Thursday 1:30 PM">1:30 PM</option>
-                                    <option value="Thursday 2:00 PM">2:00 PM</option>
-                                    <option value="Thursday 2:30 PM">2:30 PM</option>
-                                    <option value="Thursday 3:00 PM">3:00 PM</option>
-                                    <option value="Thursday 3:30 PM">3:30 PM</option>
-                                    <option value="Thursday 4:00 PM">4:00 PM</option>
-                                    <option value="Thursday 4:30 PM">4:30 PM</option>
-                                    <option value="Thursday 5:00 PM">5:00 PM</option>
-                                    <option value="Thursday 5:30 PM">5:30 PM</option>
-                                    <option value="Thursday 6:00 PM">6:00 PM</option>
-                                    <option value="Thursday 6:30 PM">6:30 PM</option>
-                                </optgroup>
-                                <optgroup label="Friday (9AM - 7PM)">
-                                    <option value="Friday 9:00 AM">9:00 AM</option>
-                                    <option value="Friday 9:30 AM">9:30 AM</option>
-                                    <option value="Friday 10:00 AM">10:00 AM</option>
-                                    <option value="Friday 10:30 AM">10:30 AM</option>
-                                    <option value="Friday 11:00 AM">11:00 AM</option>
-                                    <option value="Friday 11:30 AM">11:30 AM</option>
-                                    <option value="Friday 12:00 PM">12:00 PM</option>
-                                    <option value="Friday 12:30 PM">12:30 PM</option>
-                                    <option value="Friday 1:00 PM">1:00 PM</option>
-                                    <option value="Friday 1:30 PM">1:30 PM</option>
-                                    <option value="Friday 2:00 PM">2:00 PM</option>
-                                    <option value="Friday 2:30 PM">2:30 PM</option>
-                                    <option value="Friday 3:00 PM">3:00 PM</option>
-                                    <option value="Friday 3:30 PM">3:30 PM</option>
-                                    <option value="Friday 4:00 PM">4:00 PM</option>
-                                    <option value="Friday 4:30 PM">4:30 PM</option>
-                                    <option value="Friday 5:00 PM">5:00 PM</option>
-                                    <option value="Friday 5:30 PM">5:30 PM</option>
-                                    <option value="Friday 6:00 PM">6:00 PM</option>
-                                    <option value="Friday 6:30 PM">6:30 PM</option>
-                                </optgroup>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="modal_newclient">New Client?</label>
-                            <select id="modal_newclient" name="new_client">
-                                <option value="Yes">Yes, first time</option>
-                                <option value="No">No, returning client</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="modal_notes">Additional Notes (optional)</label>
-                        <textarea id="modal_notes" name="notes" rows="3" placeholder="Any specific requests, nail art ideas, or questions..."></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-button">
-                        📅 Request Appointment
-                    </button>
-
-                    <p style="font-size: 0.8rem; color: #666; text-align: center; margin-top: 1rem;">
-                        You'll receive a text message with booking details
-                    </p>
+                    <div class="form-row"><div class="form-group"><label for="modal_name">Full Name *</label><input type="text" id="modal_name" name="name" required></div><div class="form-group"><label for="modal_phone">Phone Number *</label><input type="tel" id="modal_phone" name="phone" required></div></div>
+                    <div class="form-group"><label for="modal_email">Email Address *</label><input type="email" id="modal_email" name="email" required></div>
+                    <div class="form-row"><div class="form-group"><label for="modal_service">Service *</label><select id="modal_service" name="service" required><option value="">Select a service</option><option value="Luxury Manicure">Luxury Manicure</option><option value="Relaxing Pedicure">Relaxing Pedicure</option><option value="Gel Polish">Gel Polish</option><option value="Expert Fill-ins">Expert Fill-ins</option><option value="Full Set Application">Full Set Application</option><option value="Multiple Services">Multiple Services</option></select></div><div class="form-group"><label for="modal_date">Preferred Date *</label><input type="date" id="modal_date" name="preferred_date" required></div></div>
+                    <div class="form-row"><div class="form-group"><label for="modal_time">Preferred Time *</label><select id="modal_time" name="preferred_time" required><option value="">Select time</option><optgroup label="Tuesday (2PM - 6PM)"><option value="Tuesday 2:00 PM">2:00 PM</option><option value="Tuesday 2:30 PM">2:30 PM</option><option value="Tuesday 3:00 PM">3:00 PM</option><option value="Tuesday 3:30 PM">3:30 PM</option><option value="Tuesday 4:00 PM">4:00 PM</option><option value="Tuesday 4:30 PM">4:30 PM</option><option value="Tuesday 5:00 PM">5:00 PM</option><option value="Tuesday 5:30 PM">5:30 PM</option></optgroup><optgroup label="Thursday (9AM - 7PM)"><option value="Thursday 9:00 AM">9:00 AM</option><option value="Thursday 9:30 AM">9:30 AM</option><option value="Thursday 10:00 AM">10:00 AM</option><option value="Thursday 10:30 AM">10:30 AM</option><option value="Thursday 11:00 AM">11:00 AM</option><option value="Thursday 11:30 AM">11:30 AM</option><option value="Thursday 12:00 PM">12:00 PM</option><option value="Thursday 12:30 PM">12:30 PM</option><option value="Thursday 1:00 PM">1:00 PM</option><option value="Thursday 1:30 PM">1:30 PM</option><option value="Thursday 2:00 PM">2:00 PM</option><option value="Thursday 2:30 PM">2:30 PM</option><option value="Thursday 3:00 PM">3:00 PM</option><option value="Thursday 3:30 PM">3:30 PM</option><option value="Thursday 4:00 PM">4:00 PM</option><option value="Thursday 4:30 PM">4:30 PM</option><option value="Thursday 5:00 PM">5:00 PM</option><option value="Thursday 5:30 PM">5:30 PM</option><option value="Thursday 6:00 PM">6:00 PM</option><option value="Thursday 6:30 PM">6:30 PM</option></optgroup><optgroup label="Friday (9AM - 7PM)"><option value="Friday 9:00 AM">9:00 AM</option><option value="Friday 9:30 AM">9:30 AM</option><option value="Friday 10:00 AM">10:00 AM</option><option value="Friday 10:30 AM">10:30 AM</option><option value="Friday 11:00 AM">11:00 AM</option><option value="Friday 11:30 AM">11:30 AM</option><option value="Friday 12:00 PM">12:00 PM</option><option value="Friday 12:30 PM">12:30 PM</option><option value="Friday 1:00 PM">1:00 PM</option><option value="Friday 1:30 PM">1:30 PM</option><option value="Friday 2:00 PM">2:00 PM</option><option value="Friday 2:30 PM">2:30 PM</option><option value="Friday 3:00 PM">3:00 PM</option><option value="Friday 3:30 PM">3:30 PM</option><option value="Friday 4:00 PM">4:00 PM</option><option value="Friday 4:30 PM">4:30 PM</option><option value="Friday 5:00 PM">5:00 PM</option><option value="Friday 5:30 PM">5:30 PM</option><option value="Friday 6:00 PM">6:00 PM</option><option value="Friday 6:30 PM">6:30 PM</option></optgroup></select></div><div class="form-group"><label for="modal_newclient">New Client?</label><select id="modal_newclient" name="new_client"><option value="Yes">Yes, first time</option><option value="No">No, returning client</option></select></div></div>
+                    <div class="form-group"><label for="modal_notes">Additional Notes (optional)</label><textarea id="modal_notes" name="notes" rows="3" placeholder="Any specific requests, nail art ideas, or questions..."></textarea></div>
+                    <button type="submit" class="submit-button">📅 Request Appointment</button>
+                    <p style="font-size: 0.8rem; color: #666; text-align: center; margin-top: 1rem;">You'll receive a text message with booking details</p>
                 </form>
-
-                <div style="text-align: center; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #eee;">
-                    <p style="color: #666; margin-bottom: 1rem;">Prefer to call or email?</p>
-                    <p style="color: #228B22; font-weight: bold; margin-bottom: 0.5rem;">📞 (240) 688-0912</p>
-                    <a href="mailto:christy@myruiz.com?subject=Appointment%20Request&body=Hello,%0D%0A%0D%0AI%20would%20like%20to%20schedule%20an%20appointment.%0D%0A%0D%0AName:%0D%0APhone:%0D%0AService:%0D%0APreferred%20date/time:%0D%0A%0D%0AThank%20you!" style="color: #228B22; text-decoration: none;">
-                        📧 christy@myruiz.com
-                    </a>
-                </div>
+                <div style="text-align: center; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #eee;"><p style="color: #666; margin-bottom: 1rem;">Prefer to call or email?</p><p style="color: #228B22; font-weight: bold; margin-bottom: 0.5rem;">📞 (240) 688-0912</p><a href="mailto:christy@myruiz.com?subject=Appointment%20Request&body=Hello,%0D%0A%0D%0AI%20would%20like%20to%20schedule%20an%20appointment.%0D%0A%0D%0AName:%0D%0APhone:%0D%0AService:%0D%0APreferred%20date/time:%0D%0A%0D%0AThank%20you!" style="color: #228B22; text-decoration: none;">📧 christy@myruiz.com</a></div>
             </div>
         </div>
     </div>
 
     <script>
+        // --- Mobile Menu ---
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        // Toggle mobile menu
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+
+        // Close mobile menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('open')) {
+                    // We don't close the modal if the booking link is clicked,
+                    // as the openBookingModal function handles that flow.
+                    if (!link.classList.contains('book-online')) {
+                       navLinks.classList.remove('open');
+                    }
+                }
+            });
+        });
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1298,30 +1044,15 @@
             }
         });
 
-        // Booking form toggle functionality
-        function toggleBookingForm() {
-            const form = document.getElementById('bookingForm');
-            const quickEmail = document.getElementById('quickEmail');
-            
-            if (form.classList.contains('hidden')) {
-                form.classList.remove('hidden');
-                quickEmail.style.display = 'none';
-            } else {
-                form.classList.add('hidden');
-                quickEmail.style.display = 'block';
-            }
-        }
-
-        // Set minimum date to today
+        // Set minimum date to today for date inputs
         document.addEventListener('DOMContentLoaded', function() {
-            const dateInputs = ['date', 'modal_date'];
+            const dateInputs = ['modal_date'];
             dateInputs.forEach(id => {
                 const dateInput = document.getElementById(id);
                 if (dateInput) {
                     const today = new Date().toISOString().split('T')[0];
                     dateInput.setAttribute('min', today);
                     
-                    // Set max date to 3 months from now
                     const maxDate = new Date();
                     maxDate.setMonth(maxDate.getMonth() + 3);
                     dateInput.setAttribute('max', maxDate.toISOString().split('T')[0]);
@@ -1329,30 +1060,27 @@
             });
         });
 
-        // Modal functions
+        // --- Modal functions ---
         function openBookingModal() {
+            // Close the mobile nav if it's open
+            if (navLinks.classList.contains('open')) {
+                navLinks.classList.remove('open');
+            }
             const modal = document.getElementById('bookingModal');
             modal.style.display = 'block';
-            
-            // Scroll to top of modal content
             setTimeout(() => {
-                const modalContent = modal.querySelector('.modal-content');
-                modalContent.scrollTop = 0;
+                modal.querySelector('.modal-content').scrollTop = 0;
             }, 100);
-            
-            // Prevent body scroll
             document.body.style.overflow = 'hidden';
         }
 
         function closeBookingModal() {
             const modal = document.getElementById('bookingModal');
             modal.style.display = 'none';
-            
-            // Restore body scroll
             document.body.style.overflow = 'auto';
         }
 
-        // Close modal when clicking outside
+        // Close modal when clicking outside of it
         window.onclick = function(event) {
             const modal = document.getElementById('bookingModal');
             if (event.target === modal) {
@@ -1360,7 +1088,7 @@
             }
         }
 
-        // Close modal with escape key
+        // Close modal with the Escape key
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 closeBookingModal();
