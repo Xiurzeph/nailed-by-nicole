@@ -976,26 +976,156 @@
         </div>
     </footer>
 
-    <!-- Booking Modal -->
-    <div id="bookingModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header"><h3>📅 Book Your Appointment</h3><button class="close" onclick="closeBookingModal()">&times;</button></div>
-            <div class="modal-body">
-                <form action="https://formspree.io/f/movlyard" method="POST" class="booking-form" id="modalBookingForm">
-                    <input type="hidden" name="_to" value="2406880912@msg.fi.google.com">
-                    <input type="hidden" name="_subject" value="New Appointment Request - Nailed By C. Nicole">
-                    <div class="form-row"><div class="form-group"><label for="modal_name">Full Name *</label><input type="text" id="modal_name" name="name" required></div><div class="form-group"><label for="modal_phone">Phone Number *</label><input type="tel" id="modal_phone" name="phone" required></div></div>
-                    <div class="form-group"><label for="modal_email">Email Address *</label><input type="email" id="modal_email" name="email" required></div>
-                    <div class="form-row"><div class="form-group"><label for="modal_service">Service *</label><select id="modal_service" name="service" required><option value="">Select a service</option><option value="Luxury Manicure">Luxury Manicure</option><option value="Relaxing Pedicure">Relaxing Pedicure</option><option value="Gel Polish">Gel Polish</option><option value="Expert Fill-ins">Expert Fill-ins</option><option value="Full Set Application">Full Set Application</option><option value="Multiple Services">Multiple Services</option></select></div><div class="form-group"><label for="modal_date">Preferred Date *</label><input type="date" id="modal_date" name="preferred_date" required></div></div>
-                    <div class="form-row"><div class="form-group"><label for="modal_time">Preferred Time *</label><select id="modal_time" name="preferred_time" required><option value="">Select time</option><optgroup label="Tuesday (2PM - 6PM)"><option value="Tuesday 2:00 PM">2:00 PM</option><option value="Tuesday 2:30 PM">2:30 PM</option><option value="Tuesday 3:00 PM">3:00 PM</option><option value="Tuesday 3:30 PM">3:30 PM</option><option value="Tuesday 4:00 PM">4:00 PM</option><option value="Tuesday 4:30 PM">4:30 PM</option><option value="Tuesday 5:00 PM">5:00 PM</option><option value="Tuesday 5:30 PM">5:30 PM</option></optgroup><optgroup label="Thursday (9AM - 7PM)"><option value="Thursday 9:00 AM">9:00 AM</option><option value="Thursday 9:30 AM">9:30 AM</option><option value="Thursday 10:00 AM">10:00 AM</option><option value="Thursday 10:30 AM">10:30 AM</option><option value="Thursday 11:00 AM">11:00 AM</option><option value="Thursday 11:30 AM">11:30 AM</option><option value="Thursday 12:00 PM">12:00 PM</option><option value="Thursday 12:30 PM">12:30 PM</option><option value="Thursday 1:00 PM">1:00 PM</option><option value="Thursday 1:30 PM">1:30 PM</option><option value="Thursday 2:00 PM">2:00 PM</option><option value="Thursday 2:30 PM">2:30 PM</option><option value="Thursday 3:00 PM">3:00 PM</option><option value="Thursday 3:30 PM">3:30 PM</option><option value="Thursday 4:00 PM">4:00 PM</option><option value="Thursday 4:30 PM">4:30 PM</option><option value="Thursday 5:00 PM">5:00 PM</option><option value="Thursday 5:30 PM">5:30 PM</option><option value="Thursday 6:00 PM">6:00 PM</option><option value="Thursday 6:30 PM">6:30 PM</option></optgroup><optgroup label="Friday (9AM - 7PM)"><option value="Friday 9:00 AM">9:00 AM</option><option value="Friday 9:30 AM">9:30 AM</option><option value="Friday 10:00 AM">10:00 AM</option><option value="Friday 10:30 AM">10:30 AM</option><option value="Friday 11:00 AM">11:00 AM</option><option value="Friday 11:30 AM">11:30 AM</option><option value="Friday 12:00 PM">12:00 PM</option><option value="Friday 12:30 PM">12:30 PM</option><option value="Friday 1:00 PM">1:00 PM</option><option value="Friday 1:30 PM">1:30 PM</option><option value="Friday 2:00 PM">2:00 PM</option><option value="Friday 2:30 PM">2:30 PM</option><option value="Friday 3:00 PM">3:00 PM</option><option value="Friday 3:30 PM">3:30 PM</option><option value="Friday 4:00 PM">4:00 PM</option><option value="Friday 4:30 PM">4:30 PM</option><option value="Friday 5:00 PM">5:00 PM</option><option value="Friday 5:30 PM">5:30 PM</option><option value="Friday 6:00 PM">6:00 PM</option><option value="Friday 6:30 PM">6:30 PM</option></optgroup></select></div><div class="form-group"><label for="modal_newclient">New Client?</label><select id="modal_newclient" name="new_client"><option value="Yes">Yes, first time</option><option value="No">No, returning client</option></select></div></div>
-                    <div class="form-group"><label for="modal_notes">Additional Notes (optional)</label><textarea id="modal_notes" name="notes" rows="3" placeholder="Any specific requests, nail art ideas, or questions..."></textarea></div>
-                    <button type="submit" class="submit-button">📅 Request Appointment</button>
-                    <p style="font-size: 0.8rem; color: #666; text-align: center; margin-top: 1rem;">You'll receive a text message with booking details</p>
-                </form>
-                <div style="text-align: center; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #eee;"><p style="color: #666; margin-bottom: 1rem;">Prefer to call or email?</p><p style="color: #228B22; font-weight: bold; margin-bottom: 0.5rem;">📞 (240) 688-0912</p><a href="mailto:christy@myruiz.com?subject=Appointment%20Request&body=Hello,%0D%0A%0D%0AI%20would%20like%20to%20schedule%20an%20appointment.%0D%0A%0D%0AName:%0D%0APhone:%0D%0AService:%0D%0APreferred%20date/time:%0D%0A%0D%0AThank%20you!" style="color: #228B22; text-decoration: none;">📧 christy@myruiz.com</a></div>
+   <!-- Booking Modal -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>📅 Book Your Appointment</h3><button class="close" onclick="closeBookingModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form action="https://formspree.io/f/movlyard" method="POST" class="booking-form" id="modalBookingForm">
+                <input type="hidden" name="_to" value="2406880912@msg.fi.google.com">
+                <input type="hidden" name="_subject" value="New Appointment Request - Nailed By C. Nicole">
+                <div class="form-row">
+                    <div class="form-group"><label for="modal_name">Full Name *</label><input type="text" id="modal_name" name="name" required></div>
+                    <div class="form-group"><label for="modal_phone">Phone Number *</label><input type="tel" id="modal_phone" name="phone" required></div>
+                </div>
+                <div class="form-group"><label for="modal_email">Email Address *</label><input type="email" id="modal_email" name="email" required></div>
+
+                <!-- New Location Selector -->
+                <div class="form-group">
+                    <label for="modal_location">Location *</label>
+                    <select id="modal_location" name="location" required onchange="handleLocationChange()">
+                        <option value="In Salon" selected>In Salon</option>
+                        <option value="Mobile">Mobile</option>
+                    </select>
+                    <p id="mobile_note" style="display: none; font-size: 0.8rem; color: #666; margin-top: 5px;">Note: Mobile services may be limited.</p>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group"><label for="modal_service">Service *</label>
+                        <select id="modal_service" name="service" required onchange="handleServiceChange()">
+                            <option value="">Select a service</option>
+                            <option value="Luxury Manicure">Luxury Manicure</option>
+                            <option value="Relaxing Pedicure">Relaxing Pedicure</option>
+                            <option value="Gel Polish">Gel Polish</option>
+                            <option value="Expert Fill-ins">Expert Fill-ins</option>
+                            <option value="Full Set Application">Full Set Application</option>
+                            <option value="Multiple Services">Multiple Services</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><label for="modal_date">Preferred Date *</label><input type="date" id="modal_date" name="preferred_date" required></div>
+                </div>
+
+                <!-- Hidden Multiple Services Selector -->
+                <div class="form-group" id="multiple_services_container" style="display:none;">
+                    <label>Select Services</label>
+                    <div class="checkbox-group" style="padding-top: 8px;">
+                        <div style="display: flex; align-items: center; margin-bottom: 8px;"><input type="checkbox" id="service_mani" name="multiple_services[]" value="Luxury Manicure"><label for="service_mani" style="margin-left: 8px;">Luxury Manicure</label></div>
+                        <div style="display: flex; align-items: center; margin-bottom: 8px;"><input type="checkbox" id="service_pedi" name="multiple_services[]" value="Relaxing Pedicure"><label for="service_pedi" style="margin-left: 8px;">Relaxing Pedicure</label></div>
+                        <div style="display: flex; align-items: center; margin-bottom: 8px;"><input type="checkbox" id="service_gel" name="multiple_services[]" value="Gel Polish"><label for="service_gel" style="margin-left: 8px;">Gel Polish</label></div>
+                        <div style="display: flex; align-items: center; margin-bottom: 8px;"><input type="checkbox" id="service_fill" name="multiple_services[]" value="Expert Fill-ins"><label for="service_fill" style="margin-left: 8px;">Expert Fill-ins</label></div>
+                        <div style="display: flex; align-items: center; margin-bottom: 8px;"><input type="checkbox" id="service_full" name="multiple_services[]" value="Full Set Application"><label for="service_full" style="margin-left: 8px;">Full Set Application</label></div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group"><label for="modal_time">Preferred Time *</label><select id="modal_time" name="preferred_time" required>
+                            <option value="">Select time</option>
+                            <optgroup label="Tuesday (2PM - 6PM)">
+                                <option value="Tuesday 2:00 PM">2:00 PM</option>
+                                <option value="Tuesday 2:30 PM">2:30 PM</option>
+                                <option value="Tuesday 3:00 PM">3:00 PM</option>
+                                <option value="Tuesday 3:30 PM">3:30 PM</option>
+                                <option value="Tuesday 4:00 PM">4:00 PM</option>
+                                <option value="Tuesday 4:30 PM">4:30 PM</option>
+                                <option value="Tuesday 5:00 PM">5:00 PM</option>
+                                <option value="Tuesday 5:30 PM">5:30 PM</option>
+                            </optgroup>
+                            <optgroup label="Thursday (9AM - 7PM)">
+                                <option value="Thursday 9:00 AM">9:00 AM</option>
+                                <option value="Thursday 9:30 AM">9:30 AM</option>
+                                <option value="Thursday 10:00 AM">10:00 AM</option>
+                                <option value="Thursday 10:30 AM">10:30 AM</option>
+                                <option value="Thursday 11:00 AM">11:00 AM</option>
+                                <option value="Thursday 11:30 AM">11:30 AM</option>
+                                <option value="Thursday 12:00 PM">12:00 PM</option>
+                                <option value="Thursday 12:30 PM">12:30 PM</option>
+                                <option value="Thursday 1:00 PM">1:00 PM</option>
+                                <option value="Thursday 1:30 PM">1:30 PM</option>
+                                <option value="Thursday 2:00 PM">2:00 PM</option>
+                                <option value="Thursday 2:30 PM">2:30 PM</option>
+                                <option value="Thursday 3:00 PM">3:00 PM</option>
+                                <option value="Thursday 3:30 PM">3:30 PM</option>
+                                <option value="Thursday 4:00 PM">4:00 PM</option>
+                                <option value="Thursday 4:30 PM">4:30 PM</option>
+                                <option value="Thursday 5:00 PM">5:00 PM</option>
+                                <option value="Thursday 5:30 PM">5:30 PM</option>
+                                <option value="Thursday 6:00 PM">6:00 PM</option>
+                                <option value="Thursday 6:30 PM">6:30 PM</option>
+                            </optgroup>
+                            <optgroup label="Friday (9AM - 7PM)">
+                                <option value="Friday 9:00 AM">9:00 AM</option>
+                                <option value="Friday 9:30 AM">9:30 AM</option>
+                                <option value="Friday 10:00 AM">10:00 AM</option>
+                                <option value="Friday 10:30 AM">10:30 AM</option>
+                                <option value="Friday 11:00 AM">11:00 AM</option>
+                                <option value="Friday 11:30 AM">11:30 AM</option>
+                                <option value="Friday 12:00 PM">12:00 PM</option>
+                                <option value="Friday 12:30 PM">12:30 PM</option>
+                                <option value="Friday 1:00 PM">1:00 PM</option>
+                                <option value="Friday 1:30 PM">1:30 PM</option>
+                                <option value="Friday 2:00 PM">2:00 PM</option>
+                                <option value="Friday 2:30 PM">2:30 PM</option>
+                                <option value="Friday 3:00 PM">3:00 PM</option>
+                                <option value="Friday 3:30 PM">3:30 PM</option>
+                                <option value="Friday 4:00 PM">4:00 PM</option>
+                                <option value="Friday 4:30 PM">4:30 PM</option>
+                                <option value="Friday 5:00 PM">5:00 PM</option>
+                                <option value="Friday 5:30 PM">5:30 PM</option>
+                                <option value="Friday 6:00 PM">6:00 PM</option>
+                                <option value="Friday 6:30 PM">6:30 PM</option>
+                            </optgroup>
+                        </select></div>
+                    <div class="form-group"><label for="modal_newclient">New Client?</label><select id="modal_newclient" name="new_client">
+                            <option value="Yes">Yes, first time</option>
+                            <option value="No">No, returning client</option>
+                        </select></div>
+                </div>
+                <div class="form-group"><label for="modal_notes">Additional Notes (optional)</label><textarea id="modal_notes" name="notes" rows="3" placeholder="Any specific requests, nail art ideas, or questions..."></textarea></div>
+                <button type="submit" class="submit-button">📅 Request Appointment</button>
+                <p style="font-size: 0.8rem; color: #666; text-align: center; margin-top: 1rem;">You'll receive a text message with booking details</p>
+            </form>
+            <script>
+                // Shows/hides the note for mobile services
+                function handleLocationChange() {
+                    const locationSelect = document.getElementById('modal_location');
+                    const mobileNote = document.getElementById('mobile_note');
+                    if (locationSelect.value === 'Mobile') {
+                        mobileNote.style.display = 'block';
+                    } else {
+                        mobileNote.style.display = 'none';
+                    }
+                }
+
+                // Shows/hides the multi-select box for services
+                function handleServiceChange() {
+                    const serviceSelect = document.getElementById('modal_service');
+                    const multipleServicesContainer = document.getElementById('multiple_services_container');
+                    if (serviceSelect.value === 'Multiple Services') {
+                        multipleServicesContainer.style.display = 'block';
+                    } else {
+                        multipleServicesContainer.style.display = 'none';
+                    }
+                }
+            </script>
+            <div style="text-align: center; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #eee;">
+                <p style="color: #666; margin-bottom: 1rem;">Prefer to call or email?</p>
+                <p style="color: #228B22; font-weight: bold; margin-bottom: 0.5rem;">📞 (240) 688-0912</p><a href="mailto:christy@myruiz.com?subject=Appointment%20Request&body=Hello,%0D%0A%0D%0AI%20would%20like%20to%20schedule%20an%20appointment.%0D%0A%0D%0AName:%0D%0APhone:%0D%0AService:%0D%0APreferred%20date/time:%0D%0A%0D%0AThank%20you!" style="color: #228B22; text-decoration: none;">📧 christy@myruiz.com</a>
             </div>
         </div>
     </div>
+</div>
 
     <script>
         // --- Mobile Menu ---
