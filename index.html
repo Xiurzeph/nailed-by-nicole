@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,1237 +7,556 @@
     <meta name="keywords" content="nail salon, manicure, pedicure, gel polish, nail art, Clinton Maryland, nail services, acrylic nails, luxury nail care">
     <meta name="author" content="Nailed By C. Nicole">
     <meta property="og:title" content="Nailed By C. Nicole - Luxury Nail Services in Clinton, MD">
-    <meta property="og:description" content="Professional nail services including luxury manicures, relaxing pedicures, gel polish, and nail art. Expert nail care in Clinton, Maryland.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nailedbycnicole.com">
-    <title>Nailed By C. Nicole - Luxury Nail Services in Clinton, MD | Professional Manicures & Pedicures</title>
+    <title>Nailed By C. Nicole - Luxury Nail Services</title>
     
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+
+    <link href="./dist/output.css" rel="stylesheet">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .logo-circle {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #228B22, #FFD700);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .logo-circle img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .logo-text {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #228B22;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: #228B22;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: #FFD700;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-links a.book-online {
-            background: linear-gradient(135deg, #228B22, #32CD32);
-            color: white !important;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .nav-links a.book-online:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            background: linear-gradient(135deg, #32CD32, #228B22);
-            color: white !important;
-        }
-
-        .nav-links a.book-online::after {
-            display: none;
-        }
-
-        /* Mobile Menu Toggle (Hamburger) */
-        .mobile-menu-toggle {
-            display: none;
-            flex-direction: column;
-            justify-content: space-around;
-            width: 30px;
-            height: 25px;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            z-index: 1001; /* Ensure it's above other elements */
-        }
-        
-        .mobile-menu-toggle span {
-            width: 100%;
-            height: 3px;
-            background-color: #333;
-            border-radius: 10px;
-            transition: all 0.3s linear;
-            position: relative;
-            transform-origin: 1px;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(34, 139, 34, 0.4), rgba(255, 215, 0, 0.3)), url('image1.JPG');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding-top: 80px; /* Adjust for fixed header */
-        }
-
-        .hero-content h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            animation: fadeInUp 1s ease;
-        }
-
-        .hero-content p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease 0.2s both;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #228B22;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            animation: fadeInUp 1s ease 0.4s both;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-            background: #FFD700;
-            color: #8B4513;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 3rem;
-            color: #333;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(90deg, #228B22, #FFD700);
-            margin: 1rem auto;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #228B22, #FFD700);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-            border-color: #228B22;
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            color: #228B22;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #FFD700, #FFFF99);
-            border-radius: 50%;
-            margin: 0 auto 1rem auto;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .service-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Gallery Section */
-        .gallery {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            height: 300px;
-            background: #f8f9fa;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-style: italic;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.3s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(34, 139, 34, 0.8), rgba(255, 215, 0, 0.8));
-            opacity: 0;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        /* Instagram Feed Section */
-        .instagram-feed {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #FFF8DC 100%);
-        }
-
-        .instagram-container {
-            text-align: center;
-        }
-
-        .instagram-embed {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            margin: 2rem auto;
-            max-width: 800px;
-        }
-
-        .instagram-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-            color: white;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            margin: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .instagram-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-            color: white;
-            text-decoration: none;
-        }
-
-        .instagram-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        
-        /* About Section */
-        .about {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #FFF8DC 100%);
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr; /* Default to single column */
-            gap: 3rem;
-            align-items: center;
-        }
-        
-        @media (min-width: 768px) {
-            .about-content {
-                grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
-            }
-        }
-
-        .about-text h2 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 2rem;
-        }
-
-        .about-text p {
-            color: #666;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-        
-        /* Footer */
-        footer {
-            background: #333;
-            color: white;
-            padding: 3rem 0 1rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            color: #FFD700;
-            margin-bottom: 1rem;
-        }
-
-        .footer-section p, .footer-section a {
-            color: #ccc;
-            text-decoration: none;
-            line-height: 1.6;
-        }
-
-        .footer-section a:hover {
-            color: #228B22;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid #555;
-            padding-top: 1rem;
-            color: #999;
-        }
-
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            background-color: white;
-            margin: 2% auto;
-            padding: 0;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 600px;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            animation: modalSlideIn 0.3s ease-out;
-        }
-
-        .modal-header {
-            background: linear-gradient(135deg, #228B22, #FFD700);
-            color: white;
-            padding: 1.5rem 2rem;
-            border-radius: 15px 15px 0 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .modal-header h3 {
-            margin: 0;
-            font-size: 1.5rem;
-        }
-
-        .close {
-            color: white;
-            float: right;
-            font-size: 2rem;
-            font-weight: bold;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 0;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: background-color 0.3s ease;
-        }
-
-        .close:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .modal-body {
-            padding: 2rem;
-        }
-
-        .modal .booking-form {
-            box-shadow: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .booking-form {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            margin-top: 1rem;
-            max-width: 600px;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #333;
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #228B22;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-
-        .submit-button {
-            background: linear-gradient(135deg, #228B22, #32CD32);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 25px;
-            font-weight: bold;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .submit-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        @keyframes modalSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Service Menu Styles */
-        .service-menu {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #FFF8DC 100%);
-        }
-
-        .menu-category {
-            background: white;
-            border-radius: 15px;
-            margin-bottom: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-        .menu-category-header {
-            background: linear-gradient(135deg, #228B22, #FFD700);
-            color: white;
-            padding: 1.5rem 2rem;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .menu-items {
-            padding: 2rem;
-        }
-
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 1rem 0;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .menu-item:last-child {
-            border-bottom: none;
-        }
-
-        .menu-item-info {
-            flex: 1;
-        }
-
-        .menu-item-name {
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .menu-item-description {
-            color: #666;
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
-
-        .menu-item-price {
-            font-weight: bold;
-            color: #228B22;
-            font-size: 1.1rem;
-            margin-left: 1rem;
-            flex-shrink: 0;
-        }
-
-        .menu-item-duration {
-            color: #999;
-            font-size: 0.8rem;
-            margin-top: 0.25rem;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .logo-text {
-                font-size: 1.5rem;
-            }
-
-            .mobile-menu-toggle {
-                display: flex;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%; /* Start off-screen */
-                height: 100vh;
-                width: 70%;
-                max-width: 300px;
-                background: white;
-                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 2.5rem;
-                transition: right 0.3s ease-in-out;
-            }
-            
-            .nav-links.open {
-                right: 0;
-            }
-
-            .nav-links a.book-online {
-                padding: 0.8rem 1.5rem; /* Ensure padding is consistent */
-            }
-
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-content p {
-                font-size: 1.2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .modal-content {
-                width: 95%;
-                margin: 5% auto;
-                max-height: 85vh;
-            }
-            
-            .modal-header {
-                padding: 1rem 1.5rem;
-            }
-            
-            .modal-body {
-                padding: 1.5rem;
-            }
-            
-            .menu-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .menu-item-price {
-                margin-left: 0;
-                margin-top: 0.5rem;
-            }
+        /* Custom override for the mobile menu transition */
+        #nav-links {
+            transition: transform 0.3s ease-in-out;
         }
     </style>
 </head>
-<body>
-    <header>
-        <nav class="container">
-            <div class="logo">
-                <div class="logo-circle">
-                    <img src="logo.png" alt="Nailed By C. Nicole Logo" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #228B22, #FFD700)'; this.parentElement.innerHTML='<span style=color:white;font-weight:bold;font-size:1.2rem>NC</span>';">
+<body class="font-serif leading-relaxed text-gray-800 bg-slate-50 antialiased">
+
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md shadow-md transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center max-w-6xl">
+            <div class="flex items-center gap-4">
+                <div class="w-[60px] h-[60px] rounded-full bg-gradient-to-br from-brand-green to-brand-gold flex items-center justify-center shadow-lg overflow-hidden">
+                    <img src="logo.png" alt="NC" class="w-[50px] h-[50px] rounded-full object-cover" 
+                         onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-white font-bold text-xl\'>NC</span>';">
                 </div>
-                <div class="logo-text">Nailed By C. Nicole</div>
+                <div class="text-2xl font-bold text-brand-green drop-shadow-sm hidden sm:block">Nailed By C. Nicole</div>
             </div>
             
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#menu">Menu & Pricing</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#instagram">Instagram</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#" onclick="openBookingModal(); return false;" class="book-online">📅 Book Online</a></li>
+            <ul class="hidden md:flex items-center gap-8 font-medium">
+                <li><a href="#home" class="hover:text-brand-green transition-colors">Home</a></li>
+                <li><a href="#services" class="hover:text-brand-green transition-colors">Services</a></li>
+                <li><a href="#menu" class="hover:text-brand-green transition-colors">Menu</a></li>
+                <li><a href="#gallery" class="hover:text-brand-green transition-colors">Gallery</a></li>
+                <li><a href="#about" class="hover:text-brand-green transition-colors">About</a></li>
+                <li>
+                    <a href="#" onclick="openBookingModal(); return false;" 
+                       class="bg-gradient-to-r from-brand-green to-lime-500 text-white px-6 py-2.5 rounded-full font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all">
+                        📅 Book Online
+                    </a>
+                </li>
             </ul>
 
-            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button id="mobile-menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2 z-[60]">
+                <span class="w-8 h-0.5 bg-gray-800 transition-all origin-left"></span>
+                <span class="w-8 h-0.5 bg-gray-800 transition-all"></span>
+                <span class="w-8 h-0.5 bg-gray-800 transition-all origin-left"></span>
             </button>
         </nav>
+
+        <div id="nav-links" class="fixed top-0 right-0 h-screen w-[70%] max-w-[300px] bg-white shadow-2xl flex flex-col items-center justify-center gap-8 translate-x-full md:hidden z-50">
+            <a href="#home" class="text-xl font-medium hover:text-brand-green">Home</a>
+            <a href="#services" class="text-xl font-medium hover:text-brand-green">Services</a>
+            <a href="#menu" class="text-xl font-medium hover:text-brand-green">Menu</a>
+            <a href="#gallery" class="text-xl font-medium hover:text-brand-green">Gallery</a>
+            <a href="#about" class="text-xl font-medium hover:text-brand-green">About</a>
+            <a href="#" onclick="openBookingModal(); return false;" class="bg-brand-green text-white px-8 py-3 rounded-full font-bold shadow-md">📅 Book Online</a>
+        </div>
     </header>
 
-    <!-- Main Content Sections -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Luxury Nail Artistry in Clinton, Maryland</h1>
-                <p>Professional nail care where luxury meets artistry for stunning results</p>
-                <a href="#services" class="cta-button">Explore Our Services</a>
+    <section id="home" class="relative h-screen flex items-center justify-center text-center text-white pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="image1.JPG" alt="Hero Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-green/60 to-brand-gold/30 mix-blend-multiply"></div>
+        </div>
+
+        <div class="relative z-10 px-6 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg animate-[fadeInUp_1s_ease-out]">
+                Luxury Nail Artistry in Clinton, Maryland
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 opacity-95 animate-[fadeInUp_1s_ease-out_0.2s_both]">
+                Professional nail care where luxury meets artistry for stunning results
+            </p>
+            <a href="#services" class="inline-block bg-white text-brand-green px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-brand-gold hover:text-amber-900 hover:-translate-y-1 transition-all animate-[fadeInUp_1s_ease-out_0.4s_both]">
+                Explore Our Services
+            </a>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-4xl md:text-5xl text-center font-bold text-gray-800 mb-4 relative after:content-[''] after:block after:w-24 after:h-1 after:bg-gradient-to-r after:from-brand-green after:to-brand-gold after:mx-auto after:mt-4">
+                Our Premium Services
+            </h2>
+            <p class="text-center text-gray-500 max-w-3xl mx-auto mb-16 text-lg">
+                Click any service below to book your appointment instantly.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div onclick="openBookingModal('Luxury Manicure')" class="cursor-pointer group bg-white p-8 rounded-2xl shadow-lg border-t-4 border-transparent hover:border-brand-green hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-brand-gold to-yellow-100 p-1">
+                        <img src="image4.jpg" alt="Manicure" class="w-full h-full rounded-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4 text-gray-800 group-hover:text-brand-green">Luxury Manicure</h3>
+                    <p class="text-gray-600 text-center">Comprehensive nail artistry service including precise shaping, cuticle care, massage, and premium polish.</p>
+                </div>
+
+                <div onclick="openBookingModal('Relaxing Pedicure')" class="cursor-pointer group bg-white p-8 rounded-2xl shadow-lg border-t-4 border-transparent hover:border-brand-green hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-brand-gold to-yellow-100 p-1">
+                        <img src="image5.jpg" alt="Pedicure" class="w-full h-full rounded-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4 text-gray-800 group-hover:text-brand-green">Relaxing Pedicure</h3>
+                    <p class="text-gray-600 text-center">Immerse your feet in a soothing bath with exfoliation, callus removal, and therapeutic massage.</p>
+                </div>
+
+                <div onclick="openBookingModal('Gel Polish')" class="cursor-pointer group bg-white p-8 rounded-2xl shadow-lg border-t-4 border-transparent hover:border-brand-green hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-brand-gold to-yellow-100 p-1">
+                        <img src="image8.jpg" alt="Gel" class="w-full h-full rounded-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4 text-gray-800 group-hover:text-brand-green">Gel Polish</h3>
+                    <p class="text-gray-600 text-center">Exceptional durability and brilliant shine. Chip-free, glossy nails that maintain beauty for weeks.</p>
+                </div>
+                
+                <div onclick="openBookingModal('Expert Fill-ins')" class="cursor-pointer group bg-white p-8 rounded-2xl shadow-lg border-t-4 border-transparent hover:border-brand-green hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-brand-gold to-yellow-100 p-1">
+                        <img src="image6.jpg" alt="Fill-ins" class="w-full h-full rounded-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4 text-gray-800 group-hover:text-brand-green">Expert Fill-ins</h3>
+                    <p class="text-gray-600 text-center">Seamlessly blend new growth with existing enhancements. Professionally reshaped and buffed.</p>
+                </div>
+
+                <div onclick="openBookingModal('Full Set Application')" class="cursor-pointer group bg-white p-8 rounded-2xl shadow-lg border-t-4 border-transparent hover:border-brand-green hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 md:col-span-2 lg:col-span-1">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-brand-gold to-yellow-100 p-1">
+                        <img src="image7.JPG" alt="Full Set" class="w-full h-full rounded-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4 text-gray-800 group-hover:text-brand-green">Full Set Application</h3>
+                    <p class="text-gray-600 text-center">Add length and strength with acrylic or gel extensions customized to your desired shape and style.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">Our Premium Nail Services</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem; color: #666;">
-                At Nailed By C. Nicole, we offer comprehensive nail services designed to pamper and beautify your hands and feet. Our expert nail technicians use only the highest quality products and techniques to ensure your <strong>luxury nail artistry</strong> experience exceeds expectations. Whether you're looking for a relaxing spa day or preparing for a special occasion, our professional nail care services in Clinton, Maryland will leave you feeling confident and beautiful.
-            </p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="image4.jpg" alt="Luxury Manicure" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
-                    </div>
-                    <h3><a href="#luxury-manicure" style="color: inherit; text-decoration: none;">Luxury Manicure</a></h3>
-                    <p>Our signature <strong>luxury manicure</strong> service treats your hands to professional nail care that will leave your nails looking stunning and your skin feeling soft and rejuvenated. This comprehensive nail artistry service includes precise nail shaping, expert cuticle care, relaxing hand massage, and your choice of premium polish application for a flawless finish.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="image5.jpg" alt="Professional Pedicure" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
-                    </div>
-                    <h3><a href="#relaxing-pedicure" style="color: inherit; text-decoration: none;">Relaxing Pedicure</a></h3>
-                    <p>Relax and unwind with our professional pedicure service as you immerse your feet in a soothing, aromatic footbath. Our <strong>relaxing pedicure</strong> will pamper your feet with meticulous nail trimming, expert cuticle work, exfoliation, callus removal, and a therapeutic foot massage. Complete your spa experience with your favorite polish shade or choose a natural buffed shine.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="image8.jpg" alt="Gel Polish" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
-                    </div>
-                    <h3><a href="#gel-polish" style="color: inherit; text-decoration: none;">Gel Polish</a></h3>
-                    <p>Indulge in the long-lasting beauty of our professional <strong>gel polish</strong> application, known for its exceptional durability and brilliant shine. Our gel polish nail service includes expert nail shaping, cuticle care, and the perfect coating of your chosen gel color for chip-free, glossy nails that maintain their beauty for weeks.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="image6.jpg" alt="Expert Fill-ins" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
-                    </div>
-                    <h3><a href="#expert-fill-ins" style="color: inherit; text-decoration: none;">Expert Fill-ins</a></h3>
-                    <p>Maintain the beauty of your acrylic or gel nails with our <strong>expert fill-in service</strong>. Our skilled nail technicians carefully blend the new growth with the existing nail enhancements, ensuring a seamless and natural-looking result. Your nails will be professionally reshaped, buffed, and polished to perfection.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="image7.JPG" alt="Full Set Application" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
-                    </div>
-                    <h3><a href="#full-set-application" style="color: inherit; text-decoration: none;">Full Set Application</a></h3>
-                    <p>Transform your nails with our professional <strong>full set application</strong> service, ideal for those looking to add length and strength to their natural nails. Choose from a variety of nail enhancements, including acrylic or gel extensions, customized to suit your desired shape and style. Our skilled technicians provide precise application for beautiful, long-lasting results.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section id="menu" class="py-20 bg-gradient-to-br from-gray-50 to-orange-50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Service Menu & Pricing</h2>
 
-    <section class="service-menu" id="menu">
-        <div class="container">
-            <h2 class="section-title">Service Menu & Pricing</h2>
-            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.1rem; color: #666;">
-                Professional nail services with transparent pricing. All services include expert care and attention to detail.
-            </p>
-
-            <!-- Menu Categories -->
-            <div class="menu-category">
-                <div class="menu-category-header">💅 Manicure Services</div>
-                <div class="menu-items">
-                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Basic Manicure</div><div class="menu-item-description">Luxurious basic manicure with professional results and easy application process. Enjoy a long-lasting finish with basic polish.</div><div class="menu-item-duration">45 minutes</div></div><div class="menu-item-price">$25</div></div>
-                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Gel Manicure</div><div class="menu-item-description">Luxurious gel manicure experience with long-lasting color, professional finish, and easy application that will leave you feeling pampered and glamorous.</div><div class="menu-item-duration">1 hour</div></div><div class="menu-item-price">$30</div></div>
-                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Structured Manicure</div><div class="menu-item-description">Professional finish designed to provide added strength, durability, and structure to natural nails. Includes cuticle care and wide selection of vibrant colors.</div><div class="menu-item-duration">1 hour 15 minutes</div></div><div class="menu-item-price">$35</div></div>
-                </div>
-            </div>
-            <div class="menu-category">
-                <div class="menu-category-header">🦶 Pedicure Services</div>
-                <div class="menu-items">
-                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Basic Pedicure</div><div class="menu-item-description">Relaxing pedicure that pampers your feet and enhances foot health. Professional results with regular polish that leave you feeling rejuvenated.</div><div class="menu-item-duration">45 minutes</div></div><div class="menu-item-price">$30</div></div>
-                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Gel Pedicure</div><div class="menu-item-description">Pampering gel pedicure session with long-lasting color and chip-resistant formula. Uses gel polish and UV/LED lamp for professional salon results.</div><div class="menu-item-duration">1 hour 10 minutes</div></div><div class="menu-item-price">$35</div></div>
-                </div>
-            </div>
-            <div class="menu-category">
-                <div class="menu-category-header">✨ Nail Enhancements</div>
-                <div class="menu-items">
-                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Hard Gel Overlay</div><div class="menu-item-description">Enhance your nails with durable protection, easy application, and high shine finish. Perfect for strengthening natural nails.</div><div class="menu-item-duration">1 hour 30 minutes</div></div><div class="menu-item-price">$45</div></div>
-                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Gel Tip Extension</div><div class="menu-item-description">Achieve longer, natural-looking nails with pre-shaped soft gel tips. Lightweight, flexible extensions that mimic natural nails perfectly.</div><div class="menu-item-duration">1 hour 30 minutes</div></div><div class="menu-item-price">$55</div></div>
-                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Hard Gel Fill</div><div class="menu-item-description">Maintenance service for hard gel enhanced nails. Includes basic manicure and filling regrowth area for a natural-looking finish.</div><div class="menu-item-duration">1 hour 15 minutes</div></div><div class="menu-item-price">$35</div></div>
-                </div>
-            </div>
-            <div class="menu-category">
-                <div class="menu-category-header">🎨 Nail Art & Repairs</div>
-                <div class="menu-items">
-                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Nail Art</div><div class="menu-item-description">Express your unique style with exclusive nail art! Creative designs that are long-lasting and incredibly easy to apply.</div><div class="menu-item-duration">30 minutes</div></div><div class="menu-item-price">$5-20</div></div>
-                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Nail Fix</div><div class="menu-item-description">Professional repair service for broken or cracked nails that haven't damaged the nail plate or skin. Price depends on repair complexity.</div><div class="menu-item-duration">15 minutes</div></div><div class="menu-item-price">$5-15</div></div>
-                </div>
-            </div>
-            <div class="menu-category">
-                <div class="menu-category-header">🚗 Mobile Services</div>
-                <div class="menu-items">
-                    <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Travel Fee</div><div class="menu-item-description">Mobile services available! Prices vary based on distance from home technician's base location. Enjoy professional nail services in the comfort of your home.</div><div class="menu-item-duration">30 minutes</div></div><div class="menu-item-price">$10-25</div></div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+                <div class="bg-gradient-to-r from-brand-green to-brand-gold px-8 py-4 text-white text-xl font-bold">💅 Manicure Services</div>
+                <div class="p-6 divide-y divide-gray-100">
+                    <div class="flex flex-col sm:flex-row justify-between py-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-800">Basic Manicure</h4>
+                            <p class="text-sm text-gray-500">Long-lasting finish with basic polish.</p>
+                        </div>
+                        <div class="mt-2 sm:mt-0 text-right">
+                            <span class="block font-bold text-brand-green text-lg">$25</span>
+                            <span class="text-xs text-gray-400">45 mins</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row justify-between py-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-800">Gel Manicure</h4>
+                            <p class="text-sm text-gray-500">Long-lasting color and chip-resistant.</p>
+                        </div>
+                        <div class="mt-2 sm:mt-0 text-right">
+                            <span class="block font-bold text-brand-green text-lg">$30</span>
+                            <span class="text-xs text-gray-400">1 hr</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row justify-between py-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-800">Structured Manicure</h4>
+                            <p class="text-sm text-gray-500">Added strength and structure for natural nails.</p>
+                        </div>
+                        <div class="mt-2 sm:mt-0 text-right">
+                            <span class="block font-bold text-brand-green text-lg">$35</span>
+                            <span class="text-xs text-gray-400">1 hr 15m</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div style="text-align: center; margin-top: 3rem;">
-                <p style="color: #666; margin-bottom: 1.5rem;">Ready to book your appointment?</p>
-                <button onclick="openBookingModal()" class="submit-button" style="width: auto; padding: 1rem 2rem;">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+                <div class="bg-gradient-to-r from-brand-green to-brand-gold px-8 py-4 text-white text-xl font-bold">🦶 Pedicure Services</div>
+                <div class="p-6 divide-y divide-gray-100">
+                    <div class="flex flex-col sm:flex-row justify-between py-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-800">Basic Pedicure</h4>
+                            <p class="text-sm text-gray-500">Relaxing foot care with regular polish.</p>
+                        </div>
+                        <div class="mt-2 sm:mt-0 text-right">
+                            <span class="block font-bold text-brand-green text-lg">$30</span>
+                            <span class="text-xs text-gray-400">45 mins</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row justify-between py-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-800">Gel Pedicure</h4>
+                            <p class="text-sm text-gray-500">Pampering session with durable gel polish.</p>
+                        </div>
+                        <div class="mt-2 sm:mt-0 text-right">
+                            <span class="block font-bold text-brand-green text-lg">$35</span>
+                            <span class="text-xs text-gray-400">1 hr 10m</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+                <div class="bg-gradient-to-r from-brand-green to-brand-gold px-8 py-4 text-white text-xl font-bold">✨ Enhancements</div>
+                <div class="p-6 divide-y divide-gray-100">
+                    <div class="flex flex-col sm:flex-row justify-between py-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-800">Hard Gel Overlay</h4>
+                            <p class="text-sm text-gray-500">Durable protection for natural nails.</p>
+                        </div>
+                        <div class="mt-2 sm:mt-0 text-right">
+                            <span class="block font-bold text-brand-green text-lg">$45</span>
+                            <span class="text-xs text-gray-400">1 hr 30m</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row justify-between py-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-800">Gel Tip Extension</h4>
+                            <p class="text-sm text-gray-500">Lightweight, flexible soft gel tips.</p>
+                        </div>
+                        <div class="mt-2 sm:mt-0 text-right">
+                            <span class="block font-bold text-brand-green text-lg">$55</span>
+                            <span class="text-xs text-gray-400">1 hr 30m</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row justify-between py-4">
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-800">Hard Gel Fill</h4>
+                            <p class="text-sm text-gray-500">Maintenance for regrowth.</p>
+                        </div>
+                        <div class="mt-2 sm:mt-0 text-right">
+                            <span class="block font-bold text-brand-green text-lg">$35</span>
+                            <span class="text-xs text-gray-400">1 hr 15m</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button onclick="openBookingModal()" class="bg-gradient-to-r from-brand-green to-lime-600 text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:scale-105 transition-transform">
                     📅 Book Your Service
                 </button>
             </div>
         </div>
     </section>
 
-    <section class="gallery" id="gallery">
-        <div class="container">
-            <h2 class="section-title">Our Work Gallery</h2>
-            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; font-size: 1.1rem; color: #666;">
-                Discover the artistry and precision that defines our work. Each image represents our commitment to excellence in <strong>nail artistry</strong> and the <strong>luxury nail</strong> experience we provide to every client in Clinton, Maryland.
-            </p>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="image2.JPG" alt="Natural nail design with decorative accents"><div class="gallery-overlay">Natural Elegance</div></div>
-                <div class="gallery-item"><img src="image3.JPG" alt="Clear nails with elegant gold accent details"><div class="gallery-overlay">Sophisticated Style</div></div>
-                <div class="gallery-item"><img src="image1.JPG" alt="Hand moisturizing treatment with beautiful nails"><div class="gallery-overlay">Luxury Hand Care</div></div>
+    <section id="gallery" class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-6">Our Work Gallery</h2>
+            <p class="text-center text-gray-500 mb-12">Click any image to view details.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="image2.JPG" data-lightbox="gallery" data-title="Natural Elegance" class="block group relative rounded-2xl overflow-hidden shadow-lg h-[300px]">
+                    <img src="image2.JPG" alt="Natural nail design" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-green/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                        <span class="text-white font-bold text-xl">Natural Elegance</span>
+                    </div>
+                </a>
+
+                <a href="image3.JPG" data-lightbox="gallery" data-title="Sophisticated Style" class="block group relative rounded-2xl overflow-hidden shadow-lg h-[300px]">
+                    <img src="image3.JPG" alt="Gold accents" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-green/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                        <span class="text-white font-bold text-xl">Sophisticated Style</span>
+                    </div>
+                </a>
+
+                <a href="image1.JPG" data-lightbox="gallery" data-title="Luxury Hand Care" class="block group relative rounded-2xl overflow-hidden shadow-lg h-[300px]">
+                    <img src="image1.JPG" alt="Hand care" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-green/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                        <span class="text-white font-bold text-xl">Luxury Hand Care</span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <section class="instagram-feed" id="instagram">
-        <div class="container">
-            <h2 class="section-title">Latest Work</h2>
-            <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem; color: #666;">
-                Stay up to date with our newest <strong>nail artistry</strong> creations and recent client transformations. Follow our journey of creating beautiful nails for our valued clients in Clinton, Maryland.
-            </p>
-            <div class="instagram-container">
-                <p style="font-size: 1.2rem; color: #666; margin-bottom: 1rem;">Check out our newest <strong>nail art</strong> and recent client work showcasing our expertise in <strong>luxury nail artistry</strong></p>
-                <a href="https://www.instagram.com/nailedbycnicole/" target="_blank" class="instagram-button">📸 Follow @nailedbycnicole on Instagram</a>
-                <div class="instagram-embed">
-                    <div id="latest-work-gallery">
-                        <div class="instagram-grid">
-                            <div class="gallery-item" style="height: 250px;"><img src="recent1.jpg" alt="Recent nail work 1" onerror="this.parentElement.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;background:#f0f0f0;color:#666;border-radius:10px;&quot;>Recent Work 1</div>';"><div class="gallery-overlay">Latest Work</div></div>
-                            <div class="gallery-item" style="height: 250px;"><img src="recent2.jpg" alt="Recent nail work 2" onerror="this.parentElement.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;background:#f0f0f0;color:#666;border-radius:10px;&quot;>Recent Work 2</div>';"><div class="gallery-overlay">Fresh Design</div></div>
-                            <div class="gallery-item" style="height: 250px;"><img src="recent3.jpg" alt="Recent nail work 3" onerror="this.parentElement.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;background:#f0f0f0;color:#666;border-radius:10px;&quot;>Recent Work 3</div>';"><div class="gallery-overlay">New Style</div></div>
-                            <div class="gallery-item" style="height: 250px;"><img src="recent4.jpg" alt="Recent nail work 4" onerror="this.parentElement.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;background:#f0f0f0;color:#666;border-radius:10px;&quot;>Recent Work 4</div>';"><div class="gallery-overlay">Client Favorite</div></div>
-                        </div>
+    <section id="instagram" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Latest Work</h2>
+            <a href="https://www.instagram.com/nailedbycnicole/" target="_blank" class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-bold shadow-md hover:shadow-lg transition-all mb-10">
+                📸 Follow @nailedbycnicole
+            </a>
+            
+           <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                <a href="recent1.jpg" data-lightbox="recent" data-title="Recent Work 1" class="block group relative h-64 rounded-lg overflow-hidden shadow-md">
+                    <img src="recent1.jpg" alt="Recent Work 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                         onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-gray-200 text-gray-400\'>Image Missing</div>'">
+                </a>
+
+                <a href="recent2.jpg" data-lightbox="recent" data-title="Recent Work 2" class="block group relative h-64 rounded-lg overflow-hidden shadow-md">
+                    <img src="recent2.jpg" alt="Recent Work 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                         onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-gray-200 text-gray-400\'>Image Missing</div>'">
+                </a>
+
+                <a href="recent3.jpg" data-lightbox="recent" data-title="Recent Work 3" class="block group relative h-64 rounded-lg overflow-hidden shadow-md">
+                    <img src="recent3.jpg" alt="Recent Work 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                         onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-gray-200 text-gray-400\'>Image Missing</div>'">
+                </a>
+
+                <a href="recent4.jpg" data-lightbox="recent" data-title="Recent Work 4" class="block group relative h-64 rounded-lg overflow-hidden shadow-md">
+                    <img src="recent4.jpg" alt="Recent Work 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                         onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-gray-200 text-gray-400\'>Image Missing</div>'">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="md:grid md:grid-cols-2 gap-12 items-center">
+                <div class="mb-8 md:mb-0 text-center">
+                   <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Welcome to Nailed By C. Nicole</h2>
+                   <p class="text-gray-600 mb-4 leading-relaxed">
+                       We specialize in providing high-quality <strong>nail services</strong> with an unwavering commitment to excellence and artistry. As a premier nail salon in Clinton, Maryland, we have built our reputation on exceptional service.
+                   </p>
+                   <p class="text-gray-600 leading-relaxed">
+                       Whether you're preparing for a special occasion or simply treating yourself, our team is dedicated to helping you look and feel your best.
+                   </p>
+                </div>
+                <div class="bg-brand-green/10 p-8 rounded-3xl border-2 border-brand-green/20 text-center">
+                    <h3 class="text-xl font-bold text-brand-green mb-2">Located In</h3>
+                    <p class="text-2xl font-bold text-gray-800 mb-6">Clinton, Maryland</p>
+                    <button onclick="openBookingModal()" class="bg-brand-green text-white px-6 py-2 rounded-lg font-bold hover:bg-brand-dark transition-colors w-full">
+                        Book Appointment
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-brand-gold font-bold text-xl mb-4">Contact</h3>
+                    <p><a href="tel:2406880912" class="hover:text-white text-gray-400 transition-colors">(240) 688-0912</a></p>
+                    <div class="mt-4">
+                        <a href="mailto:christy@myruiz.com" class="inline-block border border-gray-600 px-4 py-2 rounded hover:bg-gray-800 transition-colors text-sm">📧 Email Us</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Welcome to Nailed By C. Nicole - Your Premier Nail Salon in Clinton, Maryland</h2>
-                    <p>We specialize in providing high-quality <strong>nail services</strong> with an unwavering commitment to excellence and artistry. As a premier nail salon in Clinton, Maryland, we have built our reputation on exceptional service and attention to detail.</p>
-                    <p>At Nailed By C. Nicole, we pride ourselves on our meticulous attention to detail and our commitment to providing a comfortable, relaxing, and luxurious experience for our customers. Our comprehensive range of <strong>nail artistry</strong> services includes professional manicures, therapeutic pedicures, stunning nail art, gel polish applications, and custom nail enhancements.</p>
-                    <p>Located in Clinton, Maryland, we serve clients from surrounding areas who appreciate quality nail care and personalized service. Whether you're preparing for a special occasion or simply treating yourself to some well-deserved pampering, our team is dedicated to helping you look and feel your absolute best. <a href="#" onclick="openBookingModal(); return false;" style="color: #228B22; font-weight: bold;">Book your appointment today</a> and experience the difference that professional nail artistry can make.</p>
+                <div>
+                    <h3 class="text-brand-gold font-bold text-xl mb-4">Hours</h3>
+                    <p class="text-gray-400">Tue: 2PM - 6PM</p>
+                    <p class="text-gray-400">Thu - Fri: 9AM - 7PM</p>
+                    <p class="text-gray-600 text-sm mt-2">Sun/Mon/Wed/Sat: Closed</p>
+                </div>
+                <div>
+                    <h3 class="text-brand-gold font-bold text-xl mb-4">Social</h3>
+                    <a href="https://www.instagram.com/nailedbycnicole/" class="block text-gray-400 hover:text-brand-gold mb-2">Instagram</a>
+                    <a href="#" class="block text-gray-400 hover:text-brand-gold">Facebook</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section"><h3>Contact Info</h3><p>Phone: <a href="tel:2406880912" style="color: inherit; text-decoration: none;">(240) 688-0912</a></p><div id="quickEmail" style="margin-top: 1rem;"><a href="mailto:christy@myruiz.com?subject=Appointment%20Request&body=Hello,%0D%0A%0D%0AI%20would%20like%20to%20schedule%20an%20appointment.%0D%0A%0D%0AName:%0D%0APhone:%0D%0AService:%0D%0APreferred%20date/time:%0D%0A%0D%0AThank%20you!" class="email-button">📧 Email Us</a></div></div>
-                <div class="footer-section"><h3>Business Hours</h3><p>Monday: Closed</p><p>Tuesday: 2PM - 6PM</p><p>Wednesday: Closed</p><p>Thursday: 9AM - 7PM</p><p>Friday: 9AM - 7PM</p><p>Saturday: Closed</p><p>Sunday: Closed</p></div>
-                <div class="footer-section"><h3>Services</h3><a href="#luxury-manicure" style="color: #ccc; text-decoration: none; line-height: 1.6;">Luxury Manicures</a><br><a href="#relaxing-pedicure" style="color: #ccc; text-decoration: none; line-height: 1.6;">Relaxing Pedicures</a><br><a href="#gel-polish" style="color: #ccc; text-decoration: none; line-height: 1.6;">Gel Polish</a><br><a href="#expert-fill-ins" style="color: #ccc; text-decoration: none; line-height: 1.6;">Expert Fill-ins</a><br><a href="#full-set-application" style="color: #ccc; text-decoration: none; line-height: 1.6;">Full Set Application</a></div>
-                <div class="footer-section"><h3>Share</h3><a href="https://www.instagram.com/nailedbycnicole/" target="_blank">Instagram</a><br><a href="https://www.facebook.com/sharer/sharer.php?u=https://yourusername.github.io/nailedbycnicole" target="_blank">Share on Facebook</a><br><a href="https://twitter.com/intent/tweet?text=Check%20out%20Nailed%20By%20C.%20Nicole%20for%20amazing%20nail%20services!&url=https://yourusername.github.io/nailedbycnicole" target="_blank">Share on Twitter</a><br><a href="whatsapp://send?text=Check%20out%20Nailed%20By%20C.%20Nicole%20for%20amazing%20nail%20services!%20https://yourusername.github.io/nailedbycnicole" target="_blank">Share on WhatsApp</a></div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2025 Nailed By C. Nicole. All rights reserved.
             </div>
-            <div class="footer-bottom"><p>&copy; 2025 Nailed By C. Nicole. All rights reserved.</p></div>
         </div>
     </footer>
 
-<!-- Booking Modal -->
-<div id="bookingModal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h3>📅 Book Your Appointment</h3><button class="close" onclick="closeBookingModal()">&times;</button>
-        </div>
-        <div class="modal-body">
-            <form action="https://formspree.io/f/movlyard" method="POST" class="booking-form" id="modalBookingForm">
-                <input type="hidden" name="_to" value="2406880912@msg.fi.google.com">
-                <input type="hidden" name="_subject" value="New Appointment Request - Nailed By C. Nicole">
-                <div class="form-row">
-                    <div class="form-group"><label for="modal_name">Full Name *</label><input type="text" id="modal_name" name="name" required></div>
-                    <div class="form-group"><label for="modal_phone">Phone Number *</label><input type="tel" id="modal_phone" name="phone" required></div>
-                </div>
-                <div class="form-group"><label for="modal_email">Email Address *</label><input type="email" id="modal_email" name="email" required></div>
-
-                <!-- New Location Selector -->
-                <div class="form-group">
-                    <label for="modal_location">Location *</label>
-                    <select id="modal_location" name="location" required onchange="handleLocationChange()">
-                        <option value="In Salon" selected>In Salon</option>
-                        <option value="Mobile">Mobile</option>
-                    </select>
-                    <p id="mobile_note" style="display: none; font-size: 0.8rem; color: #666; margin-top: 5px;">Note: Mobile services may be limited.</p>
+    <div id="bookingModal" class="hidden fixed inset-0 z-[2000] bg-black/70 backdrop-blur-sm overflow-y-auto">
+        <div class="min-h-screen flex items-center justify-center p-4">
+            <div class="bg-white w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden animate-[fadeInUp_0.3s_ease-out]">
+                <div class="bg-gradient-to-r from-brand-green to-brand-gold p-6 flex justify-between items-center text-white">
+                    <h3 class="text-2xl font-bold">📅 Book Appointment</h3>
+                    <button onclick="closeBookingModal()" class="hover:bg-white/20 rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold transition-colors">&times;</button>
                 </div>
 
-                <div class="form-row">
-                    <div class="form-group"><label for="modal_service">Service *</label>
-                        <select id="modal_service" name="service" required onchange="handleServiceChange()">
-                            <option value="">Select a service</option>
-                            <option value="Luxury Manicure">Luxury Manicure</option>
-                            <option value="Relaxing Pedicure">Relaxing Pedicure</option>
-                            <option value="Gel Polish">Gel Polish</option>
-                            <option value="Expert Fill-ins">Expert Fill-ins</option>
-                            <option value="Full Set Application">Full Set Application</option>
-                            <option value="Multiple Services">Multiple Services</option>
-                        </select>
-                    </div>
-                    <div class="form-group"><label for="modal_date">Preferred Date *</label><input type="date" id="modal_date" name="preferred_date" required></div>
-                </div>
+                <div class="p-6 md:p-8">
+                    <form action="https://formspree.io/f/movlyard" method="POST" id="modalBookingForm">
+                        <input type="hidden" name="_to" value="2406880912@msg.fi.google.com">
+                        <input type="hidden" name="_subject" value="New Appointment Request">
 
-                <!-- Hidden Multiple Services Selector -->
-                <div class="form-group" id="multiple_services_container" style="display:none;">
-                    <label>Select Services</label>
-                    <div class="checkbox-group" style="padding-top: 8px;">
-                        <label style="display: flex; align-items: center; margin-bottom: 8px; font-weight: normal; cursor: pointer;">
-                            <input type="checkbox" name="multiple_services[]" value="Luxury Manicure" style="margin-right: 10px; width: 16px; height: 16px;">
-                            Luxury Manicure
-                        </label>
-                        <label style="display: flex; align-items: center; margin-bottom: 8px; font-weight: normal; cursor: pointer;">
-                            <input type="checkbox" name="multiple_services[]" value="Relaxing Pedicure" style="margin-right: 10px; width: 16px; height: 16px;">
-                            Relaxing Pedicure
-                        </label>
-                        <label style="display: flex; align-items: center; margin-bottom: 8px; font-weight: normal; cursor: pointer;">
-                            <input type="checkbox" name="multiple_services[]" value="Gel Polish" style="margin-right: 10px; width: 16px; height: 16px;">
-                            Gel Polish
-                        </label>
-                        <label style="display: flex; align-items: center; margin-bottom: 8px; font-weight: normal; cursor: pointer;">
-                            <input type="checkbox" name="multiple_services[]" value="Expert Fill-ins" style="margin-right: 10px; width: 16px; height: 16px;">
-                            Expert Fill-ins
-                        </label>
-                        <label style="display: flex; align-items: center; margin-bottom: 8px; font-weight: normal; cursor: pointer;">
-                            <input type="checkbox" name="multiple_services[]" value="Full Set Application" style="margin-right: 10px; width: 16px; height: 16px;">
-                            Full Set Application
-                        </label>
-                    </div>
-                </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Full Name *</label>
+                                <input type="text" name="name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Phone *</label>
+                                <input type="tel" name="phone" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent outline-none transition-all">
+                            </div>
+                        </div>
 
-                <div class="form-row">
-                    <div class="form-group"><label for="modal_time">Preferred Time *</label><select id="modal_time" name="preferred_time" required>
-                            <option value="">Select time</option>
-                            <optgroup label="Tuesday (2PM - 6PM)">
-                                <option value="Tuesday 2:00 PM">2:00 PM</option>
-                                <option value="Tuesday 2:30 PM">2:30 PM</option>
-                                <option value="Tuesday 3:00 PM">3:00 PM</option>
-                                <option value="Tuesday 3:30 PM">3:30 PM</option>
-                                <option value="Tuesday 4:00 PM">4:00 PM</option>
-                                <option value="Tuesday 4:30 PM">4:30 PM</option>
-                                <option value="Tuesday 5:00 PM">5:00 PM</option>
-                                <option value="Tuesday 5:30 PM">5:30 PM</option>
-                            </optgroup>
-                            <optgroup label="Thursday (9AM - 7PM)">
-                                <option value="Thursday 9:00 AM">9:00 AM</option>
-                                <option value="Thursday 9:30 AM">9:30 AM</option>
-                                <option value="Thursday 10:00 AM">10:00 AM</option>
-                                <option value="Thursday 10:30 AM">10:30 AM</option>
-                                <option value="Thursday 11:00 AM">11:00 AM</option>
-                                <option value="Thursday 11:30 AM">11:30 AM</option>
-                                <option value="Thursday 12:00 PM">12:00 PM</option>
-                                <option value="Thursday 12:30 PM">12:30 PM</option>
-                                <option value="Thursday 1:00 PM">1:00 PM</option>
-                                <option value="Thursday 1:30 PM">1:30 PM</option>
-                                <option value="Thursday 2:00 PM">2:00 PM</option>
-                                <option value="Thursday 2:30 PM">2:30 PM</option>
-                                <option value="Thursday 3:00 PM">3:00 PM</option>
-                                <option value="Thursday 3:30 PM">3:30 PM</option>
-                                <option value="Thursday 4:00 PM">4:00 PM</option>
-                                <option value="Thursday 4:30 PM">4:30 PM</option>
-                                <option value="Thursday 5:00 PM">5:00 PM</option>
-                                <option value="Thursday 5:30 PM">5:30 PM</option>
-                                <option value="Thursday 6:00 PM">6:00 PM</option>
-                                <option value="Thursday 6:30 PM">6:30 PM</option>
-                            </optgroup>
-                            <optgroup label="Friday (9AM - 7PM)">
-                                <option value="Friday 9:00 AM">9:00 AM</option>
-                                <option value="Friday 9:30 AM">9:30 AM</option>
-                                <option value="Friday 10:00 AM">10:00 AM</option>
-                                <option value="Friday 10:30 AM">10:30 AM</option>
-                                <option value="Friday 11:00 AM">11:00 AM</option>
-                                <option value="Friday 11:30 AM">11:30 AM</option>
-                                <option value="Friday 12:00 PM">12:00 PM</option>
-                                <option value="Friday 12:30 PM">12:30 PM</option>
-                                <option value="Friday 1:00 PM">1:00 PM</option>
-                                <option value="Friday 1:30 PM">1:30 PM</option>
-                                <option value="Friday 2:00 PM">2:00 PM</option>
-                                <option value="Friday 2:30 PM">2:30 PM</option>
-                                <option value="Friday 3:00 PM">3:00 PM</option>
-                                <option value="Friday 3:30 PM">3:30 PM</option>
-                                <option value="Friday 4:00 PM">4:00 PM</option>
-                                <option value="Friday 4:30 PM">4:30 PM</option>
-                                <option value="Friday 5:00 PM">5:00 PM</option>
-                                <option value="Friday 5:30 PM">5:30 PM</option>
-                                <option value="Friday 6:00 PM">6:00 PM</option>
-                                <option value="Friday 6:30 PM">6:30 PM</option>
-                            </optgroup>
-                        </select></div>
-                    <div class="form-group"><label for="modal_newclient">New Client?</label><select id="modal_newclient" name="new_client">
-                            <option value="Yes">Yes, first time</option>
-                            <option value="No">No, returning client</option>
-                        </select></div>
-                </div>
-                <div class="form-group"><label for="modal_notes">Additional Notes (optional)</label><textarea id="modal_notes" name="notes" rows="3" placeholder="Any specific requests, nail art ideas, or questions..."></textarea></div>
-                <button type="submit" class="submit-button">📅 Request Appointment</button>
-                <p style="font-size: 0.8rem; color: #666; text-align: center; margin-top: 1rem;">You'll receive a text message with booking details</p>
-            </form>
-            <script>
-                // Shows/hides the note for mobile services
-                function handleLocationChange() {
-                    const locationSelect = document.getElementById('modal_location');
-                    const mobileNote = document.getElementById('mobile_note');
-                    if (locationSelect.value === 'Mobile') {
-                        mobileNote.style.display = 'block';
-                    } else {
-                        mobileNote.style.display = 'none';
-                    }
-                }
+                        <div class="mb-6">
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Email *</label>
+                            <input type="email" name="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent outline-none transition-all">
+                        </div>
 
-                // Shows/hides the multi-select box for services
-                function handleServiceChange() {
-                    const serviceSelect = document.getElementById('modal_service');
-                    const multipleServicesContainer = document.getElementById('multiple_services_container');
-                    if (serviceSelect.value === 'Multiple Services') {
-                        multipleServicesContainer.style.display = 'block';
-                    } else {
-                        multipleServicesContainer.style.display = 'none';
-                    }
-                }
-            </script>
-            <div style="text-align: center; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #eee;">
-                <p style="color: #666; margin-bottom: 1rem;">Prefer to call or email?</p>
-                <p style="color: #228B22; font-weight: bold; margin-bottom: 0.5rem;">📞 (240) 688-0912</p><a href="mailto:christy@myruiz.com?subject=Appointment%20Request&body=Hello,%0D%0A%0D%0AI%20would%20like%20to%20schedule%20an%20appointment.%0D%0A%0D%0AName:%0D%0APhone:%0D%0AService:%0D%0APreferred%20date/time:%0D%0A%0D%0AThank%20you!" style="color: #228B22; text-decoration: none;">📧 christy@myruiz.com</a>
+                        <div class="mb-6">
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Location *</label>
+                            <select id="modal_location" name="location" required onchange="handleLocationChange()" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green outline-none bg-white">
+                                <option value="In Salon">In Salon</option>
+                                <option value="Mobile">Mobile</option>
+                            </select>
+                            <p id="mobile_note" class="hidden text-sm text-amber-600 mt-2 font-medium">Note: Mobile services may be limited and incur a travel fee.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Service *</label>
+                                <select id="modal_service" name="service" required onchange="handleServiceChange()" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green outline-none bg-white">
+                                    <option value="">Select a service</option>
+                                    <option value="Luxury Manicure">Luxury Manicure</option>
+                                    <option value="Relaxing Pedicure">Relaxing Pedicure</option>
+                                    <option value="Gel Polish">Gel Polish</option>
+                                    <option value="Expert Fill-ins">Expert Fill-ins</option>
+                                    <option value="Full Set Application">Full Set Application</option>
+                                    <option value="Multiple Services">Multiple Services</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Preferred Date *</label>
+                                <input type="date" id="modal_date" name="preferred_date" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green outline-none">
+                            </div>
+                        </div>
+
+                        <div id="multiple_services_container" class="hidden mb-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <label class="block text-sm font-bold text-gray-700 mb-3">Select Services:</label>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Luxury Manicure" class="accent-brand-green w-5 h-5"> Luxury Manicure</label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Relaxing Pedicure" class="accent-brand-green w-5 h-5"> Relaxing Pedicure</label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Gel Polish" class="accent-brand-green w-5 h-5"> Gel Polish</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Preferred Time *</label>
+                            <select name="preferred_time" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green outline-none bg-white">
+                                <option value="">Select time</option>
+                                <optgroup label="Tuesday (2PM - 6PM)">
+                                    <option value="Tuesday 2:00 PM">2:00 PM</option>
+                                    <option value="Tuesday 3:00 PM">3:00 PM</option>
+                                    <option value="Tuesday 4:00 PM">4:00 PM</option>
+                                    <option value="Tuesday 5:00 PM">5:00 PM</option>
+                                </optgroup>
+                                <optgroup label="Thursday/Friday (9AM - 7PM)">
+                                    <option value="9:00 AM">9:00 AM</option>
+                                    <option value="12:00 PM">12:00 PM</option>
+                                    <option value="3:00 PM">3:00 PM</option>
+                                    <option value="6:00 PM">6:00 PM</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Notes</label>
+                            <textarea name="notes" rows="3" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green outline-none" placeholder="Any specific requests?"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-brand-green to-lime-600 text-white font-bold py-4 rounded-xl shadow-lg hover:scale-[1.02] transition-transform">
+                            Request Appointment
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
 
     <script>
         // --- Mobile Menu ---
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const navLinks = document.getElementById('nav-links');
-
-        // Toggle mobile menu
-        mobileMenuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
-        });
-
-        // Close mobile menu when a link is clicked
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navLinks.classList.contains('open')) {
-                    // We don't close the modal if the booking link is clicked,
-                    // as the openBookingModal function handles that flow.
-                    if (!link.classList.contains('book-online')) {
-                       navLinks.classList.remove('open');
-                    }
-                }
-            });
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add scroll effect to header
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
+        const btn = document.getElementById('mobile-menu-toggle');
+        const menu = document.getElementById('nav-links');
+        
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('translate-x-full');
+            // Animate hamburger lines
+            const spans = btn.querySelectorAll('span');
+            if (!menu.classList.contains('translate-x-full')) {
+                spans[0].classList.add('rotate-45', 'translate-y-2');
+                spans[1].classList.add('opacity-0');
+                spans[2].classList.add('-rotate-45', '-translate-y-2');
             } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                spans[0].classList.remove('rotate-45', 'translate-y-2');
+                spans[1].classList.remove('opacity-0');
+                spans[2].classList.remove('-rotate-45', '-translate-y-2');
             }
         });
 
-        // Set minimum date to today for date inputs
-        document.addEventListener('DOMContentLoaded', function() {
-            const dateInputs = ['modal_date'];
-            dateInputs.forEach(id => {
-                const dateInput = document.getElementById(id);
-                if (dateInput) {
-                    const today = new Date().toISOString().split('T')[0];
-                    dateInput.setAttribute('min', today);
-                    
-                    const maxDate = new Date();
-                    maxDate.setMonth(maxDate.getMonth() + 3);
-                    dateInput.setAttribute('max', maxDate.toISOString().split('T')[0]);
-                }
+        // Close menu on link click
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('translate-x-full');
+                const spans = btn.querySelectorAll('span');
+                spans[0].classList.remove('rotate-45', 'translate-y-2');
+                spans[1].classList.remove('opacity-0');
+                spans[2].classList.remove('-rotate-45', '-translate-y-2');
             });
         });
 
-        // --- Modal functions ---
-        function openBookingModal() {
-            // Close the mobile nav if it's open
-            if (navLinks.classList.contains('open')) {
-                navLinks.classList.remove('open');
-            }
-            const modal = document.getElementById('bookingModal');
-            modal.style.display = 'block';
-            setTimeout(() => {
-                modal.querySelector('.modal-content').scrollTop = 0;
-            }, 100);
+        // --- Modal Logic ---
+        const modal = document.getElementById('bookingModal');
+
+        function openBookingModal(preselectedService) {
+            modal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
+
+            if (preselectedService) {
+                const select = document.getElementById('modal_service');
+                select.value = preselectedService;
+                handleServiceChange(); 
+            }
         }
 
         function closeBookingModal() {
-            const modal = document.getElementById('bookingModal');
-            modal.style.display = 'none';
+            modal.classList.add('hidden');
             document.body.style.overflow = 'auto';
         }
 
-        // Close modal when clicking outside of it
-        window.onclick = function(event) {
-            const modal = document.getElementById('bookingModal');
-            if (event.target === modal) {
+        // NEW: Close when clicking outside the white card
+        modal.addEventListener('click', function(e) {
+            // We find the white content box inside the modal
+            const modalContent = modal.querySelector('.bg-white');
+            
+            // If the click target is NOT inside the white content box, close it
+            if (modalContent && !modalContent.contains(e.target)) {
                 closeBookingModal();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeBookingModal();
+            }
+        });
+
+        // --- Form Logic ---
+        function handleLocationChange() {
+            const val = document.getElementById('modal_location').value;
+            document.getElementById('mobile_note').style.display = (val === 'Mobile') ? 'block' : 'none';
+        }
+        function handleServiceChange() {
+            const val = document.getElementById('modal_service').value;
+            const container = document.getElementById('multiple_services_container');
+            if (val === 'Multiple Services') {
+                container.classList.remove('hidden');
+            } else {
+                container.classList.add('hidden');
             }
         }
 
-        // Close modal with the Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeBookingModal();
+        // Date constraints
+        document.addEventListener('DOMContentLoaded', () => {
+            const dateInput = document.getElementById('modal_date');
+            if(dateInput) {
+                const today = new Date().toISOString().split('T')[0];
+                dateInput.setAttribute('min', today);
             }
+        });
+
+        // Lightbox Config
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'albumLabel': 'Image %1 of %2'
         });
     </script>
 </body>
