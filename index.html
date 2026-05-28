@@ -92,10 +92,17 @@
                 <li><a href="#policies" class="hover:text-[#0b4028] transition-colors font-medium">Studio Rules</a></li>
                 <li><a href="#gallery" class="hover:text-[#0b4028] transition-colors font-medium">Gallery</a></li>
                 <li><a href="#about" class="hover:text-[#0b4028] transition-colors font-medium">About</a></li>
-                <li>
+                <li class="flex items-center border-l border-stone-200 pl-6 gap-4">
+                    <a href="https://www.instagram.com/nailedbycnicole/" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-[#0b4028] transition-colors" aria-label="Follow on Instagram">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
                     <a href="#" onclick="openBookingModal(); return false;" 
-                       class="bg-[#0b4028] hover:bg-[#072a1b] text-white px-5 py-2.5 rounded-full font-sans font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5">
+                       <comment-tag id="1">class="bg-[#0b4028] hover:bg-[#072a1b] text-white px-5 py-2.5 rounded-full font-sans font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5">
                         📅 Secure Appointment
+                    </a></comment-tag id="1" text="Removed the calendar emoji for a sleeker, text-only luxury button." type="suggestion">class="bg-[#0b4028] hover:bg-[#072a1b] text-white px-5 py-2.5 rounded-full font-sans font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5">
+                        Secure Appointment
                     </a>
                 </li>
             </ul>
@@ -107,7 +114,7 @@
             </button>
         </nav>
 
-        <div id="nav-links" class="fixed top-0 right-0 h-screen w-[75%] max-w-[320px] bg-white shadow-2xl flex flex-col p-8 pt-24 gap-6 translate-x-full md:hidden z-50">
+        <div id="nav-links" class="fixed top-0 right-0 h-screen w-[75%] max-w-[320px] bg-white shadow-2xl flex flex-col p-8 pt-24 gap-6 translate-x-full md:hidden z-50 overflow-y-auto">
             <span class="text-xs uppercase tracking-widest text-stone-400 border-b border-stone-100 pb-2">Menu Navigation</span>
             <a href="#home" class="text-lg font-medium hover:text-[#0b4028] text-stone-800 transition-colors">Home</a>
             <a href="#services" class="text-lg font-medium hover:text-[#0b4028] text-stone-800 transition-colors">Services & Menu</a>
@@ -115,7 +122,15 @@
             <a href="#policies" class="text-lg font-medium hover:text-[#0b4028] text-stone-800 transition-colors">Studio Policies</a>
             <a href="#gallery" class="text-lg font-medium hover:text-[#0b4028] text-stone-800 transition-colors">Visual Gallery</a>
             <a href="#about" class="text-lg font-medium hover:text-[#0b4028] text-stone-800 transition-colors">About Artist</a>
-            <a href="#" onclick="openBookingModal(); return false;" class="bg-[#072a1b] text-white text-center py-3.5 rounded-xl font-sans font-bold uppercase tracking-wider mt-4 shadow-md">📅 Book Your Slot</a>
+            
+            <a href="https://www.instagram.com/nailedbycnicole/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-stone-600 hover:text-[#0b4028] mt-2 transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                </svg>
+                <span class="font-medium text-sm">Follow on Instagram</span>
+            </a>
+
+            <a href="#" onclick="openBookingModal(); return false;" <comment-tag id="2">class="bg-[#072a1b] text-white text-center py-3.5 rounded-xl font-sans font-bold uppercase tracking-wider mt-2 shadow-md">📅 Book Your Slot</a></comment-tag id="2" text="Removed the calendar emoji for mobile navigation as well." type="suggestion">class="bg-[#072a1b] text-white text-center py-3.5 rounded-xl font-sans font-bold uppercase tracking-wider mt-2 shadow-md">Book Your Slot</a>
         </div>
     </header>
 
@@ -126,8 +141,10 @@
         </div>
 
         <div class="relative z-10 px-6 max-w-4xl mx-auto flex flex-col items-center">
-            <span class="bg-[#0b4028]/80 backdrop-blur-md text-[#dfbd69] text-xs uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 border border-[#dfbd69]/30 font-sans font-semibold">
+            <comment-tag id="3"><span class="bg-[#0b4028]/80 backdrop-blur-md text-[#dfbd69] text-xs uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 border border-[#dfbd69]/30 font-sans font-semibold">
                 ✨ Clinton, MD Independent Studio
+            </span></comment-tag id="3" text="Replaced the sparkles emoji with an elegant geometric typographic star (✦) to elevate the luxury feel." type="suggestion"><span class="bg-[#0b4028]/80 backdrop-blur-md text-[#dfbd69] text-xs uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 border border-[#dfbd69]/30 font-sans font-semibold">
+                ✦ Clinton, MD Independent Studio
             </span>
             <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 drop-shadow-md leading-[1.15] animate-fade-in-up">
                 Bespoke Structure, Flawless Detailing
@@ -139,8 +156,10 @@
                 <a href="#services" class="bg-[#0b4028] hover:bg-[#072a1b] text-white font-sans font-semibold text-sm uppercase tracking-wider px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
                     Explore Curated Menu
                 </a>
-                <a href="#" onclick="openBookingModal(); return false;" class="bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-sm text-white font-sans font-semibold text-sm uppercase tracking-wider px-8 py-4 rounded-full transition-all duration-300">
+                <a href="#" onclick="openBookingModal(); return false;" <comment-tag id="4">class="bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-sm text-white font-sans font-semibold text-sm uppercase tracking-wider px-8 py-4 rounded-full transition-all duration-300">
                     📅 Secure Slot Online
+                </a></comment-tag id="4" text="Removed the emoji from the hero booking button." type="suggestion">class="bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-sm text-white font-sans font-semibold text-sm uppercase tracking-wider px-8 py-4 rounded-full transition-all duration-300">
+                    Secure Slot Online
                 </a>
             </div>
         </div>
@@ -159,18 +178,21 @@
 
             <!-- Manicures Segment -->
             <div class="mb-16">
-                <div class="flex items-center gap-3 mb-8 border-b border-stone-100 pb-3">
+                <comment-tag id="5"><div class="flex items-center gap-3 mb-8 border-b border-stone-100 pb-3">
                     <span class="text-3xl">💅</span>
+                    <h3 class="text-2xl font-bold text-[#072a1b] font-serif">Natural & Structured Gel Services</h3>
+                </div></comment-tag id="5" text="Replaced the nail polish emoji with an editorial-style numeric typography marker (01 —) to categorize sections luxuriously." type="suggestion"><div class="flex items-center gap-4 mb-8 border-b border-stone-100 pb-3">
+                    <span class="text-[#dfbd69] font-sans text-sm font-bold tracking-widest uppercase">01 &mdash;</span>
                     <h3 class="text-2xl font-bold text-[#072a1b] font-serif">Natural & Structured Gel Services</h3>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Basic Manicure -->
+                    <!-- Natural Prep -->
                     <div class="flex flex-col justify-between bg-[#fafaf7] border border-stone-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
                         <div>
                             <div class="w-full h-48 rounded-xl overflow-hidden mb-5 bg-stone-200">
-                                <img src="image4.jpg" alt="Natural Nail Polish Treatment" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-[#0b4028]/5 flex items-center justify-center text-stone-400 font-sans text-sm\'>Natural Nail Care Detail</div>';">
+                                <img src="image4.jpg" alt="Natural Nail Prep Treatment" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-[#0b4028]/5 flex items-center justify-center text-stone-400 font-sans text-sm\'>Natural Nail Care</div>';">
                             </div>
                             <div class="flex justify-between items-start mb-2">
                                 <h4 class="font-bold text-lg text-stone-900">Natural Nail Prep & Cleanse</h4>
@@ -179,6 +201,82 @@
                             <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 45 Minutes</p>
                             <p class="text-sm text-stone-600 leading-relaxed">
                                 Botanical sea-salt soak, therapeutic sugar massage, structural callus reduction, deep exfoliation, and detailed natural shine finishing.
+                            </p>
+                        </div>
+                        <button onclick="openBookingModal('Natural Nail Prep & Cleanse')" class="mt-6 w-full text-center py-2.5 rounded-lg border border-[#0b4028]/30 text-[#072a1b] text-xs font-sans font-bold uppercase tracking-wider hover:bg-[#072a1b] hover:text-white transition-colors duration-200">
+                            Select Service
+                        </button>
+                    </div>
+
+                    <!-- Gel Manicure -->
+                    <div class="flex flex-col justify-between bg-[#fafaf7] border border-stone-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="w-full h-48 rounded-xl overflow-hidden mb-5 bg-stone-200">
+                                <img src="image8.jpg" alt="Precision Gel Manicure" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-[#0b4028]/5 flex items-center justify-center text-stone-400 font-sans text-sm\'>Precision Gel Manicure</div>';">
+                            </div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-lg text-stone-900">Precision Gel Manicure</h4>
+                                <span class="font-sans font-bold text-[#0b4028] text-lg">$45</span>
+                            </div>
+                            <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 1 Hour</p>
+                            <p class="text-sm text-stone-600 leading-relaxed">
+                                Expert dry cuticle detailing coupled with zero-dry-time premium gel polish. Locks in intense color depth and matte or high-shine protection.
+                            </p>
+                        </div>
+                        <button onclick="openBookingModal('Precision Gel Manicure')" class="mt-6 w-full text-center py-2.5 rounded-lg border border-[#0b4028]/30 text-[#072a1b] text-xs font-sans font-bold uppercase tracking-wider hover:bg-[#072a1b] hover:text-white transition-colors duration-200">
+                            Select Service
+                        </button>
+                    </div>
+
+                    <!-- BIAB Manicure -->
+                    <div class="flex flex-col justify-between bg-[#fafaf7] border border-stone-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="w-full h-48 rounded-xl overflow-hidden mb-5 bg-stone-200">
+                                <img src="image2.JPG" alt="Structured Gel Manicure BIAB" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-[#0b4028]/5 flex items-center justify-center text-stone-400 font-sans text-sm\'>Structured Gel Manicure</div>';">
+                            </div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-lg text-stone-900">Structured Gel Manicure (BIAB)</h4>
+                                <span class="font-sans font-bold text-[#0b4028] text-lg">$55</span>
+                            </div>
+                            <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 1 Hour 15 Mins</p>
+                            <p class="text-sm text-stone-600 leading-relaxed">
+                                Our highly requested Builder Gel (BIAB) service. Acts as a flexible protective armor coating over your natural nails to stop bending, prevent chips, and encourage long natural growth.
+                            </p>
+                        </div>
+                        <button onclick="openBookingModal('Structured Gel Manicure (BIAB Growth)')" class="mt-6 w-full text-center py-2.5 rounded-lg border border-[#0b4028]/30 text-[#072a1b] text-xs font-sans font-bold uppercase tracking-wider hover:bg-[#072a1b] hover:text-white transition-colors duration-200">
+                            Select Service
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pedicures Segment -->
+            <div class="mb-16">
+                <comment-tag id="6"><div class="flex items-center gap-3 mb-8 border-b border-stone-100 pb-3">
+                    <span class="text-3xl">🦶</span>
+                    <h3 class="text-2xl font-bold text-[#072a1b] font-serif">Spa Pedicure Services</h3>
+                </div></comment-tag id="6" text="Replaced the foot emoji with cohesive, editorial-style section numbering." type="suggestion"><div class="flex items-center gap-4 mb-8 border-b border-stone-100 pb-3">
+                    <span class="text-[#dfbd69] font-sans text-sm font-bold tracking-widest uppercase">02 &mdash;</span>
+                    <h3 class="text-2xl font-bold text-[#072a1b] font-serif">Spa Pedicure Services</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Basic Pedicure -->
+                    <div class="flex flex-col justify-between bg-[#fafaf7] border border-stone-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="w-full h-48 rounded-xl overflow-hidden mb-5 bg-stone-200">
+                                <img src="image5.jpg" alt="Luxury Clarifying Pedicure" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-[#0b4028]/5 flex items-center justify-center text-stone-400 font-sans text-sm\'>Clarifying Pedicure</div>';">
+                            </div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-lg text-stone-900">Luxury Clarifying Pedicure</h4>
+                                <span class="font-sans font-bold text-[#0b4028] text-lg">$35</span>
+                            </div>
+                            <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 45 Minutes</p>
+                            <p class="text-sm text-stone-600 leading-relaxed">
+                                Relaxing bath soak, meticulous heel and callus refinement, cuticle care, therapeutic foot massage, and standard polish finish.
                             </p>
                         </div>
                         <button onclick="openBookingModal('Luxury Clarifying Pedicure')" class="mt-6 w-full text-center py-2.5 rounded-lg border border-[#0b4028]/30 text-[#072a1b] text-xs font-sans font-bold uppercase tracking-wider hover:bg-[#072a1b] hover:text-white transition-colors duration-200">
@@ -190,28 +288,32 @@
                     <div class="flex flex-col justify-between bg-[#fafaf7] border border-stone-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
                         <div>
                             <div class="w-full h-48 rounded-xl overflow-hidden mb-5 bg-stone-200">
-                                <img src="pexels-andreamostiphotography-17056220.jpg" alt="DMV Premium Gel Pedicure Treatment" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-[#0b4028]/5 flex items-center justify-center text-stone-400 font-sans text-sm\'>Precision Gel Pedicure</div>';">
+                                <img src="pexels-andreamostiphotography-17056220.jpg" alt="Signature Gel Pedicure Treatment" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-[#0b4028]/5 flex items-center justify-center text-stone-400 font-sans text-sm\'>Signature Gel Pedicure</div>';">
                             </div>
                             <div class="flex justify-between items-start mb-2">
-                                <h4 class="font-bold text-lg text-stone-900">DMV Precision Gel Manicure</h4>
-                                <span class="font-sans font-bold text-[#0b4028] text-lg">$45</span>
+                                <h4 class="font-bold text-lg text-stone-900">Signature Gel Pedicure</h4>
+                                <span class="font-sans font-bold text-[#0b4028] text-lg">$50</span>
                             </div>
-                            <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 1 Hour</p>
+                            <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 1 Hour 10 Mins</p>
                             <p class="text-sm text-stone-600 leading-relaxed">
-                                Extended clarify treatment coupled with zero-dry-time premium gel polish. Locks in intense color depth and high shine protection for up to 6+ weeks.
+                                Extended clarify treatment coupled with zero-dry-time premium gel polish. Locks in intense color depth and durable matte or high-shine protection.
                             </p>
                         </div>
-                        <button onclick="openBookingModal('DMV Signature Gel Pedicure')" class="mt-6 w-full text-center py-2.5 rounded-lg border border-[#0b4028]/30 text-[#072a1b] text-xs font-sans font-bold uppercase tracking-wider hover:bg-[#072a1b] hover:text-white transition-colors duration-200">
+                        <button onclick="openBookingModal('Signature Gel Pedicure')" class="mt-6 w-full text-center py-2.5 rounded-lg border border-[#0b4028]/30 text-[#072a1b] text-xs font-sans font-bold uppercase tracking-wider hover:bg-[#072a1b] hover:text-white transition-colors duration-200">
                             Select Service
                         </button>
                     </div>
                 </div>
             </div>
 
+            <!-- Enhancements Segment -->
             <div class="mb-8">
-                <div class="flex items-center gap-3 mb-8 border-b border-stone-100 pb-3">
+                <comment-tag id="7"><div class="flex items-center gap-3 mb-8 border-b border-stone-100 pb-3">
                     <span class="text-3xl">✨</span>
+                    <h3 class="text-2xl font-bold text-[#072a1b] font-serif">Specialty Enhancements & Extension Systems</h3>
+                </div></comment-tag id="7" text="Replaced the sparkles emoji with cohesive, editorial-style section numbering." type="suggestion"><div class="flex items-center gap-4 mb-8 border-b border-stone-100 pb-3">
+                    <span class="text-[#dfbd69] font-sans text-sm font-bold tracking-widest uppercase">03 &mdash;</span>
                     <h3 class="text-2xl font-bold text-[#072a1b] font-serif">Specialty Enhancements & Extension Systems</h3>
                 </div>
 
@@ -288,7 +390,7 @@
                 </div>
                 <div class="max-w-xl relative z-10">
                     <span class="text-[#dfbd69] text-xs font-sans uppercase tracking-widest font-bold">Luxury Group Booking</span>
-                    <h3 class="text-2xl sm:text-3xl font-bold font-serif mt-2 mb-4">Host a Premium Press-On Party 🎉</h3>
+                    <comment-tag id="8"><h3 class="text-2xl sm:text-3xl font-bold font-serif mt-2 mb-4">Host a Premium Press-On Party 🎉</h3></comment-tag id="8" text="Removed the party popper emoji for a cleaner, high-end presentation." type="suggestion"><h3 class="text-2xl sm:text-3xl font-bold font-serif mt-2 mb-4">Host a Premium Press-On Party</h3>
                     <p class="text-emerald-100 text-sm sm:text-base leading-relaxed">
                         Create beautiful, custom-sized luxury press-on nail styles for groups of 6 or more. Perfect for bachelorettes, corporate retreats, and premium gatherings in Clinton and local DMV.
                     </p>
@@ -405,7 +507,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white/5 border border-white/10 p-8 rounded-2xl">
-                    <span class="text-2xl mb-4 block">⏱️</span>
+                    <comment-tag id="9"><span class="text-2xl mb-4 block">⏱️</span></comment-tag id="9" text="Replaced the stopwatch emoji with a sleek SVG clock icon to match the luxury design language." type="suggestion"><svg class="w-8 h-8 text-[#dfbd69] mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     <h4 class="font-bold text-lg mb-2 font-serif">Punctuality Rule</h4>
                     <p class="text-stone-300 text-sm leading-relaxed">
                         To maintain our timeline blocks, there is a strict 10-minute grace window. Arrivals beyond this point may lead to shortened service options or automatic cancellation, incurring the full booking charge.
@@ -413,7 +515,7 @@
                 </div>
 
                 <div class="bg-white/5 border border-white/10 p-8 rounded-2xl">
-                    <span class="text-2xl mb-4 block">📅</span>
+                    <comment-tag id="10"><span class="text-2xl mb-4 block">📅</span></comment-tag id="10" text="Replaced the calendar emoji with an elegant SVG calendar icon." type="suggestion"><svg class="w-8 h-8 text-[#dfbd69] mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                     <h4 class="font-bold text-lg mb-2 font-serif">Cancellation Policy</h4>
                     <p class="text-stone-300 text-sm leading-relaxed">
                         Cancellations, schedule transfers, or structural reductions must be requested at least 24 hours prior to scheduled starts. Standard late cancellations may be subject to penalty processing charges.
@@ -421,7 +523,7 @@
                 </div>
 
                 <div class="bg-white/5 border border-white/10 p-8 rounded-2xl">
-                    <span class="text-2xl mb-4 block">🛡️</span>
+                    <comment-tag id="11"><span class="text-2xl mb-4 block">🛡️</span></comment-tag id="11" text="Replaced the shield emoji with a clean, professional SVG shield outline." type="suggestion"><svg class="w-8 h-8 text-[#dfbd69] mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     <h4 class="font-bold text-lg mb-2 font-serif">Foreign Work Terms</h4>
                     <p class="text-stone-300 text-sm leading-relaxed">
                         To maintain standard health hygiene and product safety, we do not refill or structural-blend over work from other establishments. First-time guests must secure a full clean removal if coming with existing enhancements.
@@ -480,8 +582,10 @@
         <div class="container mx-auto px-6 text-center max-w-5xl">
             <span class="text-stone-400 text-xs font-sans uppercase tracking-widest font-semibold block mb-2">Social Feed</span>
             <h2 class="text-3xl font-bold font-serif mb-6 text-stone-900">Explore Current Design Sets</h2>
-            <a href="https://www.instagram.com/nailedbycnicole/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white text-xs font-sans font-bold uppercase tracking-wider px-8 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
+            <comment-tag id="12"><a href="https://www.instagram.com/nailedbycnicole/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white text-xs font-sans font-bold uppercase tracking-wider px-8 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
                 <span>📸 Follow @nailedbycnicole</span>
+            </a></comment-tag id="12" text="Removed the camera emoji from the Instagram link for a cleaner aesthetic." type="suggestion"><a href="https://www.instagram.com/nailedbycnicole/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white text-xs font-sans font-bold uppercase tracking-wider px-8 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
+                <span>Follow @nailedbycnicole</span>
             </a>
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
@@ -525,7 +629,7 @@
                     <div class="bg-[#faf8f5] border border-stone-100 p-8 rounded-3xl text-center shadow-sm">
                         <span class="text-[#072a1b] font-sans text-xs uppercase tracking-widest block font-bold mb-1">Located In</span>
                         <p class="text-2xl font-bold text-[#072a1b] font-serif mb-6">Clinton, Maryland</p>
-                        <p class="text-xs text-stone-400 mb-6">Serving Prince George's County and the greater Washington Metro (DMV) Area.</p>
+                        <p class="text-xs text-stone-400 mb-6">Serving Prince George's County and the greater Washington Metro Area.</p>
                         <button onclick="openBookingModal()" class="bg-[#072a1b] hover:bg-[#0b4028] text-white font-sans font-bold text-xs uppercase tracking-wider py-3 px-6 rounded-xl transition-colors w-full shadow-sm">
                             Request Appointment
                         </button>
@@ -543,17 +647,25 @@
                     <p class="text-stone-400 text-sm max-w-xs leading-relaxed mb-4">
                         Premium structured gel overlay work, precise dry cuticle cleaning, and high-tier customized nail extensions in a private luxury suite.
                     </p>
-                    <p><a href="tel:2406880912" class="hover:text-[#dfbd69] text-stone-200 text-sm transition-colors font-sans font-bold">📞 (240) 688-0912</a></p>
+                    <comment-tag id="13"><p><a href="tel:2406880912" class="hover:text-[#dfbd69] text-stone-200 text-sm transition-colors font-sans font-bold">📞 (240) 688-0912</a></p>
                     <div class="mt-4">
                         <a href="mailto:christy@myruiz.com" class="inline-block border border-stone-800 text-stone-300 px-4 py-2 rounded hover:bg-stone-900 transition-colors text-xs font-sans">📧 Email Contact</a>
+                    </div></comment-tag id="13" text="Removed phone and email emojis from the footer in favor of clean text formatting." type="suggestion"><p><a href="tel:2406880912" class="hover:text-[#dfbd69] text-stone-200 text-sm transition-colors font-sans font-bold">(240) 688-0912</a></p>
+                    <div class="mt-4">
+                        <a href="mailto:christy@myruiz.com" class="inline-block border border-stone-800 text-stone-300 px-4 py-2 rounded hover:bg-stone-900 transition-colors text-xs font-sans">Email Contact</a>
                     </div>
                 </div>
                 <div>
                     <h3 class="text-[#dfbd69] font-serif font-semibold text-lg mb-4">Dedicated Hours</h3>
                     <div class="space-y-2 text-sm text-stone-400 font-sans">
-                        <p class="flex justify-between md:justify-start gap-8"><span>Tuesday:</span> <span class="text-stone-200">2:00 PM – 6:00 PM</span></p>
-                        <p class="flex justify-between md:justify-start gap-8"><span>Thu – Fri:</span> <span class="text-stone-200">9:00 AM – 7:00 PM</span></p>
-                        <p class="flex justify-between md:justify-start gap-8 text-stone-500"><span>Sun/Mon/Wed/Sat:</span> <span>Studio Closed</span></p>
+                        <p class="flex justify-between md:justify-start gap-8">
+                            <span class="text-stone-200 font-semibold">Standard Booking:</span> 
+                            <span class="text-stone-300">Thursday – Friday</span>
+                        </p>
+                        <p class="flex justify-between md:justify-start gap-8 mt-1 border-t border-stone-800 pt-2">
+                            <span class="text-[#dfbd69] font-semibold">Press-On Parties:</span> 
+                            <span class="text-[#dfbd69]">Available Any Day</span>
+                        </p>
                     </div>
                 </div>
                 <div>
@@ -573,7 +685,7 @@
             <div class="bg-white w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden animate-[fadeInUp_0.3s_ease-out]">
                 <div class="bg-[#072a1b] p-6 flex justify-between items-center text-white border-b border-white/10">
                     <div>
-                        <h3 class="text-xl sm:text-2xl font-bold font-serif">📅 Request Your Appointment</h3>
+                        <comment-tag id="14"><h3 class="text-xl sm:text-2xl font-bold font-serif">📅 Request Your Appointment</h3></comment-tag id="14" text="Removed the calendar emoji from the booking form header." type="suggestion"><h3 class="text-xl sm:text-2xl font-bold font-serif">Request Your Appointment</h3>
                         <p class="text-[10px] text-stone-400 font-sans uppercase tracking-widest mt-0.5">Clinton, MD Private Studio</p>
                     </div>
                     <button onclick="closeBookingModal()" class="hover:bg-white/10 rounded-full w-9 h-9 flex items-center justify-center text-2xl font-bold transition-colors" aria-label="Close Modal">&times;</button>
@@ -591,7 +703,7 @@
                     <!-- Booking submission block -->
                     <form action="https://formspree.io/f/movlyard" method="POST" id="modalBookingForm">
                         <input type="hidden" name="_to" value="2406880912@msg.fi.google.com">
-                        <input type="hidden" name="_subject" value="New DMV Luxury Appointment Request">
+                        <input type="hidden" name="_subject" value="New Luxury Appointment Request">
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                             <div>
@@ -621,17 +733,29 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                             <div>
                                 <label class="block text-xs font-sans font-bold text-stone-700 uppercase tracking-wider mb-1.5">Primary Service Requested *</label>
-                                <select id="modal_service" name="service" required onchange="handleServiceChange()" class="w-full p-3 text-sm border border-stone-200 rounded-xl focus:ring-2 focus:ring-[#0b4028] outline-none bg-white font-sans text-slate-800">
+                                <comment-tag id="15"><select id="modal_service" name="service" required onchange="handleServiceChange()" class="w-full p-3 text-sm border border-stone-200 rounded-xl focus:ring-2 focus:ring-[#0b4028] outline-none bg-white font-sans text-slate-800">
                                     <option value="">Select Primary Service</option>
                                     <option value="Natural Nail Prep & Cleanse">Natural Nail Prep & Cleanse ($35 | 45m)</option>
-                                    <option value="DMV Precision Gel Manicure">DMV Precision Gel Manicure ($45 | 1h)</option>
-                                    <option value="Structured Gel Manicure (BIAB)">Structured Gel Manicure (BIAB Growth) ($55 | 1h 15m)</option>
+                                    <option value="Precision Gel Manicure">Precision Gel Manicure ($45 | 1h)</option>
+                                    <option value="Structured Gel Manicure (BIAB Growth)">Structured Gel Manicure (BIAB Growth) ($55 | 1h 15m)</option>
                                     <option value="Luxury Clarifying Pedicure">Luxury Clarifying Pedicure ($35 | 45m)</option>
-                                    <option value="DMV Signature Gel Pedicure">DMV Signature Gel Pedicure ($50 | 1h 10m)</option>
+                                    <option value="Signature Gel Pedicure">Signature Gel Pedicure ($50 | 1h 10m)</option>
                                     <option value="Elite Hard Gel Overlay">Elite Hard Gel Overlay ($60 | 1h 30m)</option>
                                     <option value="Full Coverage Gel Tip Extensions">Full Coverage Gel Tip Extensions ($65+ | 1h 30m)</option>
                                     <option value="Technical Hard Gel Re-balance">Technical Hard Gel Re-balance ($45 | 1h 15m)</option>
                                     <option value="Press On Party">🎉 Custom Press On Party (Group System)</option>
+                                    <option value="Multiple Services">Multiple Services Combo Selection</option>
+                                </select></comment-tag id="15" text="Removed the party popper emoji from the dropdown menu to keep the booking inputs uniform and sleek." type="suggestion"><select id="modal_service" name="service" required onchange="handleServiceChange()" class="w-full p-3 text-sm border border-stone-200 rounded-xl focus:ring-2 focus:ring-[#0b4028] outline-none bg-white font-sans text-slate-800">
+                                    <option value="">Select Primary Service</option>
+                                    <option value="Natural Nail Prep & Cleanse">Natural Nail Prep & Cleanse ($35 | 45m)</option>
+                                    <option value="Precision Gel Manicure">Precision Gel Manicure ($45 | 1h)</option>
+                                    <option value="Structured Gel Manicure (BIAB Growth)">Structured Gel Manicure (BIAB Growth) ($55 | 1h 15m)</option>
+                                    <option value="Luxury Clarifying Pedicure">Luxury Clarifying Pedicure ($35 | 45m)</option>
+                                    <option value="Signature Gel Pedicure">Signature Gel Pedicure ($50 | 1h 10m)</option>
+                                    <option value="Elite Hard Gel Overlay">Elite Hard Gel Overlay ($60 | 1h 30m)</option>
+                                    <option value="Full Coverage Gel Tip Extensions">Full Coverage Gel Tip Extensions ($65+ | 1h 30m)</option>
+                                    <option value="Technical Hard Gel Re-balance">Technical Hard Gel Re-balance ($45 | 1h 15m)</option>
+                                    <option value="Press On Party">Custom Press On Party (Group System)</option>
                                     <option value="Multiple Services">Multiple Services Combo Selection</option>
                                 </select>
                             </div>
@@ -663,9 +787,9 @@
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-sans font-medium text-stone-700">
                                 <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Natural Nail Prep" class="accent-brand-green w-4 h-4"> Natural Prep & Cleanse ($35)</label>
                                 <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Precision Gel Manicure" class="accent-brand-green w-4 h-4"> Precision Gel Mani ($45)</label>
-                                <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Structured Gel Manicure (BIAB)" class="accent-brand-green w-4 h-4"> Structured Gel (BIAB Growth) ($55)</label>
+                                <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Structured Gel Manicure (BIAB Growth)" class="accent-brand-green w-4 h-4"> Structured Gel (BIAB) ($55)</label>
                                 <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Luxury Clarifying Pedicure" class="accent-brand-green w-4 h-4"> Luxury Pedicure ($35)</label>
-                                <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Signature Gel Pedicure" class="accent-brand-green w-4 h-4"> Gel Pedicure ($50)</label>
+                                <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Signature Gel Pedicure" class="accent-brand-green w-4 h-4"> Signature Gel Pedicure ($50)</label>
                                 <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Elite Hard Gel Overlay" class="accent-brand-green w-4 h-4"> Elite Hard Gel Overlay ($60)</label>
                             </div>
                         </div>
@@ -829,7 +953,7 @@
                 if (partyInput) partyInput.setAttribute('required', 'true'); 
             }
             
-            // Re-validate the calendar date against the new service rules
+            // Re-validate the calendar date against the new service rules dynamically
             validateDateSelection();
         }
 
@@ -868,7 +992,7 @@
                         if (response.ok) {
                             form.innerHTML = `
                                 <div class="text-center py-12 px-4">
-                                    <div class="w-16 h-16 bg-[#0b4028]/10 text-[#0b4028] rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">✨</div>
+                                    <comment-tag id="16"><div class="w-16 h-16 bg-[#0b4028]/10 text-[#0b4028] rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">✨</div></comment-tag id="16" text="Replaced the sparkles emoji in the success modal with a clean SVG checkmark for a sophisticated finish." type="suggestion"><div class="w-16 h-16 bg-[#0b4028]/10 text-[#0b4028] rounded-full flex items-center justify-center mx-auto mb-4"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div>
                                     <h4 class="text-2xl font-serif font-bold text-[#072a1b] mb-3">Request Successfully Sent</h4>
                                     <p class="text-stone-600 font-sans text-sm leading-relaxed max-w-sm mx-auto">
                                         Thank you! Your luxury appointment request has been received. We will review the details and contact you shortly to confirm your booking slot.
