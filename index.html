@@ -15,9 +15,25 @@
     <!-- Lightbox CSS for gallery zoom -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
 
-    <!-- Tailwind CSS (CDN added to guarantee styling works in any hosting environment) -->
+    <!-- Tailwind CSS CDN (No NPM required) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="./dist/output.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in-up': 'subtleFade 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        subtleFade: {
+                            '0%': { opacity: '0', transform: 'translateY(12px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
     <style>
         :root {
@@ -162,79 +178,6 @@
                             </div>
                             <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 45 Minutes</p>
                             <p class="text-sm text-stone-600 leading-relaxed">
-                                Detailed dry cuticle exfoliation and cleaning, precise filing, natural nail health analysis, finished with high-shine regular polish.
-                            </p>
-                        </div>
-                        <button onclick="openBookingModal('Natural Nail Prep & Cleanse')" class="mt-6 w-full text-center py-2.5 rounded-lg border border-[#0b4028]/30 text-[#072a1b] text-xs font-sans font-bold uppercase tracking-wider hover:bg-[#072a1b] hover:text-white transition-colors duration-200">
-                            Select Service
-                        </button>
-                    </div>
-
-                    <!-- Gel Manicure -->
-                    <div class="flex flex-col justify-between bg-[#fafaf7] border border-stone-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
-                        <div>
-                            <div class="w-full h-48 rounded-xl overflow-hidden mb-5 bg-stone-200">
-                                <img src="image8.jpg" alt="DMV Premium Gel Manicure" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-[#0b4028]/5 flex items-center justify-center text-stone-400 font-sans text-sm\'>Precision Gel Polish</div>';">
-                            </div>
-                            <div class="flex justify-between items-start mb-2">
-                                <h4 class="font-bold text-lg text-stone-900">DMV Precision Gel Manicure</h4>
-                                <span class="font-sans font-bold text-[#0b4028] text-lg">$50</span>
-                            </div>
-                            <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 1 Hour</p>
-                            <p class="text-sm text-stone-600 leading-relaxed">
-                                Long-lasting, chip-resistant hybrid color service. Includes meticulous medical-grade Russian-style cuticle treatment, edge protection styling, and your choice of a high-shine or premium matte finish.
-                            </p>
-                        </div>
-                        <button onclick="openBookingModal('DMV Precision Gel Manicure')" class="mt-6 w-full text-center py-2.5 rounded-lg border border-[#0b4028]/30 text-[#072a1b] text-xs font-sans font-bold uppercase tracking-wider hover:bg-[#072a1b] hover:text-white transition-colors duration-200">
-                            Select Service
-                        </button>
-                    </div>
-
-                    <!-- Structured Manicure -->
-                    <div class="flex flex-col justify-between bg-[#fafaf7] border border-stone-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-300 ring-2 ring-[#0b4028]/10">
-                        <div>
-                            <div class="w-full h-48 rounded-xl overflow-hidden mb-5 bg-stone-200 relative">
-                                <span class="absolute top-3 right-3 bg-[#0b4028] text-[#dfbd69] text-[10px] font-sans font-bold uppercase tracking-widest px-2.5 py-1 rounded-full shadow-sm z-10">Popular</span>
-                                <img src="image2.JPG" alt="Structured Gel Builder Gel BIAB Overlay Set" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-[#0b4028]/5 flex items-center justify-center text-stone-400 font-sans text-sm\'>Structured Gel (BIAB)</div>';">
-                            </div>
-                            <div class="flex justify-between items-start mb-2">
-                                <h4 class="font-bold text-lg text-stone-900">Structured Gel Manicure (BIAB)</h4>
-                                <span class="font-sans font-bold text-[#0b4028] text-lg">$85</span>
-                            </div>
-                            <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 1 Hour 15 Mins</p>
-                            <p class="text-sm text-stone-600 leading-relaxed">
-                                The ultimate natural nail growth treatment. Using a premium, thick builder gel overlay (often called BIAB) to reinforce and shape your natural nails. This creates a strong, flexible protective arch that prevents bending, breaking, and chipping—allowing your natural nails to grow long and strong without acrylic damage. Finished with custom color (glossy or matte).
-                            </p>
-                        </div>
-                        <button onclick="openBookingModal('Structured Gel Manicure (BIAB)')" class="mt-6 w-full text-center py-2.5 rounded-lg bg-[#0b4028] hover:bg-[#072a1b] text-white text-xs font-sans font-bold uppercase tracking-wider shadow-sm transition-colors duration-200">
-                            Select Service
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mb-16">
-                <div class="flex items-center gap-3 mb-8 border-b border-stone-100 pb-3">
-                    <span class="text-3xl">🦶</span>
-                    <h3 class="text-2xl font-bold text-[#072a1b] font-serif">Boutique Foot Care & Pedicures</h3>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
-                    <!-- Basic Pedicure -->
-                    <div class="flex flex-col justify-between bg-[#fafaf7] border border-stone-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
-                        <div>
-                            <div class="w-full h-48 rounded-xl overflow-hidden mb-5 bg-stone-200">
-                                <img src="image5.jpg" alt="Bespoke Pedicure Therapy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-[#0b4028]/5 flex items-center justify-center text-stone-400 font-sans text-sm\'>Boutique Botanical Bath</div>';">
-                            </div>
-                            <div class="flex justify-between items-start mb-2">
-                                <h4 class="font-bold text-lg text-stone-900">Luxury Clarifying Pedicure</h4>
-                                <span class="font-sans font-bold text-[#0b4028] text-lg">$45</span>
-                            </div>
-                            <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 45 Minutes</p>
-                            <p class="text-sm text-stone-600 leading-relaxed">
                                 Botanical sea-salt soak, therapeutic sugar massage, structural callus reduction, deep exfoliation, and detailed natural shine finishing.
                             </p>
                         </div>
@@ -247,14 +190,14 @@
                     <div class="flex flex-col justify-between bg-[#fafaf7] border border-stone-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
                         <div>
                             <div class="w-full h-48 rounded-xl overflow-hidden mb-5 bg-stone-200">
-                                <img src="image3.JPG" alt="DMV Premium Gel Pedicure Treatment" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                <img src="pexels-andreamostiphotography-17056220.jpg" alt="DMV Premium Gel Pedicure Treatment" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                                      onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-[#0b4028]/5 flex items-center justify-center text-stone-400 font-sans text-sm\'>Precision Gel Pedicure</div>';">
                             </div>
                             <div class="flex justify-between items-start mb-2">
-                                <h4 class="font-bold text-lg text-stone-900">DMV Signature Gel Pedicure</h4>
-                                <span class="font-sans font-bold text-[#0b4028] text-lg">$70</span>
+                                <h4 class="font-bold text-lg text-stone-900">DMV Precision Gel Manicure</h4>
+                                <span class="font-sans font-bold text-[#0b4028] text-lg">$45</span>
                             </div>
-                            <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 1 Hour 10 Mins</p>
+                            <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 1 Hour</p>
                             <p class="text-sm text-stone-600 leading-relaxed">
                                 Extended clarify treatment coupled with zero-dry-time premium gel polish. Locks in intense color depth and high shine protection for up to 6+ weeks.
                             </p>
@@ -282,7 +225,7 @@
                             </div>
                             <div class="flex justify-between items-start mb-2">
                                 <h4 class="font-bold text-lg text-stone-900">Elite Hard Gel Overlay</h4>
-                                <span class="font-sans font-bold text-[#0b4028] text-lg">$85</span>
+                                <span class="font-sans font-bold text-[#0b4028] text-lg">$60</span>
                             </div>
                             <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 1 Hour 30 Mins</p>
                             <p class="text-sm text-stone-600 leading-relaxed">
@@ -303,7 +246,7 @@
                             </div>
                             <div class="flex justify-between items-start mb-2">
                                 <h4 class="font-bold text-lg text-stone-900">Full Coverage Gel Tip Extensions</h4>
-                                <span class="font-sans font-bold text-[#0b4028] text-lg">$95+</span>
+                                <span class="font-sans font-bold text-[#0b4028] text-lg">$65+</span>
                             </div>
                             <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 1 Hour 30 Mins</p>
                             <p class="text-sm text-stone-600 leading-relaxed">
@@ -324,7 +267,7 @@
                             </div>
                             <div class="flex justify-between items-start mb-2">
                                 <h4 class="font-bold text-lg text-stone-900">Technical Hard Gel Re-balance</h4>
-                                <span class="font-sans font-bold text-[#0b4028] text-lg">$65</span>
+                                <span class="font-sans font-bold text-[#0b4028] text-lg">$45</span>
                             </div>
                             <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 1 Hour 15 Mins</p>
                             <p class="text-sm text-stone-600 leading-relaxed">
@@ -510,12 +453,12 @@
                     </div>
                 </a>
 
-                <a href="image3.JPG" data-lightbox="gallery" data-title="Sophisticated Detail Polish Set" class="block group relative rounded-2xl overflow-hidden shadow-md h-[340px] bg-stone-100">
-                    <img src="image3.JPG" alt="Flawless Alignment Gel Work" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <a href="pexels-andreamostiphotography-17056220.jpg" data-lightbox="gallery" data-title="Premium Gel Pedicure" class="block group relative rounded-2xl overflow-hidden shadow-md h-[340px] bg-stone-100">
+                    <img src="pexels-andreamostiphotography-17056220.jpg" alt="Premium Gel Pedicure" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#072a1b]/90 via-[#072a1b]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-6">
                         <div>
-                            <span class="text-white font-bold text-lg block font-serif">Sophisticated Gel Line</span>
-                            <span class="text-[#dfbd69] font-sans text-xs uppercase tracking-wider font-semibold">Gold Standard Detail</span>
+                            <span class="text-white font-bold text-lg block font-serif">Relaxing Gel Pedicure</span>
+                            <span class="text-[#dfbd69] font-sans text-xs uppercase tracking-wider font-semibold">Luxury Foot Care</span>
                         </div>
                     </div>
                 </a>
@@ -681,13 +624,13 @@
                                 <select id="modal_service" name="service" required onchange="handleServiceChange()" class="w-full p-3 text-sm border border-stone-200 rounded-xl focus:ring-2 focus:ring-[#0b4028] outline-none bg-white font-sans text-slate-800">
                                     <option value="">Select Primary Service</option>
                                     <option value="Natural Nail Prep & Cleanse">Natural Nail Prep & Cleanse ($35 | 45m)</option>
-                                    <option value="DMV Precision Gel Manicure">DMV Precision Gel Manicure ($50 | 1h)</option>
-                                    <option value="Structured Gel Manicure (BIAB)">Structured Gel Manicure (BIAB Growth) ($85 | 1h 15m)</option>
-                                    <option value="Luxury Clarifying Pedicure">Luxury Clarifying Pedicure ($45 | 45m)</option>
-                                    <option value="DMV Signature Gel Pedicure">DMV Signature Gel Pedicure ($70 | 1h 10m)</option>
-                                    <option value="Elite Hard Gel Overlay">Elite Hard Gel Overlay ($85 | 1h 30m)</option>
-                                    <option value="Full Coverage Gel Tip Extensions">Full Coverage Gel Tip Extensions ($95+ | 1h 30m)</option>
-                                    <option value="Technical Hard Gel Re-balance">Technical Hard Gel Re-balance ($65 | 1h 15m)</option>
+                                    <option value="DMV Precision Gel Manicure">DMV Precision Gel Manicure ($45 | 1h)</option>
+                                    <option value="Structured Gel Manicure (BIAB)">Structured Gel Manicure (BIAB Growth) ($55 | 1h 15m)</option>
+                                    <option value="Luxury Clarifying Pedicure">Luxury Clarifying Pedicure ($35 | 45m)</option>
+                                    <option value="DMV Signature Gel Pedicure">DMV Signature Gel Pedicure ($50 | 1h 10m)</option>
+                                    <option value="Elite Hard Gel Overlay">Elite Hard Gel Overlay ($60 | 1h 30m)</option>
+                                    <option value="Full Coverage Gel Tip Extensions">Full Coverage Gel Tip Extensions ($65+ | 1h 30m)</option>
+                                    <option value="Technical Hard Gel Re-balance">Technical Hard Gel Re-balance ($45 | 1h 15m)</option>
                                     <option value="Press On Party">🎉 Custom Press On Party (Group System)</option>
                                     <option value="Multiple Services">Multiple Services Combo Selection</option>
                                 </select>
@@ -719,11 +662,11 @@
                             <label class="block text-xs font-sans font-bold text-stone-700 uppercase tracking-wider mb-3">Select Desired Combinations:</label>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-sans font-medium text-stone-700">
                                 <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Natural Nail Prep" class="accent-brand-green w-4 h-4"> Natural Prep & Cleanse ($35)</label>
-                                <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Precision Gel Manicure" class="accent-brand-green w-4 h-4"> Precision Gel Mani ($50)</label>
-                                <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Structured Gel Manicure (BIAB)" class="accent-brand-green w-4 h-4"> Structured Gel (BIAB Growth) ($85)</label>
-                                <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Luxury Clarifying Pedicure" class="accent-brand-green w-4 h-4"> Luxury Pedicure ($45)</label>
-                                <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Signature Gel Pedicure" class="accent-brand-green w-4 h-4"> Gel Pedicure ($70)</label>
-                                <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Elite Hard Gel Overlay" class="accent-brand-green w-4 h-4"> Elite Hard Gel Overlay ($85)</label>
+                                <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Precision Gel Manicure" class="accent-brand-green w-4 h-4"> Precision Gel Mani ($45)</label>
+                                <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Structured Gel Manicure (BIAB)" class="accent-brand-green w-4 h-4"> Structured Gel (BIAB Growth) ($55)</label>
+                                <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Luxury Clarifying Pedicure" class="accent-brand-green w-4 h-4"> Luxury Pedicure ($35)</label>
+                                <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Signature Gel Pedicure" class="accent-brand-green w-4 h-4"> Gel Pedicure ($50)</label>
+                                <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Elite Hard Gel Overlay" class="accent-brand-green w-4 h-4"> Elite Hard Gel Overlay ($60)</label>
                             </div>
                         </div>
 
