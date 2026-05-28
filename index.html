@@ -3,469 +3,753 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional nail services in Clinton, Maryland. Luxury manicures, relaxing pedicures, gel polish, expert fill-ins, and full set applications. Book your appointment at Nailed By C. Nicole today!">
-    <meta name="keywords" content="nail salon, manicure, pedicure, gel polish, nail art, Clinton Maryland, nail services, acrylic nails, luxury nail care, press on party">
+    <meta name="description" content="Premium health-forward nail care & luxury structured gel manicures in Clinton, MD. Discover bespoke dry manicures, BIAB, Gel-X extensions, and custom nail artistry at Nailed By C. Nicole. Serving Prince George's County and the wider DMV.">
+    <meta name="keywords" content="luxury nail salon Clinton MD, structured gel DMV, BIAB manicure Prince George's County, Gel-X extensions Clinton, dry manicure MD, nail tech Upper Marlboro, premium gel pedicure, local independent nail artist DMV">
     <meta name="author" content="Nailed By C. Nicole">
-    <meta property="og:title" content="Nailed By C. Nicole - Luxury Nail Services in Clinton, MD">
-    <title>Nailed By C. Nicole - Luxury Nail Services</title>
+    <meta property="og:title" content="Nailed By C. Nicole | Premium Private Nail Studio | Clinton, MD">
+    <meta property="og:description" content="Experience precision, technical nail care and detailed structured nail overlays in a private, high-end environment in Clinton, Maryland.">
+    <title>Nailed By C. Nicole | Premium Private Nail Studio | Clinton, MD</title>
     
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     
+    <!-- Lightbox CSS for gallery zoom -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
 
+    <!-- Tailwind CSS (CDN added to guarantee styling works in any hosting environment) -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="./dist/output.css" rel="stylesheet">
 
     <style>
-        /* Custom override for the mobile menu transition */
+        :root {
+            --brand-green: #0b4028; /* Premium Forest Green */
+            --brand-dark-green: #072a1b; /* Sophisticated Dark Forest */
+            --brand-gold: #dfbd69; /* Champagney Luxury Muted Gold */
+            --brand-gold-hover: #cfab55;
+            --warm-alabaster: #faf8f5; /* Premium soft neutral backdrop */
+        }
         #nav-links {
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        /* Custom scrollbar to match luxury theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fbfaf7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e5dfd5;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #cfc6b8;
+        }
+        /* Elegant smooth animation variables */
+        @keyframes subtleFade {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: subtleFade 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
     </style>
 </head>
-<body class="font-serif leading-relaxed text-gray-800 bg-slate-50 antialiased">
+<body class="font-serif leading-relaxed text-stone-800 bg-[#fbfaf7] antialiased">
 
-    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md shadow-md transition-all duration-300">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center max-w-6xl">
+    <header class="fixed w-full top-0 z-[100] bg-white/95 backdrop-blur-md shadow-sm border-b border-stone-100 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-3.5 flex justify-between items-center max-w-6xl">
             <div class="flex items-center gap-4">
-                <div class="w-[60px] h-[60px] rounded-full bg-gradient-to-br from-brand-green to-brand-gold flex items-center justify-center shadow-lg overflow-hidden">
-                    <img src="logo.png" alt="NC" class="w-[50px] h-[50px] rounded-full object-cover" 
-                         onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-white font-bold text-xl\'>NC</span>';">
+                <div class="w-[52px] h-[52px] rounded-full bg-gradient-to-br from-[#0b4028] to-[#dfbd69] flex items-center justify-center shadow-md overflow-hidden p-[2px]">
+                    <img src="logo.png" alt="NC Logo" class="w-full h-full rounded-full object-cover" 
+                         onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-[#0b4028] font-bold text-lg font-serif\'>CN</span>'; this.parentElement.classList.add('bg-stone-100');">
                 </div>
-                <div class="text-2xl font-bold text-brand-green drop-shadow-sm hidden sm:block">Nailed By C. Nicole</div>
+                <div>
+                    <span class="text-xl font-bold tracking-tight text-[#0b4028] hidden sm:block">Nailed By C. Nicole</span>
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400 block -mt-1 hidden sm:block">Luxury Nail Studio</span>
+                </div>
             </div>
             
-            <ul class="hidden md:flex items-center gap-8 font-medium">
-                <li><a href="#home" class="hover:text-brand-green transition-colors">Home</a></li>
-                <li><a href="#services" class="hover:text-brand-green transition-colors">Services</a></li>
-                <li><a href="#menu" class="hover:text-brand-green transition-colors">Menu</a></li>
-                <li><a href="#gallery" class="hover:text-brand-green transition-colors">Gallery</a></li>
-                <li><a href="#about" class="hover:text-brand-green transition-colors">About</a></li>
+            <ul class="hidden md:flex items-center gap-8 font-serif text-sm tracking-wide text-stone-600">
+                <li><a href="#home" class="hover:text-[#0b4028] transition-colors font-medium">Home</a></li>
+                <li><a href="#services" class="hover:text-[#0b4028] transition-colors font-medium">Services</a></li>
+                <li><a href="#art-menu" class="hover:text-[#0b4028] transition-colors font-medium">Art Add-Ons</a></li>
+                <li><a href="#policies" class="hover:text-[#0b4028] transition-colors font-medium">Studio Rules</a></li>
+                <li><a href="#gallery" class="hover:text-[#0b4028] transition-colors font-medium">Gallery</a></li>
+                <li><a href="#about" class="hover:text-[#0b4028] transition-colors font-medium">About</a></li>
                 <li>
                     <a href="#" onclick="openBookingModal(); return false;" 
-                       class="bg-gradient-to-r from-brand-green to-lime-500 text-white px-6 py-2.5 rounded-full font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all">
-                        📅 Book Online
+                       class="bg-[#0b4028] hover:bg-[#072a1b] text-white px-5 py-2.5 rounded-full font-sans font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5">
+                        📅 Secure Appointment
                     </a>
                 </li>
             </ul>
 
-            <button id="mobile-menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2 z-[60]">
-                <span class="w-8 h-0.5 bg-gray-800 transition-all origin-left"></span>
-                <span class="w-8 h-0.5 bg-gray-800 transition-all"></span>
-                <span class="w-8 h-0.5 bg-gray-800 transition-all origin-left"></span>
+            <button id="mobile-menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2 z-[110]" aria-label="Toggle Menu">
+                <span class="w-7 h-0.5 bg-stone-800 transition-all origin-left"></span>
+                <span class="w-7 h-0.5 bg-stone-800 transition-all"></span>
+                <span class="w-7 h-0.5 bg-stone-800 transition-all origin-left"></span>
             </button>
         </nav>
 
-        <div id="nav-links" class="fixed top-0 right-0 h-screen w-[70%] max-w-[300px] bg-white shadow-2xl flex flex-col items-center justify-center gap-8 translate-x-full md:hidden z-50">
-            <a href="#home" class="text-xl font-medium hover:text-brand-green">Home</a>
-            <a href="#services" class="text-xl font-medium hover:text-brand-green">Services</a>
-            <a href="#menu" class="text-xl font-medium hover:text-brand-green">Menu</a>
-            <a href="#gallery" class="text-xl font-medium hover:text-brand-green">Gallery</a>
-            <a href="#about" class="text-xl font-medium hover:text-brand-green">About</a>
-            <a href="#" onclick="openBookingModal(); return false;" class="bg-brand-green text-white px-8 py-3 rounded-full font-bold shadow-md">📅 Book Online</a>
+        <div id="nav-links" class="fixed top-0 right-0 h-screen w-[75%] max-w-[320px] bg-white shadow-2xl flex flex-col p-8 pt-24 gap-6 translate-x-full md:hidden z-50">
+            <span class="text-xs uppercase tracking-widest text-stone-400 border-b border-stone-100 pb-2">Menu Navigation</span>
+            <a href="#home" class="text-lg font-medium hover:text-[#0b4028] text-stone-800 transition-colors">Home</a>
+            <a href="#services" class="text-lg font-medium hover:text-[#0b4028] text-stone-800 transition-colors">Services & Menu</a>
+            <a href="#art-menu" class="text-lg font-medium hover:text-[#0b4028] text-stone-800 transition-colors">Art Customizations</a>
+            <a href="#policies" class="text-lg font-medium hover:text-[#0b4028] text-stone-800 transition-colors">Studio Policies</a>
+            <a href="#gallery" class="text-lg font-medium hover:text-[#0b4028] text-stone-800 transition-colors">Visual Gallery</a>
+            <a href="#about" class="text-lg font-medium hover:text-[#0b4028] text-stone-800 transition-colors">About Artist</a>
+            <a href="#" onclick="openBookingModal(); return false;" class="bg-[#072a1b] text-white text-center py-3.5 rounded-xl font-sans font-bold uppercase tracking-wider mt-4 shadow-md">📅 Book Your Slot</a>
         </div>
     </header>
 
     <section id="home" class="relative h-screen flex items-center justify-center text-center text-white pt-20">
         <div class="absolute inset-0 z-0">
-            <img src="image1.JPG" alt="Hero Background" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-b from-brand-green/60 to-brand-gold/30 mix-blend-multiply"></div>
+            <img src="image1.JPG" alt="Exquisite Nail Set Overlay Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-stone-950/70 mix-blend-multiply"></div>
         </div>
 
-        <div class="relative z-10 px-6 max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg animate-[fadeInUp_1s_ease-out]">
-                Luxury Nail Artistry in Clinton, Maryland
+        <div class="relative z-10 px-6 max-w-4xl mx-auto flex flex-col items-center">
+            <span class="bg-[#0b4028]/80 backdrop-blur-md text-[#dfbd69] text-xs uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 border border-[#dfbd69]/30 font-sans font-semibold">
+                ✨ Clinton, MD Independent Studio
+            </span>
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 drop-shadow-md leading-[1.15] animate-fade-in-up">
+                Bespoke Structure, Flawless Detailing
             </h1>
-            <p class="text-xl md:text-2xl mb-10 opacity-95 animate-[fadeInUp_1s_ease-out_0.2s_both]">
-                Professional nail care where luxury meets artistry for stunning results
+            <p class="text-base sm:text-xl text-stone-200 mb-10 max-w-2xl font-serif font-light leading-relaxed tracking-wide opacity-95 animate-fade-in-up" style="animation-delay: 0.2s;">
+                Specializing in health-first advanced natural nail reinforcement, structured gel overlays, and premium custom extensions. Experience the precision of true independent artistry in a private, high-end environment.
             </p>
-            <a href="#services" class="inline-block bg-white text-brand-green px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-brand-gold hover:text-amber-900 hover:-translate-y-1 transition-all animate-[fadeInUp_1s_ease-out_0.4s_both]">
-                Explore Our Services
-            </a>
+            <div class="flex flex-col sm:flex-row gap-4 items-center animate-fade-in-up" style="animation-delay: 0.4s;">
+                <a href="#services" class="bg-[#0b4028] hover:bg-[#072a1b] text-white font-sans font-semibold text-sm uppercase tracking-wider px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                    Explore Curated Menu
+                </a>
+                <a href="#" onclick="openBookingModal(); return false;" class="bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-sm text-white font-sans font-semibold text-sm uppercase tracking-wider px-8 py-4 rounded-full transition-all duration-300">
+                    📅 Secure Slot Online
+                </a>
+            </div>
         </div>
     </section>
 
-    <section id="services" class="py-20 bg-white">
+    <section id="services" class="py-24 bg-white scroll-mt-10">
         <div class="container mx-auto px-6 max-w-6xl">
-            <h2 class="text-4xl md:text-5xl text-center font-bold text-gray-800 mb-4 relative after:content-[''] after:block after:w-24 after:h-1 after:bg-gradient-to-r after:from-brand-green after:to-brand-gold after:mx-auto after:mt-4">
-                Our Premium Services
-            </h2>
-            <p class="text-center text-gray-500 max-w-3xl mx-auto mb-16 text-lg">
-                Click any service below to book your appointment instantly.
-            </p>
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-[#0b4028] text-xs uppercase tracking-widest font-sans font-bold">Comprehensive Service Offerings</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-stone-900 mt-2 tracking-tight">The Curated Spa Menu</h2>
+                <div class="w-16 h-0.5 bg-gradient-to-r from-[#0b4028] to-[#dfbd69] mx-auto mt-4"></div>
+                <p class="text-stone-500 mt-4 text-base sm:text-lg">
+                    Private 1-on-1 booking model focused entirely on precision execution, extreme attention to clean cuticle anatomy, and durable structural integrity.
+                </p>
+            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div onclick="openBookingModal('Luxury Manicure')" class="cursor-pointer group bg-white p-8 rounded-2xl shadow-lg border-t-4 border-transparent hover:border-brand-green hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
-                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-brand-gold to-yellow-100 p-1">
-                        <img src="image4.jpg" alt="Manicure" class="w-full h-full rounded-full object-cover">
-                    </div>
-                    <h3 class="text-2xl font-bold text-center mb-4 text-gray-800 group-hover:text-brand-green">Luxury Manicure</h3>
-                    <p class="text-gray-600 text-center">Comprehensive nail artistry service including precise shaping, cuticle care, massage, and premium polish.</p>
-                </div>
-
-                <div onclick="openBookingModal('Relaxing Pedicure')" class="cursor-pointer group bg-white p-8 rounded-2xl shadow-lg border-t-4 border-transparent hover:border-brand-green hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
-                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-brand-gold to-yellow-100 p-1">
-                        <img src="image5.jpg" alt="Pedicure" class="w-full h-full rounded-full object-cover">
-                    </div>
-                    <h3 class="text-2xl font-bold text-center mb-4 text-gray-800 group-hover:text-brand-green">Relaxing Pedicure</h3>
-                    <p class="text-gray-600 text-center">Immerse your feet in a soothing bath with exfoliation, callus removal, and therapeutic massage.</p>
-                </div>
-
-                <div onclick="openBookingModal('Gel Polish')" class="cursor-pointer group bg-white p-8 rounded-2xl shadow-lg border-t-4 border-transparent hover:border-brand-green hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
-                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-brand-gold to-yellow-100 p-1">
-                        <img src="image8.jpg" alt="Gel" class="w-full h-full rounded-full object-cover">
-                    </div>
-                    <h3 class="text-2xl font-bold text-center mb-4 text-gray-800 group-hover:text-brand-green">Gel Polish</h3>
-                    <p class="text-gray-600 text-center">Exceptional durability and brilliant shine. Chip-free, glossy nails that maintain beauty for weeks.</p>
+            <!-- Manicures Segment -->
+            <div class="mb-16">
+                <div class="flex items-center gap-3 mb-8 border-b border-stone-100 pb-3">
+                    <span class="text-3xl">💅</span>
+                    <h3 class="text-2xl font-bold text-[#072a1b] font-serif">Natural & Structured Gel Services</h3>
                 </div>
                 
-                <div onclick="openBookingModal('Expert Fill-ins')" class="cursor-pointer group bg-white p-8 rounded-2xl shadow-lg border-t-4 border-transparent hover:border-brand-green hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
-                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-brand-gold to-yellow-100 p-1">
-                        <img src="image6.jpg" alt="Fill-ins" class="w-full h-full rounded-full object-cover">
-                    </div>
-                    <h3 class="text-2xl font-bold text-center mb-4 text-gray-800 group-hover:text-brand-green">Expert Fill-ins</h3>
-                    <p class="text-gray-600 text-center">Seamlessly blend new growth with existing enhancements. Professionally reshaped and buffed.</p>
-                </div>
-
-                <div onclick="openBookingModal('Press On Party')" class="cursor-pointer group bg-white p-8 rounded-2xl shadow-lg border-t-4 border-transparent hover:border-brand-green hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
-                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-brand-gold to-yellow-100 p-1">
-                        <img src="press_on_party.jpg" alt="Press On Party" class="w-full h-full rounded-full object-cover"
-                             onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\'w-full h-full rounded-full bg-brand-green flex items-center justify-center text-white text-2xl\'>🎉</div>';">
-                    </div>
-                    <h3 class="text-2xl font-bold text-center mb-4 text-gray-800 group-hover:text-brand-green">Press On Party</h3>
-                    <p class="text-gray-600 text-center">Host a fun gathering with custom press-on nail applications for you and your friends. Perfect for events!</p>
-                </div>
-
-                <div onclick="openBookingModal('Full Set Application')" class="cursor-pointer group bg-white p-8 rounded-2xl shadow-lg border-t-4 border-transparent hover:border-brand-green hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
-                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-brand-gold to-yellow-100 p-1">
-                        <img src="image7.JPG" alt="Full Set" class="w-full h-full rounded-full object-cover">
-                    </div>
-                    <h3 class="text-2xl font-bold text-center mb-4 text-gray-800 group-hover:text-brand-green">Full Set Application</h3>
-                    <p class="text-gray-600 text-center">Add length and strength with acrylic or gel extensions customized to your desired shape and style.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="menu" class="py-20 bg-gradient-to-br from-gray-50 to-orange-50">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Service Menu & Pricing</h2>
-
-            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
-                <div class="bg-gradient-to-r from-brand-green to-brand-gold px-8 py-4 text-white text-xl font-bold">💅 Manicure Services</div>
-                <div class="p-6 divide-y divide-gray-100">
-                    <div class="flex flex-col sm:flex-row justify-between py-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Basic Manicure -->
+                    <div class="flex flex-col justify-between bg-[#fafaf7] border border-stone-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
                         <div>
-                            <h4 class="font-bold text-lg text-gray-800">Basic Manicure</h4>
-                            <p class="text-sm text-gray-500">Long-lasting finish with basic polish.</p>
+                            <div class="w-full h-48 rounded-xl overflow-hidden mb-5 bg-stone-200">
+                                <img src="image4.jpg" alt="Natural Nail Polish Treatment" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-[#0b4028]/5 flex items-center justify-center text-stone-400 font-sans text-sm\'>Natural Nail Care Detail</div>';">
+                            </div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-lg text-stone-900">Natural Nail Prep & Cleanse</h4>
+                                <span class="font-sans font-bold text-[#0b4028] text-lg">$35</span>
+                            </div>
+                            <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 45 Minutes</p>
+                            <p class="text-sm text-stone-600 leading-relaxed">
+                                Detailed dry cuticle exfoliation and cleaning, precise filing, natural nail health analysis, finished with high-shine regular polish.
+                            </p>
                         </div>
-                        <div class="mt-2 sm:mt-0 text-right">
-                            <span class="block font-bold text-brand-green text-lg">$25</span>
-                            <span class="text-xs text-gray-400">45 mins</span>
-                        </div>
+                        <button onclick="openBookingModal('Natural Nail Prep & Cleanse')" class="mt-6 w-full text-center py-2.5 rounded-lg border border-[#0b4028]/30 text-[#072a1b] text-xs font-sans font-bold uppercase tracking-wider hover:bg-[#072a1b] hover:text-white transition-colors duration-200">
+                            Select Service
+                        </button>
                     </div>
-                    <div class="flex flex-col sm:flex-row justify-between py-4">
-                        <div>
-                            <h4 class="font-bold text-lg text-gray-800">Gel Manicure</h4>
-                            <p class="text-sm text-gray-500">Long-lasting color and chip-resistant.</p>
-                        </div>
-                        <div class="mt-2 sm:mt-0 text-right">
-                            <span class="block font-bold text-brand-green text-lg">$30</span>
-                            <span class="text-xs text-gray-400">1 hr</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-col sm:flex-row justify-between py-4">
-                        <div>
-                            <h4 class="font-bold text-lg text-gray-800">Structured Manicure</h4>
-                            <p class="text-sm text-gray-500">Added strength and structure for natural nails.</p>
-                        </div>
-                        <div class="mt-2 sm:mt-0 text-right">
-                            <span class="block font-bold text-brand-green text-lg">$35</span>
-                            <span class="text-xs text-gray-400">1 hr 15m</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
-                <div class="bg-gradient-to-r from-brand-green to-brand-gold px-8 py-4 text-white text-xl font-bold">🦶 Pedicure Services</div>
-                <div class="p-6 divide-y divide-gray-100">
-                    <div class="flex flex-col sm:flex-row justify-between py-4">
+                    <!-- Gel Manicure -->
+                    <div class="flex flex-col justify-between bg-[#fafaf7] border border-stone-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
                         <div>
-                            <h4 class="font-bold text-lg text-gray-800">Basic Pedicure</h4>
-                            <p class="text-sm text-gray-500">Relaxing foot care with regular polish.</p>
+                            <div class="w-full h-48 rounded-xl overflow-hidden mb-5 bg-stone-200">
+                                <img src="image8.jpg" alt="DMV Premium Gel Manicure" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-[#0b4028]/5 flex items-center justify-center text-stone-400 font-sans text-sm\'>Precision Gel Polish</div>';">
+                            </div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-lg text-stone-900">DMV Precision Gel Manicure</h4>
+                                <span class="font-sans font-bold text-[#0b4028] text-lg">$50</span>
+                            </div>
+                            <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 1 Hour</p>
+                            <p class="text-sm text-stone-600 leading-relaxed">
+                                Long-lasting, chip-resistant hybrid color service. Includes meticulous medical-grade Russian-style cuticle treatment, edge protection styling, and your choice of a high-shine or premium matte finish.
+                            </p>
                         </div>
-                        <div class="mt-2 sm:mt-0 text-right">
-                            <span class="block font-bold text-brand-green text-lg">$30</span>
-                            <span class="text-xs text-gray-400">45 mins</span>
-                        </div>
+                        <button onclick="openBookingModal('DMV Precision Gel Manicure')" class="mt-6 w-full text-center py-2.5 rounded-lg border border-[#0b4028]/30 text-[#072a1b] text-xs font-sans font-bold uppercase tracking-wider hover:bg-[#072a1b] hover:text-white transition-colors duration-200">
+                            Select Service
+                        </button>
                     </div>
-                    <div class="flex flex-col sm:flex-row justify-between py-4">
+
+                    <!-- Structured Manicure -->
+                    <div class="flex flex-col justify-between bg-[#fafaf7] border border-stone-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-300 ring-2 ring-[#0b4028]/10">
                         <div>
-                            <h4 class="font-bold text-lg text-gray-800">Gel Pedicure</h4>
-                            <p class="text-sm text-gray-500">Pampering session with durable gel polish.</p>
+                            <div class="w-full h-48 rounded-xl overflow-hidden mb-5 bg-stone-200 relative">
+                                <span class="absolute top-3 right-3 bg-[#0b4028] text-[#dfbd69] text-[10px] font-sans font-bold uppercase tracking-widest px-2.5 py-1 rounded-full shadow-sm z-10">Popular</span>
+                                <img src="image2.JPG" alt="Structured Gel Builder Gel BIAB Overlay Set" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-[#0b4028]/5 flex items-center justify-center text-stone-400 font-sans text-sm\'>Structured Gel (BIAB)</div>';">
+                            </div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-lg text-stone-900">Structured Gel Manicure (BIAB)</h4>
+                                <span class="font-sans font-bold text-[#0b4028] text-lg">$85</span>
+                            </div>
+                            <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 1 Hour 15 Mins</p>
+                            <p class="text-sm text-stone-600 leading-relaxed">
+                                The ultimate natural nail growth treatment. Using a premium, thick builder gel overlay (often called BIAB) to reinforce and shape your natural nails. This creates a strong, flexible protective arch that prevents bending, breaking, and chipping—allowing your natural nails to grow long and strong without acrylic damage. Finished with custom color (glossy or matte).
+                            </p>
                         </div>
-                        <div class="mt-2 sm:mt-0 text-right">
-                            <span class="block font-bold text-brand-green text-lg">$35</span>
-                            <span class="text-xs text-gray-400">1 hr 10m</span>
-                        </div>
+                        <button onclick="openBookingModal('Structured Gel Manicure (BIAB)')" class="mt-6 w-full text-center py-2.5 rounded-lg bg-[#0b4028] hover:bg-[#072a1b] text-white text-xs font-sans font-bold uppercase tracking-wider shadow-sm transition-colors duration-200">
+                            Select Service
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
-                <div class="bg-gradient-to-r from-brand-green to-brand-gold px-8 py-4 text-white text-xl font-bold">✨ Enhancements</div>
-                <div class="p-6 divide-y divide-gray-100">
-                    <div class="flex flex-col sm:flex-row justify-between py-4">
+            <div class="mb-16">
+                <div class="flex items-center gap-3 mb-8 border-b border-stone-100 pb-3">
+                    <span class="text-3xl">🦶</span>
+                    <h3 class="text-2xl font-bold text-[#072a1b] font-serif">Boutique Foot Care & Pedicures</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+                    <!-- Basic Pedicure -->
+                    <div class="flex flex-col justify-between bg-[#fafaf7] border border-stone-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
                         <div>
-                            <h4 class="font-bold text-lg text-gray-800">Hard Gel Overlay</h4>
-                            <p class="text-sm text-gray-500">Durable protection for natural nails.</p>
+                            <div class="w-full h-48 rounded-xl overflow-hidden mb-5 bg-stone-200">
+                                <img src="image5.jpg" alt="Bespoke Pedicure Therapy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-[#0b4028]/5 flex items-center justify-center text-stone-400 font-sans text-sm\'>Boutique Botanical Bath</div>';">
+                            </div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-lg text-stone-900">Luxury Clarifying Pedicure</h4>
+                                <span class="font-sans font-bold text-[#0b4028] text-lg">$45</span>
+                            </div>
+                            <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 45 Minutes</p>
+                            <p class="text-sm text-stone-600 leading-relaxed">
+                                Botanical sea-salt soak, therapeutic sugar massage, structural callus reduction, deep exfoliation, and detailed natural shine finishing.
+                            </p>
                         </div>
-                        <div class="mt-2 sm:mt-0 text-right">
-                            <span class="block font-bold text-brand-green text-lg">$45</span>
-                            <span class="text-xs text-gray-400">1 hr 30m</span>
-                        </div>
+                        <button onclick="openBookingModal('Luxury Clarifying Pedicure')" class="mt-6 w-full text-center py-2.5 rounded-lg border border-[#0b4028]/30 text-[#072a1b] text-xs font-sans font-bold uppercase tracking-wider hover:bg-[#072a1b] hover:text-white transition-colors duration-200">
+                            Select Service
+                        </button>
                     </div>
-                    <div class="flex flex-col sm:flex-row justify-between py-4">
+
+                    <!-- Gel Pedicure -->
+                    <div class="flex flex-col justify-between bg-[#fafaf7] border border-stone-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
                         <div>
-                            <h4 class="font-bold text-lg text-gray-800">Gel Tip Extension</h4>
-                            <p class="text-sm text-gray-500">Lightweight, flexible soft gel tips.</p>
+                            <div class="w-full h-48 rounded-xl overflow-hidden mb-5 bg-stone-200">
+                                <img src="image3.JPG" alt="DMV Premium Gel Pedicure Treatment" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-[#0b4028]/5 flex items-center justify-center text-stone-400 font-sans text-sm\'>Precision Gel Pedicure</div>';">
+                            </div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-lg text-stone-900">DMV Signature Gel Pedicure</h4>
+                                <span class="font-sans font-bold text-[#0b4028] text-lg">$70</span>
+                            </div>
+                            <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 1 Hour 10 Mins</p>
+                            <p class="text-sm text-stone-600 leading-relaxed">
+                                Extended clarify treatment coupled with zero-dry-time premium gel polish. Locks in intense color depth and high shine protection for up to 6+ weeks.
+                            </p>
                         </div>
-                        <div class="mt-2 sm:mt-0 text-right">
-                            <span class="block font-bold text-brand-green text-lg">$55</span>
-                            <span class="text-xs text-gray-400">1 hr 30m</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-col sm:flex-row justify-between py-4">
-                        <div>
-                            <h4 class="font-bold text-lg text-gray-800">Hard Gel Fill</h4>
-                            <p class="text-sm text-gray-500">Maintenance for regrowth.</p>
-                        </div>
-                        <div class="mt-2 sm:mt-0 text-right">
-                            <span class="block font-bold text-brand-green text-lg">$35</span>
-                            <span class="text-xs text-gray-400">1 hr 15m</span>
-                        </div>
+                        <button onclick="openBookingModal('DMV Signature Gel Pedicure')" class="mt-6 w-full text-center py-2.5 rounded-lg border border-[#0b4028]/30 text-[#072a1b] text-xs font-sans font-bold uppercase tracking-wider hover:bg-[#072a1b] hover:text-white transition-colors duration-200">
+                            Select Service
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <div class="text-center mt-12">
-                <button onclick="openBookingModal()" class="bg-gradient-to-r from-brand-green to-lime-600 text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:scale-105 transition-transform">
-                    📅 Book Your Service
+            <div class="mb-8">
+                <div class="flex items-center gap-3 mb-8 border-b border-stone-100 pb-3">
+                    <span class="text-3xl">✨</span>
+                    <h3 class="text-2xl font-bold text-[#072a1b] font-serif">Specialty Enhancements & Extension Systems</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Hard Gel Overlay -->
+                    <div class="flex flex-col justify-between bg-[#fafaf7] border border-stone-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="w-full h-48 rounded-xl overflow-hidden mb-5 bg-stone-200">
+                                <img src="image1.JPG" alt="Hard Gel Strength Overlay" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-[#0b4028]/5 flex items-center justify-center text-stone-400 font-sans text-sm\'>Armor Gel Overlay</div>';">
+                            </div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-lg text-stone-900">Elite Hard Gel Overlay</h4>
+                                <span class="font-sans font-bold text-[#0b4028] text-lg">$85</span>
+                            </div>
+                            <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 1 Hour 30 Mins</p>
+                            <p class="text-sm text-stone-600 leading-relaxed">
+                                Armor protection built directly over long or brittle natural nails. Creates an un-bendable protective wall with structural sculpting.
+                            </p>
+                        </div>
+                        <button onclick="openBookingModal('Elite Hard Gel Overlay')" class="mt-6 w-full text-center py-2.5 rounded-lg border border-[#0b4028]/30 text-[#072a1b] text-xs font-sans font-bold uppercase tracking-wider hover:bg-[#072a1b] hover:text-white transition-colors duration-200">
+                            Select Service
+                        </button>
+                    </div>
+
+                    <!-- Gel Tip Extension -->
+                    <div class="flex flex-col justify-between bg-[#fafaf7] border border-stone-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="w-full h-48 rounded-xl overflow-hidden mb-5 bg-stone-200">
+                                <img src="image7.JPG" alt="Soft Gel-X Tip Extensions" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-[#0b4028]/5 flex items-center justify-center text-stone-400 font-sans text-sm\'>Gel Extension Systems</div>';">
+                            </div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-lg text-stone-900">Full Coverage Gel Tip Extensions</h4>
+                                <span class="font-sans font-bold text-[#0b4028] text-lg">$95+</span>
+                            </div>
+                            <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 1 Hour 30 Mins</p>
+                            <p class="text-sm text-stone-600 leading-relaxed">
+                                Premium soft gel extension caps (Apres Gel-X equivalent) fused seamlessly to your nail bed. Lightweight, beautifully pre-shaped, and flexible.
+                            </p>
+                        </div>
+                        <button onclick="openBookingModal('Full Coverage Gel Tip Extensions')" class="mt-6 w-full text-center py-2.5 rounded-lg border border-[#0b4028]/30 text-[#072a1b] text-xs font-sans font-bold uppercase tracking-wider hover:bg-[#072a1b] hover:text-white transition-colors duration-200">
+                            Select Service
+                        </button>
+                    </div>
+
+                    <!-- Hard Gel Fill -->
+                    <div class="flex flex-col justify-between bg-[#fafaf7] border border-stone-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="w-full h-48 rounded-xl overflow-hidden mb-5 bg-stone-200">
+                                <img src="image6.jpg" alt="Hard Gel Maintenance Fill" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-[#0b4028]/5 flex items-center justify-center text-stone-400 font-sans text-sm\'>Precision Re-balance Fill</div>';">
+                            </div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-lg text-stone-900">Technical Hard Gel Re-balance</h4>
+                                <span class="font-sans font-bold text-[#0b4028] text-lg">$65</span>
+                            </div>
+                            <p class="text-xs text-stone-400 font-sans mb-3 uppercase tracking-wider font-semibold">⏳ 1 Hour 15 Mins</p>
+                            <p class="text-sm text-stone-600 leading-relaxed">
+                                Professional alignment check, complete debulking, regrowth zone filling, styling rebalance, and updated structural contouring.
+                            </p>
+                        </div>
+                        <button onclick="openBookingModal('Technical Hard Gel Re-balance')" class="mt-6 w-full text-center py-2.5 rounded-lg border border-[#0b4028]/30 text-[#072a1b] text-xs font-sans font-bold uppercase tracking-wider hover:bg-[#072a1b] hover:text-white transition-colors duration-200">
+                            Select Service
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-[#072a1b] text-white rounded-3xl p-8 md:p-12 shadow-xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10">
+                    <img src="press_on_party.jpg" alt="Party context" class="w-full h-full object-cover" 
+                         onerror="this.style.display='none';">
+                </div>
+                <div class="max-w-xl relative z-10">
+                    <span class="text-[#dfbd69] text-xs font-sans uppercase tracking-widest font-bold">Luxury Group Booking</span>
+                    <h3 class="text-2xl sm:text-3xl font-bold font-serif mt-2 mb-4">Host a Premium Press-On Party 🎉</h3>
+                    <p class="text-emerald-100 text-sm sm:text-base leading-relaxed">
+                        Create beautiful, custom-sized luxury press-on nail styles for groups of 6 or more. Perfect for bachelorettes, corporate retreats, and premium gatherings in Clinton and local DMV.
+                    </p>
+                </div>
+                <button onclick="openBookingModal('Press On Party')" class="relative z-10 shrink-0 bg-[#dfbd69] hover:bg-[#cfab55] text-[#072a1b] font-sans font-bold uppercase tracking-wider text-xs px-8 py-4 rounded-xl shadow-md transition-all hover:scale-[1.02] duration-300">
+                    Book Press On Party
                 </button>
             </div>
         </div>
     </section>
 
-    <section id="gallery" class="py-20 bg-white">
+    <section id="art-menu" class="py-24 bg-gradient-to-b from-white to-[#faf8f5] border-t border-stone-100 scroll-mt-10">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center max-w-xl mx-auto mb-16">
+                <span class="text-[#0b4028] text-xs uppercase tracking-widest font-sans font-bold">Custom Creative Tiers</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mt-1">Design & Art Add-Ons</h2>
+                <p class="text-stone-500 text-sm mt-3 leading-relaxed">
+                    Nail art takes dedication, technical mastery, and structural timing. Choose the precise tier that matches your desired design level.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tier 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm relative overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="text-[#072a1b] font-sans font-extrabold text-sm uppercase tracking-widest mb-4">Tier 1: Minimalist</div>
+                        <div class="flex items-baseline gap-1 mb-4">
+                            <span class="text-3xl font-sans font-bold text-stone-900">+$20</span>
+                            <span class="text-xs text-stone-400 uppercase font-semibold">Add-on</span>
+                        </div>
+                        <ul class="space-y-3 text-stone-600 text-sm mb-6">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-[#0b4028] mt-0.5">✓</span>
+                                Classical French tips or crisp hand-painted borders.
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-[#0b4028] mt-0.5">✓</span>
+                                Sleek premium chrome glaze on all nails.
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-[#0b4028] mt-0.5">✓</span>
+                                Subtle dots, tiny geometric icons, or 2 accent nails.
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="text-xs text-stone-400 font-sans italic">Adds 15-20 mins to booking block</p>
+                </div>
+
+                <!-- Tier 2 -->
+                <div class="bg-white p-8 rounded-2xl border-2 border-[#0b4028]/20 shadow-md relative overflow-hidden flex flex-col justify-between">
+                    <span class="absolute top-0 right-0 bg-[#0b4028] text-white text-[9px] tracking-widest uppercase font-bold px-3 py-1 rounded-bl-lg font-sans">Highly Demanded</span>
+                    <div>
+                        <div class="text-[#072a1b] font-sans font-extrabold text-sm uppercase tracking-widest mb-4">Tier 2: Contemporary</div>
+                        <div class="flex items-baseline gap-1 mb-4">
+                            <span class="text-3xl font-sans font-bold text-stone-900">+$40</span>
+                            <span class="text-xs text-stone-400 uppercase font-semibold">Add-on</span>
+                        </div>
+                        <ul class="space-y-3 text-stone-600 text-sm mb-6">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-[#0b4028] mt-0.5">✓</span>
+                                Intricate abstract lines, marble patterns, or tortoiseshell.
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-[#0b4028] mt-0.5">✓</span>
+                                Premium foil encapsulations & clean alignment lines.
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-[#0b4028] mt-0.5">✓</span>
+                                Playful animal prints, swirls, or multi-tone designs.
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="text-xs text-stone-400 font-sans italic">Adds 30-40 mins to booking block</p>
+                </div>
+
+                <!-- Tier 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm relative overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="text-[#072a1b] font-sans font-extrabold text-sm uppercase tracking-widest mb-4">Tier 3: Masterpiece</div>
+                        <div class="flex items-baseline gap-1 mb-4">
+                            <span class="text-3xl font-sans font-bold text-stone-900">+$60+</span>
+                            <span class="text-xs text-stone-400 uppercase font-semibold">Add-on</span>
+                        </div>
+                        <ul class="space-y-3 text-stone-600 text-sm mb-6">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-[#0b4028] mt-0.5">✓</span>
+                                Intricate hand-painted portraits or custom illustration.
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-[#0b4028] mt-0.5">✓</span>
+                                Heavy crystal clusters, 3D gel design, & textured art.
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-[#0b4028] mt-0.5">✓</span>
+                                Fully customized set, mixing chrome, charms, and detailed art.
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="text-xs text-stone-400 font-sans italic">Adds 50+ mins to booking block</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="policies" class="py-24 bg-[#072a1b] text-white scroll-mt-10">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center max-w-xl mx-auto mb-16">
+                <span class="text-[#dfbd69] text-xs uppercase tracking-widest font-sans font-semibold">Booking Boundaries</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-serif mt-1">Studio Guidelines & Policies</h2>
+                <p class="text-emerald-100/70 text-sm mt-3 leading-relaxed">
+                    Please review our guidelines thoroughly prior to requesting a booking slot. These enforce respect for scheduling and product health.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white/5 border border-white/10 p-8 rounded-2xl">
+                    <span class="text-2xl mb-4 block">⏱️</span>
+                    <h4 class="font-bold text-lg mb-2 font-serif">Punctuality Rule</h4>
+                    <p class="text-stone-300 text-sm leading-relaxed">
+                        To maintain our timeline blocks, there is a strict 10-minute grace window. Arrivals beyond this point may lead to shortened service options or automatic cancellation, incurring the full booking charge.
+                    </p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-8 rounded-2xl">
+                    <span class="text-2xl mb-4 block">📅</span>
+                    <h4 class="font-bold text-lg mb-2 font-serif">Cancellation Policy</h4>
+                    <p class="text-stone-300 text-sm leading-relaxed">
+                        Cancellations, schedule transfers, or structural reductions must be requested at least 24 hours prior to scheduled starts. Standard late cancellations may be subject to penalty processing charges.
+                    </p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-8 rounded-2xl">
+                    <span class="text-2xl mb-4 block">🛡️</span>
+                    <h4 class="font-bold text-lg mb-2 font-serif">Foreign Work Terms</h4>
+                    <p class="text-stone-300 text-sm leading-relaxed">
+                        To maintain standard health hygiene and product safety, we do not refill or structural-blend over work from other establishments. First-time guests must secure a full clean removal if coming with existing enhancements.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 bg-white scroll-mt-10">
         <div class="container mx-auto px-6 max-w-6xl">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-6">Our Work Gallery</h2>
-            <p class="text-center text-gray-500 mb-12">Click any image to view details.</p>
+            <div class="text-center max-w-xl mx-auto mb-16">
+                <span class="text-[#0b4028] text-xs uppercase tracking-widest font-sans font-bold">Artisan Showcase</span>
+                <h2 class="text-4xl font-bold text-stone-900 mt-1">Our Visual Gallery</h2>
+                <div class="w-12 h-0.5 bg-gradient-to-r from-[#0b4028] to-[#dfbd69] mx-auto mt-4"></div>
+                <p class="text-stone-500 text-sm mt-3">
+                    Click on any card to view detailed overlays, clean structural apex work, and detailed art in pristine high-resolution.
+                </p>
+            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <a href="image2.JPG" data-lightbox="gallery" data-title="Natural Elegance" class="block group relative rounded-2xl overflow-hidden shadow-lg h-[300px]">
-                    <img src="image2.JPG" alt="Natural nail design" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-green/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                        <span class="text-white font-bold text-xl">Natural Elegance</span>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="image2.JPG" data-lightbox="gallery" data-title="Bespoke Apex Structure Overlay Set" class="block group relative rounded-2xl overflow-hidden shadow-md h-[340px] bg-stone-100">
+                    <img src="image2.JPG" alt="Advanced Structured Apex Artistry Set" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#072a1b]/90 via-[#072a1b]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-6">
+                        <div>
+                            <span class="text-white font-bold text-lg block font-serif">Bespoke Structure Overlay</span>
+                            <span class="text-[#dfbd69] font-sans text-xs uppercase tracking-wider font-semibold">Perfect Structural Apex</span>
+                        </div>
                     </div>
                 </a>
 
-                <a href="image3.JPG" data-lightbox="gallery" data-title="Sophisticated Style" class="block group relative rounded-2xl overflow-hidden shadow-lg h-[300px]">
-                    <img src="image3.JPG" alt="Gold accents" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-green/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                        <span class="text-white font-bold text-xl">Sophisticated Style</span>
+                <a href="image3.JPG" data-lightbox="gallery" data-title="Sophisticated Detail Polish Set" class="block group relative rounded-2xl overflow-hidden shadow-md h-[340px] bg-stone-100">
+                    <img src="image3.JPG" alt="Flawless Alignment Gel Work" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#072a1b]/90 via-[#072a1b]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-6">
+                        <div>
+                            <span class="text-white font-bold text-lg block font-serif">Sophisticated Gel Line</span>
+                            <span class="text-[#dfbd69] font-sans text-xs uppercase tracking-wider font-semibold">Gold Standard Detail</span>
+                        </div>
                     </div>
                 </a>
 
-                <a href="image1.JPG" data-lightbox="gallery" data-title="Luxury Hand Care" class="block group relative rounded-2xl overflow-hidden shadow-lg h-[300px]">
-                    <img src="image1.JPG" alt="Hand care" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-green/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                        <span class="text-white font-bold text-xl">Luxury Hand Care</span>
+                <a href="image1.JPG" data-lightbox="gallery" data-title="Luxury Hand Treatment and Alignment" class="block group relative rounded-2xl overflow-hidden shadow-md h-[340px] bg-stone-100">
+                    <img src="image1.JPG" alt="Nourishing Hand Treatment Structure" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#072a1b]/90 via-[#072a1b]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-6">
+                        <div>
+                            <span class="text-white font-bold text-lg block font-serif">Nourished Skin & Nail Alignment</span>
+                            <span class="text-[#dfbd69] font-sans text-xs uppercase tracking-wider font-semibold">Advanced Dry cuticle therapy</span>
+                        </div>
                     </div>
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="instagram" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-6">Latest Work</h2>
-            <a href="https://www.instagram.com/nailedbycnicole/" target="_blank" class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-bold shadow-md hover:shadow-lg transition-all mb-10">
-                📸 Follow @nailedbycnicole
+    <section id="instagram" class="py-20 bg-[#fbfaf7] border-y border-stone-100">
+        <div class="container mx-auto px-6 text-center max-w-5xl">
+            <span class="text-stone-400 text-xs font-sans uppercase tracking-widest font-semibold block mb-2">Social Feed</span>
+            <h2 class="text-3xl font-bold font-serif mb-6 text-stone-900">Explore Current Design Sets</h2>
+            <a href="https://www.instagram.com/nailedbycnicole/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white text-xs font-sans font-bold uppercase tracking-wider px-8 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
+                <span>📸 Follow @nailedbycnicole</span>
             </a>
             
-           <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-                <a href="recent1.jpg" data-lightbox="recent" data-title="Recent Work 1" class="block group relative h-64 rounded-lg overflow-hidden shadow-md">
-                    <img src="recent1.jpg" alt="Recent Work 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                         onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-gray-200 text-gray-400\'>Image Missing</div>'">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+                <a href="recent1.jpg" data-lightbox="recent" data-title="Recent Work Set 1" class="block group relative h-60 rounded-xl overflow-hidden bg-stone-200">
+                    <img src="recent1.jpg" alt="Recent Client Session 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                         onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-stone-200 text-stone-400 text-xs font-sans font-semibold\'>Interactive Client Set</div>'">
                 </a>
 
-                <a href="recent2.jpg" data-lightbox="recent" data-title="Recent Work 2" class="block group relative h-64 rounded-lg overflow-hidden shadow-md">
-                    <img src="recent2.jpg" alt="Recent Work 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                         onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-gray-200 text-gray-400\'>Image Missing</div>'">
+                <a href="recent2.jpg" data-lightbox="recent" data-title="Recent Work Set 2" class="block group relative h-60 rounded-xl overflow-hidden bg-stone-200">
+                    <img src="recent2.jpg" alt="Recent Client Session 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                         onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-stone-200 text-stone-400 text-xs font-sans font-semibold\'>Artisan Detail Design</div>'">
                 </a>
 
-                <a href="recent3.jpg" data-lightbox="recent" data-title="Recent Work 3" class="block group relative h-64 rounded-lg overflow-hidden shadow-md">
-                    <img src="recent3.jpg" alt="Recent Work 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                         onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-gray-200 text-gray-400\'>Image Missing</div>'">
+                <a href="recent3.jpg" data-lightbox="recent" data-title="Recent Work Set 3" class="block group relative h-60 rounded-xl overflow-hidden bg-stone-200">
+                    <img src="recent3.jpg" alt="Recent Client Session 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                         onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-stone-200 text-stone-400 text-xs font-sans font-semibold\'>Structural Hard Gel Fill</div>'">
                 </a>
 
-                <a href="recent4.jpg" data-lightbox="recent" data-title="Recent Work 4" class="block group relative h-64 rounded-lg overflow-hidden shadow-md">
-                    <img src="recent4.jpg" alt="Recent Work 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                         onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-gray-200 text-gray-400\'>Image Missing</div>'">
+                <a href="recent4.jpg" data-lightbox="recent" data-title="Recent Work Set 4" class="block group relative h-60 rounded-xl overflow-hidden bg-stone-200">
+                    <img src="recent4.jpg" alt="Recent Client Session 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                         onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-stone-200 text-stone-400 text-xs font-sans font-semibold\'>Minimalist Gel-X Art</div>'">
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-24 bg-white scroll-mt-10">
         <div class="container mx-auto px-6 max-w-5xl">
-            <div class="md:grid md:grid-cols-2 gap-12 items-center">
-                <div class="mb-8 md:mb-0 text-center">
-                   <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Welcome to Nailed By C. Nicole</h2>
-                   <p class="text-gray-600 mb-4 leading-relaxed">
-                       We specialize in providing high-quality <strong>nail services</strong> with an unwavering commitment to excellence and artistry. As a premier nail salon in Clinton, Maryland, we have built our reputation on exceptional service.
-                   </p>
-                   <p class="text-gray-600 leading-relaxed">
-                       Whether you're preparing for a special occasion or simply treating yourself, our team is dedicated to helping you look and feel your best.
-                   </p>
+            <div class="md:grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-7 mb-8 md:mb-0">
+                    <span class="text-[#0b4028] text-xs uppercase tracking-widest font-sans font-bold">The Creative Behind the Brand</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mt-2 mb-6">Welcome to Nailed By C. Nicole</h2>
+                    <p class="text-stone-600 text-sm sm:text-base leading-relaxed mb-4">
+                        We specialize in technical, health-forward natural nail reinforcement and precise structure styling. As an elite private studio in Clinton, Maryland, we intentionally distance ourselves from the hurried environment of walk-in salons, focusing instead on detail, precision safety, and bespoke styling designed to protect your physical nail plate structure.
+                    </p>
+                    <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
+                        Whether restoring standard natural nail plate health with advanced structural gel alignments or detailing an art-forward extension masterpiece, each booking is an immersive service designed to celebrate you.
+                    </p>
                 </div>
-                <div class="bg-brand-green/10 p-8 rounded-3xl border-2 border-brand-green/20 text-center">
-                    <h3 class="text-xl font-bold text-brand-green mb-2">Located In</h3>
-                    <p class="text-2xl font-bold text-gray-800 mb-6">Clinton, Maryland</p>
-                    <button onclick="openBookingModal()" class="bg-brand-green text-white px-6 py-2 rounded-lg font-bold hover:bg-brand-dark transition-colors w-full">
-                        Book Appointment
-                    </button>
+                <div class="md:col-span-5">
+                    <div class="bg-[#faf8f5] border border-stone-100 p-8 rounded-3xl text-center shadow-sm">
+                        <span class="text-[#072a1b] font-sans text-xs uppercase tracking-widest block font-bold mb-1">Located In</span>
+                        <p class="text-2xl font-bold text-[#072a1b] font-serif mb-6">Clinton, Maryland</p>
+                        <p class="text-xs text-stone-400 mb-6">Serving Prince George's County and the greater Washington Metro (DMV) Area.</p>
+                        <button onclick="openBookingModal()" class="bg-[#072a1b] hover:bg-[#0b4028] text-white font-sans font-bold text-xs uppercase tracking-wider py-3 px-6 rounded-xl transition-colors w-full shadow-sm">
+                            Request Appointment
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-center md:text-left">
+    <footer class="bg-stone-950 text-white py-16">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12 text-center md:text-left">
                 <div>
-                    <h3 class="text-brand-gold font-bold text-xl mb-4">Contact</h3>
-                    <p><a href="tel:2406880912" class="hover:text-white text-gray-400 transition-colors">(240) 688-0912</a></p>
+                    <h3 class="text-[#dfbd69] font-serif font-semibold text-lg mb-4">Studio Identity</h3>
+                    <p class="text-stone-400 text-sm max-w-xs leading-relaxed mb-4">
+                        Premium structured gel overlay work, precise dry cuticle cleaning, and high-tier customized nail extensions in a private luxury suite.
+                    </p>
+                    <p><a href="tel:2406880912" class="hover:text-[#dfbd69] text-stone-200 text-sm transition-colors font-sans font-bold">📞 (240) 688-0912</a></p>
                     <div class="mt-4">
-                        <a href="mailto:christy@myruiz.com" class="inline-block border border-gray-600 px-4 py-2 rounded hover:bg-gray-800 transition-colors text-sm">📧 Email Us</a>
+                        <a href="mailto:christy@myruiz.com" class="inline-block border border-stone-800 text-stone-300 px-4 py-2 rounded hover:bg-stone-900 transition-colors text-xs font-sans">📧 Email Contact</a>
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-brand-gold font-bold text-xl mb-4">Hours</h3>
-                    <p class="text-gray-400">Tue: 2PM - 6PM</p>
-                    <p class="text-gray-400">Thu - Fri: 9AM - 7PM</p>
-                    <p class="text-gray-600 text-sm mt-2">Sun/Mon/Wed/Sat: Closed</p>
+                    <h3 class="text-[#dfbd69] font-serif font-semibold text-lg mb-4">Dedicated Hours</h3>
+                    <div class="space-y-2 text-sm text-stone-400 font-sans">
+                        <p class="flex justify-between md:justify-start gap-8"><span>Tuesday:</span> <span class="text-stone-200">2:00 PM – 6:00 PM</span></p>
+                        <p class="flex justify-between md:justify-start gap-8"><span>Thu – Fri:</span> <span class="text-stone-200">9:00 AM – 7:00 PM</span></p>
+                        <p class="flex justify-between md:justify-start gap-8 text-stone-500"><span>Sun/Mon/Wed/Sat:</span> <span>Studio Closed</span></p>
+                    </div>
                 </div>
                 <div>
-                    <h3 class="text-brand-gold font-bold text-xl mb-4">Social</h3>
-                    <a href="https://www.instagram.com/nailedbycnicole/" class="block text-gray-400 hover:text-brand-gold mb-2">Instagram</a>
+                    <h3 class="text-[#dfbd69] font-serif font-semibold text-lg mb-4">Social Presence</h3>
+                    <a href="https://www.instagram.com/nailedbycnicole/" target="_blank" rel="noopener noreferrer" class="block text-stone-400 hover:text-[#dfbd69] text-sm transition-colors mb-2">Instagram</a>
+                    <a href="#policies" class="block text-stone-400 hover:text-[#dfbd69] text-sm transition-colors mb-2">Booking Polices</a>
                </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-                &copy; 2025 Nailed By C. Nicole. All rights reserved.
+            <div class="border-t border-stone-900 pt-8 text-center text-stone-500 text-xs font-sans">
+                &copy; 2026 Nailed By C. Nicole. All rights reserved. Precision, Integrity, & Artistry.
             </div>
         </div>
     </footer>
 
-    <div id="bookingModal" class="hidden fixed inset-0 z-[2000] bg-black/70 backdrop-blur-sm overflow-y-auto">
+    <div id="bookingModal" class="hidden fixed inset-0 z-[2000] bg-stone-950/80 backdrop-blur-md overflow-y-auto" role="dialog" aria-modal="true">
         <div class="min-h-screen flex items-center justify-center p-4">
-            <div class="bg-white w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden animate-[fadeInUp_0.3s_ease-out]">
-                <div class="bg-gradient-to-r from-brand-green to-brand-gold p-6 flex justify-between items-center text-white">
-                    <h3 class="text-2xl font-bold">📅 Book Appointment</h3>
-                    <button onclick="closeBookingModal()" class="hover:bg-white/20 rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold transition-colors">&times;</button>
+            <div class="bg-white w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden animate-[fadeInUp_0.3s_ease-out]">
+                <div class="bg-[#072a1b] p-6 flex justify-between items-center text-white border-b border-white/10">
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-bold font-serif">📅 Request Your Appointment</h3>
+                        <p class="text-[10px] text-stone-400 font-sans uppercase tracking-widest mt-0.5">Clinton, MD Private Studio</p>
+                    </div>
+                    <button onclick="closeBookingModal()" class="hover:bg-white/10 rounded-full w-9 h-9 flex items-center justify-center text-2xl font-bold transition-colors" aria-label="Close Modal">&times;</button>
                 </div>
 
                 <div class="p-6 md:p-8">
+                    <!-- Dynamic Studio Policy Notice to establish early professional boundary -->
+                    <div class="bg-[#faf8f5] border border-stone-100 rounded-xl p-4 mb-6">
+                        <span class="text-xs font-sans font-bold text-[#072a1b] uppercase tracking-wider block mb-1">⚠️ Studio Policy Highlight:</span>
+                        <p class="text-xs text-stone-500 leading-relaxed">
+                            Cancellations must be processed at least 24 hours prior to service starts. A strictly enforced 10-minute late grace period is applied. We do not work over foreign enhancements (fills on other techs' work).
+                        </p>
+                    </div>
+
+                    <!-- Booking submission block -->
                     <form action="https://formspree.io/f/movlyard" method="POST" id="modalBookingForm">
                         <input type="hidden" name="_to" value="2406880912@msg.fi.google.com">
-                        <input type="hidden" name="_subject" value="New Appointment Request">
+                        <input type="hidden" name="_subject" value="New DMV Luxury Appointment Request">
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                             <div>
-                                <label class="block text-sm font-bold text-gray-700 mb-2">Full Name *</label>
-                                <input type="text" name="name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent outline-none transition-all">
+                                <label class="block text-xs font-sans font-bold text-stone-700 uppercase tracking-wider mb-1.5">Full Name *</label>
+                                <input type="text" name="name" required class="w-full p-3 text-sm border border-stone-200 rounded-xl focus:ring-2 focus:ring-[#0b4028] focus:border-transparent outline-none transition-all">
                             </div>
                             <div>
-                                <label class="block text-sm font-bold text-gray-700 mb-2">Phone *</label>
-                                <input type="tel" name="phone" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent outline-none transition-all">
+                                <label class="block text-xs font-sans font-bold text-stone-700 uppercase tracking-wider mb-1.5">Phone *</label>
+                                <input type="tel" name="phone" required class="w-full p-3 text-sm border border-stone-200 rounded-xl focus:ring-2 focus:ring-[#0b4028] focus:border-transparent outline-none transition-all">
                             </div>
                         </div>
 
-                        <div class="mb-6">
-                            <label class="block text-sm font-bold text-gray-700 mb-2">Email *</label>
-                            <input type="email" name="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent outline-none transition-all">
+                        <div class="mb-4">
+                            <label class="block text-xs font-sans font-bold text-stone-700 uppercase tracking-wider mb-1.5">Email Address *</label>
+                            <input type="email" name="email" required class="w-full p-3 text-sm border border-stone-200 rounded-xl focus:ring-2 focus:ring-[#0b4028] focus:border-transparent outline-none transition-all">
                         </div>
 
-                        <div class="mb-6">
-                            <label class="block text-sm font-bold text-gray-700 mb-2">Location *</label>
-                            <select id="modal_location" name="location" required onchange="handleLocationChange()" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green outline-none bg-white">
-                                <option value="In Salon">In Salon</option>
-                                <option value="Mobile">Mobile</option>
+                        <div class="mb-4">
+                            <label class="block text-xs font-sans font-bold text-stone-700 uppercase tracking-wider mb-1.5">Appointment Location *</label>
+                            <select id="modal_location" name="location" required onchange="handleLocationChange()" class="w-full p-3 text-sm border border-stone-200 rounded-xl focus:ring-2 focus:ring-[#0b4028] outline-none bg-white font-sans">
+                                <option value="In Salon">Private Studio Suite (Clinton, MD)</option>
+                                <option value="Mobile">Mobile (Limited Availability & Travel Fee Applies)</option>
                             </select>
-                            <p id="mobile_note" class="hidden text-sm text-amber-600 mt-2 font-medium">Note: Mobile services may be limited and incur a travel fee.</p>
+                            <p id="mobile_note" class="hidden text-xs text-amber-600 mt-2 font-medium font-sans">Note: Mobile requests are curated on an individual basis and incur additional travel fees.</p>
                         </div>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                             <div>
-                                <label class="block text-sm font-bold text-gray-700 mb-2">Service *</label>
-                                <select id="modal_service" name="service" required onchange="handleServiceChange()" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green outline-none bg-white">
-                                    <option value="">Select a service</option>
-                                    <option value="Press On Party">🎉 Press On Party</option> 
-                                    <option value="Luxury Manicure">Luxury Manicure</option>
-                                    <option value="Relaxing Pedicure">Relaxing Pedicure</option>
-                                    <option value="Gel Polish">Gel Polish</option>
-                                    <option value="Expert Fill-ins">Expert Fill-ins</option>
-                                    <option value="Full Set Application">Full Set Application</option>
-                                    <option value="Multiple Services">Multiple Services</option>
+                                <label class="block text-xs font-sans font-bold text-stone-700 uppercase tracking-wider mb-1.5">Primary Service Requested *</label>
+                                <select id="modal_service" name="service" required onchange="handleServiceChange()" class="w-full p-3 text-sm border border-stone-200 rounded-xl focus:ring-2 focus:ring-[#0b4028] outline-none bg-white font-sans text-slate-800">
+                                    <option value="">Select Primary Service</option>
+                                    <option value="Natural Nail Prep & Cleanse">Natural Nail Prep & Cleanse ($35 | 45m)</option>
+                                    <option value="DMV Precision Gel Manicure">DMV Precision Gel Manicure ($50 | 1h)</option>
+                                    <option value="Structured Gel Manicure (BIAB)">Structured Gel Manicure (BIAB Growth) ($85 | 1h 15m)</option>
+                                    <option value="Luxury Clarifying Pedicure">Luxury Clarifying Pedicure ($45 | 45m)</option>
+                                    <option value="DMV Signature Gel Pedicure">DMV Signature Gel Pedicure ($70 | 1h 10m)</option>
+                                    <option value="Elite Hard Gel Overlay">Elite Hard Gel Overlay ($85 | 1h 30m)</option>
+                                    <option value="Full Coverage Gel Tip Extensions">Full Coverage Gel Tip Extensions ($95+ | 1h 30m)</option>
+                                    <option value="Technical Hard Gel Re-balance">Technical Hard Gel Re-balance ($65 | 1h 15m)</option>
+                                    <option value="Press On Party">🎉 Custom Press On Party (Group System)</option>
+                                    <option value="Multiple Services">Multiple Services Combo Selection</option>
                                 </select>
                             </div>
                             <div>
-                                <label class="block text-sm font-bold text-gray-700 mb-2">Preferred Date *</label>
-                                <input type="date" id="modal_date" name="preferred_date" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green outline-none">
+                                <label class="block text-xs font-sans font-bold text-stone-700 uppercase tracking-wider mb-1.5">Preferred Date *</label>
+                                <input type="date" id="modal_date" name="preferred_date" required class="w-full p-3 text-sm border border-stone-200 rounded-xl focus:ring-2 focus:ring-[#0b4028] outline-none font-sans">
+                                <p id="date_warning" class="hidden text-xs text-red-600 mt-1.5 font-sans font-semibold"></p>
                             </div>
                         </div>
 
-                        <div id="party_size_container" class="hidden mb-6 animate-[fadeInUp_0.3s_ease-out]">
-                            <label class="block text-sm font-bold text-gray-700 mb-2">Number of People (Min. 6) *</label>
-                            <input type="number" id="party_size_input" name="party_size" min="6" placeholder="Enter number of guests (6 minimum)" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent outline-none transition-all">
-                            <p class="text-sm text-gray-500 mt-1">We require a minimum of 6 guests for booking parties.</p>
+                        <!-- Art Selection Add-On Layer -->
+                        <div class="mb-4">
+                            <label class="block text-xs font-sans font-bold text-stone-700 uppercase tracking-wider mb-1.5">Nail Art Add-On Category</label>
+                            <select id="modal_art" name="nail_art_tier" class="w-full p-3 text-sm border border-stone-200 rounded-xl focus:ring-2 focus:ring-[#0b4028] outline-none bg-white font-sans">
+                                <option value="None">None (Solid Base Gel Only)</option>
+                                <option value="Tier 1 Minimalist">Tier 1: Minimalist (+$20 | Chrome, French, Accent Nails)</option>
+                                <option value="Tier 2 Contemporary">Tier 2: Contemporary (+$40 | Abstracts, Foils, Custom Swirls)</option>
+                                <option value="Tier 3 Masterpiece">Tier 3: Masterpiece (+$60+ | Portraits, Crystals, Custom Designs)</option>
+                            </select>
                         </div>
 
-                        <div id="multiple_services_container" class="hidden mb-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
-                            <label class="block text-sm font-bold text-gray-700 mb-3">Select Services:</label>
-                            <div class="space-y-2">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Luxury Manicure" class="accent-brand-green w-5 h-5"> Luxury Manicure</label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Relaxing Pedicure" class="accent-brand-green w-5 h-5"> Relaxing Pedicure</label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Gel Polish" class="accent-brand-green w-5 h-5"> Gel Polish</label>
+                        <div id="party_size_container" class="hidden mb-4 animate-[fadeInUp_0.3s_ease-out]">
+                            <label class="block text-xs font-sans font-bold text-stone-700 uppercase tracking-wider mb-1.5">Number of Guests (Min. 6) *</label>
+                            <input type="number" id="party_size_input" name="party_size" min="6" placeholder="Enter number of guests (6 minimum)" class="w-full p-3 text-sm border border-stone-200 rounded-xl focus:ring-2 focus:ring-[#0b4028] focus:border-transparent outline-none transition-all">
+                        </div>
+
+                        <div id="multiple_services_container" class="hidden mb-4 p-4 bg-stone-50 border border-stone-200 rounded-xl">
+                            <label class="block text-xs font-sans font-bold text-stone-700 uppercase tracking-wider mb-3">Select Desired Combinations:</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-sans font-medium text-stone-700">
+                                <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Natural Nail Prep" class="accent-brand-green w-4 h-4"> Natural Prep & Cleanse ($35)</label>
+                                <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Precision Gel Manicure" class="accent-brand-green w-4 h-4"> Precision Gel Mani ($50)</label>
+                                <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Structured Gel Manicure (BIAB)" class="accent-brand-green w-4 h-4"> Structured Gel (BIAB Growth) ($85)</label>
+                                <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Luxury Clarifying Pedicure" class="accent-brand-green w-4 h-4"> Luxury Pedicure ($45)</label>
+                                <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Signature Gel Pedicure" class="accent-brand-green w-4 h-4"> Gel Pedicure ($70)</label>
+                                <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" name="multiple_services[]" value="Elite Hard Gel Overlay" class="accent-brand-green w-4 h-4"> Elite Hard Gel Overlay ($85)</label>
                             </div>
                         </div>
 
-                        <div class="mb-6">
-                            <label class="block text-sm font-bold text-gray-700 mb-2">Preferred Time *</label>
-                            <select name="preferred_time" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green outline-none bg-white">
-                                <option value="">Select time</option>
-                                <optgroup label="Tuesday (2PM - 6PM)">
-                                    <option value="Tuesday 2:00 PM">2:00 PM</option>
-                                    <option value="Tuesday 3:00 PM">3:00 PM</option>
-                                    <option value="Tuesday 4:00 PM">4:00 PM</option>
-                                    <option value="Tuesday 5:00 PM">5:00 PM</option>
+                        <div class="mb-4">
+                            <label class="block text-xs font-sans font-bold text-stone-700 uppercase tracking-wider mb-1.5">Preferred Time Window *</label>
+                            <select name="preferred_time" required class="w-full p-3 text-sm border border-stone-200 rounded-xl focus:ring-2 focus:ring-[#0b4028] outline-none bg-white font-sans text-stone-700">
+                                <option value="">Select Slot Segment</option>
+                                <optgroup label="Thursday / Friday Frames (9:00 AM – 7:00 PM)">
+                                    <option value="Morning 9:00 AM">Morning Standard (9:00 AM)</option>
+                                    <option value="Midday 12:00 PM">Lunch Slot Frame (12:00 PM)</option>
+                                    <option value="Afternoon 3:00 PM">Afternoon Premium Block (3:00 PM)</option>
+                                    <option value="Evening 5:30 PM">Evening Closing Block (5:30 PM)</option>
                                 </optgroup>
-                                <optgroup label="Thursday/Friday (9AM - 7PM)">
-                                    <option value="9:00 AM">9:00 AM</option>
-                                    <option value="12:00 PM">12:00 PM</option>
-                                    <option value="3:00 PM">3:00 PM</option>
-                                    <option value="6:00 PM">6:00 PM</option>
+                                <optgroup label="Custom Party Booking (Any Day)">
+                                    <option value="Party Request Time">Request Custom Party Time (Note below)</option>
                                 </optgroup>
                             </select>
                         </div>
 
                         <div class="mb-6">
-                            <label class="block text-sm font-bold text-gray-700 mb-2">Notes</label>
-                            <textarea name="notes" rows="3" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green outline-none" placeholder="Any specific requests?"></textarea>
+                            <label class="block text-xs font-sans font-bold text-stone-700 uppercase tracking-wider mb-1.5">Design Idea Notes / Specific Requests</label>
+                            <textarea name="notes" rows="3" class="w-full p-3 text-sm border border-stone-200 rounded-xl focus:ring-2 focus:ring-[#0b4028] outline-none font-sans" placeholder="Mention length preferences, current nail condition, or art ideas..."></textarea>
                         </div>
 
-                        <button type="submit" class="w-full bg-gradient-to-r from-brand-green to-lime-600 text-white font-bold py-4 rounded-xl shadow-lg hover:scale-[1.02] transition-transform">
-                            Request Appointment
+                        <button type="submit" class="w-full bg-[#072a1b] hover:bg-[#0b4028] text-white font-sans font-extrabold text-sm uppercase tracking-widest py-4 rounded-xl shadow-md transition-transform hover:scale-[1.01] duration-200">
+                            Submit Slot Request
                         </button>
                     </form>
                 </div>
@@ -473,29 +757,31 @@
         </div>
     </div>
 
+    <!-- Lightbox Dependency Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
 
     <script>
-        // --- Mobile Menu ---
+        // --- Mobile Slideout Handler ---
         const btn = document.getElementById('mobile-menu-toggle');
         const menu = document.getElementById('nav-links');
         
         btn.addEventListener('click', () => {
             menu.classList.toggle('translate-x-full');
-            // Animate hamburger lines
             const spans = btn.querySelectorAll('span');
             if (!menu.classList.contains('translate-x-full')) {
                 spans[0].classList.add('rotate-45', 'translate-y-2');
                 spans[1].classList.add('opacity-0');
                 spans[2].classList.add('-rotate-45', '-translate-y-2');
+                document.body.style.overflow = 'hidden'; // Lock background scrolling
             } else {
                 spans[0].classList.remove('rotate-45', 'translate-y-2');
                 spans[1].classList.remove('opacity-0');
                 spans[2].classList.remove('-rotate-45', '-translate-y-2');
+                document.body.style.overflow = ''; // Unlock background scrolling
             }
         });
 
-        // Close menu on link click
+        // Auto collapse drawer on mobile link navigation
         menu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.add('translate-x-full');
@@ -503,10 +789,11 @@
                 spans[0].classList.remove('rotate-45', 'translate-y-2');
                 spans[1].classList.remove('opacity-0');
                 spans[2].classList.remove('-rotate-45', '-translate-y-2');
+                document.body.style.overflow = '';
             });
         });
 
-        // --- Modal Logic ---
+        // --- Elegant Modal Interactions ---
         const modal = document.getElementById('bookingModal');
 
         function openBookingModal(preselectedService) {
@@ -525,28 +812,58 @@
             document.body.style.overflow = 'auto';
         }
 
-        // NEW: Close when clicking outside the white card
+        // Close when clicking outside of modal card boundaries
         modal.addEventListener('click', function(e) {
-            // We find the white content box inside the modal
             const modalContent = modal.querySelector('.bg-white');
-            
-            // If the click target is NOT inside the white content box, close it
             if (modalContent && !modalContent.contains(e.target)) {
                 closeBookingModal();
             }
         });
 
-        // Close on Escape key
+        // Escape Key Binding for QoL exit
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
                 closeBookingModal();
             }
         });
 
-        // --- Form Logic ---
+        // --- Dynamic Form Display Logics ---
         function handleLocationChange() {
             const val = document.getElementById('modal_location').value;
             document.getElementById('mobile_note').style.display = (val === 'Mobile') ? 'block' : 'none';
+        }
+
+        // Dedicated Date Validation Function to allow re-checking when service changes
+        function validateDateSelection() {
+            const dateInput = document.getElementById('modal_date');
+            const serviceVal = document.getElementById('modal_service').value;
+            const dateWarning = document.getElementById('date_warning');
+            
+            if (!dateInput || !dateInput.value) return;
+
+            const isParty = (serviceVal === 'Press On Party');
+            
+            // Parse year, month, and day out of the string manually to avoid timezone shift issues
+            const parts = dateInput.value.split('-');
+            const year = parseInt(parts[0], 10);
+            const month = parseInt(parts[1], 10) - 1;
+            const day = parseInt(parts[2], 10);
+
+            const selectedDate = new Date(year, month, day);
+            const dayOfWeek = selectedDate.getDay(); // 0: Sunday, 4: Thursday, 5: Friday, etc.
+
+            // Restrict to Thurs(4)/Fri(5) UNLESS it is a Press On Party
+            if (!isParty && dayOfWeek !== 4 && dayOfWeek !== 5) {
+                dateInput.value = ''; // Reset invalid selection
+                if (dateWarning) {
+                    dateWarning.innerHTML = '⚠️ Standard services require a Thursday or Friday. (Press-On Parties bypass this rule).';
+                    dateWarning.classList.remove('hidden');
+                }
+            } else {
+                if (dateWarning) {
+                    dateWarning.classList.add('hidden');
+                }
+            }
         }
 
         function handleServiceChange() {
@@ -555,37 +872,85 @@
             const partyContainer = document.getElementById('party_size_container');
             const partyInput = document.getElementById('party_size_input');
 
-            // 1. Hide everything initially
+            // Hide dynamic categories by default
             multipleContainer.classList.add('hidden');
             partyContainer.classList.add('hidden');
             
-            // 2. Reset required attribute on party input so it doesn't block other submissions
-            if(partyInput) partyInput.removeAttribute('required');
+            if (partyInput) partyInput.removeAttribute('required');
 
-            // 3. Show based on selection
+            // Toggle layout modules based on selected services
             if (val === 'Multiple Services') {
                 multipleContainer.classList.remove('hidden');
             } else if (val === 'Press On Party') {
                 partyContainer.classList.remove('hidden');
-                // Make it required only if this service is chosen
-                if(partyInput) partyInput.setAttribute('required', 'true'); 
+                if (partyInput) partyInput.setAttribute('required', 'true'); 
             }
+            
+            // Re-validate the calendar date against the new service rules
+            validateDateSelection();
         }
 
-        // Date constraints
         document.addEventListener('DOMContentLoaded', () => {
             const dateInput = document.getElementById('modal_date');
-            if(dateInput) {
-                const today = new Date().toISOString().split('T')[0];
-                dateInput.setAttribute('min', today);
+
+            if (dateInput) {
+                // Ensure 'today' calculation accounts for local timezone, not UTC
+                const todayObj = new Date();
+                const localToday = new Date(todayObj.getTime() - (todayObj.getTimezoneOffset() * 60000)).toISOString().split('T')[0];
+                dateInput.setAttribute('min', localToday);
+
+                // Check calendar selection on change
+                dateInput.addEventListener('change', validateDateSelection);
+            }
+            
+            // AJAX Formspree submission handler to prevent page redirection
+            const form = document.getElementById('modalBookingForm');
+            if(form) {
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalBtnText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = 'Sending Request...';
+                    submitBtn.disabled = true;
+                    submitBtn.classList.add('opacity-70');
+
+                    try {
+                        const response = await fetch(form.action, {
+                            method: form.method,
+                            body: new FormData(form),
+                            headers: { 'Accept': 'application/json' }
+                        });
+                        
+                        if (response.ok) {
+                            form.innerHTML = `
+                                <div class="text-center py-12 px-4">
+                                    <div class="w-16 h-16 bg-[#0b4028]/10 text-[#0b4028] rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">✨</div>
+                                    <h4 class="text-2xl font-serif font-bold text-[#072a1b] mb-3">Request Successfully Sent</h4>
+                                    <p class="text-stone-600 font-sans text-sm leading-relaxed max-w-sm mx-auto">
+                                        Thank you! Your luxury appointment request has been received. We will review the details and contact you shortly to confirm your booking slot.
+                                    </p>
+                                </div>
+                            `;
+                        } else {
+                            throw new Error('Network response was not ok');
+                        }
+                    } catch (error) {
+                        alert('There was a problem submitting your request. Please try contacting us directly via email or phone.');
+                        submitBtn.innerHTML = originalBtnText;
+                        submitBtn.disabled = false;
+                        submitBtn.classList.remove('opacity-70');
+                    }
+                });
             }
         });
 
-        // Lightbox Config
+        // Adjust Lightbox Config
         lightbox.option({
-            'resizeDuration': 200,
+            'resizeDuration': 150,
             'wrapAround': true,
-            'albumLabel': 'Image %1 of %2'
+            'albumLabel': 'Detail image %1 of %2',
+            'fadeDuration': 200
         });
     </script>
 </body>
